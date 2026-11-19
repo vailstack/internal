@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@viliha/vui-ui/command";
+} from "@vui/vui-ui/command";
 
 import { H2, P, CodeBlock, Note } from "@/components/doc";
 import {
@@ -29,7 +29,7 @@ import {
 const usage = `import {
   Command, CommandInput, CommandList, CommandEmpty,
   CommandGroup, CommandItem, CommandSeparator, CommandShortcut,
-} from "@viliha/vui-ui/command";
+} from "@vui/vui-ui/command";
 
 export function Example() {
   return (

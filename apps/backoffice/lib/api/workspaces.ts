@@ -1,4 +1,4 @@
-import type { Organization } from "@viliha/vui-ui/org-switcher";
+import type { Organization } from "@vui/vui-ui/org-switcher";
 
 /**
  * DATA — the organizations the signed-in person belongs to, for the sidebar

@@ -6,7 +6,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@viliha/vui-ui/input-otp";
+} from "@vui/vui-ui/input-otp";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -18,7 +18,7 @@ import {
 
 const usage = `import {
   InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator,
-} from "@viliha/vui-ui/input-otp";
+} from "@vui/vui-ui/input-otp";
 
 export function Example() {
   const [value, setValue] = React.useState("");

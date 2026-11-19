@@ -1,4 +1,4 @@
-import { CardGrid, Cta, DownloadBlock, Hero, Prose, Section } from "@viliha/vui-web";
+import { CardGrid, Cta, DownloadBlock, Hero, Prose, Section } from "@vui/vui-web";
 
 import { LinkButton } from "@/app/_components/link-button";
 import { NEWS, PRESS_KIT } from "@/lib/catalog";

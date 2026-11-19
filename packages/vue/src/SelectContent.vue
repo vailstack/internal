@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SELECT_CONTENT, cn } from "@viliha/vui-core";
+import { SELECT_CONTENT, cn } from "@vui/vui-core";
 import { SelectContent, SelectPortal } from "reka-ui";
 import { computed } from "vue";
 

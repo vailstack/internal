@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 import { Label } from "reka-ui";
 import { computed } from "vue";
 

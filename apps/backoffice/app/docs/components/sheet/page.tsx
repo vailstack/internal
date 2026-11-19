@@ -9,10 +9,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@viliha/vui-ui/sheet";
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { Label } from "@viliha/vui-ui/label";
+} from "@vui/vui-ui/sheet";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { Label } from "@vui/vui-ui/label";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -26,7 +26,7 @@ import {
 const usage = `import {
   Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle,
   SheetDescription, SheetFooter, SheetClose,
-} from "@viliha/vui-ui/sheet";
+} from "@vui/vui-ui/sheet";
 
 export function Example() {
   return (
@@ -68,7 +68,7 @@ export default function Page() {
               </div>
               <div className="grid gap-1.5">
                 <Label htmlFor="username">Username</Label>
-                <Input id="username" defaultValue="@viliha" />
+                <Input id="username" defaultValue="@voilet" />
               </div>
             </div>
             <SheetFooter>

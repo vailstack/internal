@@ -1,4 +1,4 @@
-import { CardGrid, Cta, Hero, Section, SectionHeader } from "@viliha/vui-web";
+import { CardGrid, Cta, Hero, Section, SectionHeader } from "@vui/vui-web";
 
 import type { CollectionName } from "@/lib/catalog";
 import { COLLECTIONS } from "@/lib/catalog";

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-import { Breadcrumbs as UiBreadcrumbs } from "@viliha/vui-ui/breadcrumbs";
+import { Breadcrumbs as UiBreadcrumbs } from "@vui/vui-ui/breadcrumbs";
 import { crumbsFor } from "@/app/_components/route-meta";
 
 /** Route-derived breadcrumb trail. Delegates rendering to the shared

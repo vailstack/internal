@@ -12,7 +12,7 @@ import {
   RecordView,
   type FilterValues,
   type RecordField,
-} from "@viliha/vui-ui/record-view";
+} from "@vui/vui-ui/record-view";
 import { markets, type Market } from "@/lib/mock-data";
 import { resolvePostCodes, searchPostCodes } from "@/lib/api/post-codes";
 import { filterRows, reconcile } from "@/lib/use-client-filter";

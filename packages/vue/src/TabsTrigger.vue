@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TABS_TRIGGER, cn } from "@viliha/vui-core";
+import { TABS_TRIGGER, cn } from "@vui/vui-core";
 import { TabsTrigger } from "reka-ui";
 import { computed } from "vue";
 

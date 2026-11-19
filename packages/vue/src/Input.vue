@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 import { computed } from "vue";
 
 // v-model is how a Vue developer expects an input to work; the React component's

@@ -1,4 +1,4 @@
-import { CardGrid, Cta, Hero, Stats } from "@viliha/vui-web";
+import { CardGrid, Cta, Hero, Stats } from "@vui/vui-web";
 
 import { LinkButton } from "@/app/_components/link-button";
 import { PORTFOLIO } from "@/lib/catalog";

@@ -1,12 +1,12 @@
 # Using VUI in your project (AI agent guide)
 
-> **Audience:** developers (and their AI agents) **consuming** `@viliha/vui-ui`
+> **Audience:** developers (and their AI agents) **consuming** `@vui/vui-ui`
 > in a downstream app. This file ships with the npm package. To auto-load these
 > rules, copy the ready-made pointer to your project root; it `@`-imports this
 > file, so you never duplicate the rules:
 >
 > ```bash
-> cp node_modules/@viliha/vui-ui/CLAUDE.template.md ./CLAUDE.md   # Claude Code
+> cp node_modules/@vui/vui-ui/CLAUDE.template.md ./CLAUDE.md   # Claude Code
 > # or ./AGENTS.md for other agent tools
 > ```
 >
@@ -16,7 +16,7 @@
 
 You are a frontend architect building enterprise applications on **VUI Starter**. Your job is to ship apps that are consistent, maintainable, accessible, and production-ready by leaning fully on the VUI Design System. Don't reinvent the framework; build with it.
 
-> **What you get from the package vs. what to copy.** `@viliha/vui-ui` ships the
+> **What you get from the package vs. what to copy.** `@vui/vui-ui` ships the
 > component primitives (`Button`, `Input`, `Select`, `Dialog`, `Menu`,
 > `RecordView`, `ChartContainer`, `Breadcrumbs`, `theme.css`, …). App-shell
 > patterns referenced below (`SetPageTitle`, the sidebar, and the `AuthCard*`
@@ -61,7 +61,7 @@ The package ships the components; the **app shell** (layout, sidebar, open tabs,
 command palette, nav config, logo) and **demo pages** are scaffolded with:
 
 ```bash
-npx @viliha/vui-ui init          # interactive decision tree
+npx @vui/vui-ui init          # interactive decision tree
 ```
 
 Files land in the consumer's repo (they own them). Questions:
@@ -93,11 +93,11 @@ app. Target the specific application, e.g. `apps/web`. Two equivalent ways:
 
 ```bash
 # A) from the repo root, name the app dir
-npx @viliha/vui-ui init --turbo --dir apps/web
+npx @vui/vui-ui init --turbo --dir apps/web
 
 # B) from inside the app (simplest to reason about)
 cd apps/web
-npx @viliha/vui-ui init
+npx @vui/vui-ui init
 ```
 
 In turbo mode the CLI **does not auto-install** (installs are workspace-specific),
@@ -105,7 +105,7 @@ so finish the setup yourself, scoped to that app:
 
 ```bash
 cd apps/web                 # be inside the app, not the root
-pnpm add @viliha/vui-ui …   # or: pnpm --filter <app-name> add @viliha/vui-ui …
+pnpm add @vui/vui-ui …   # or: pnpm --filter <app-name> add @vui/vui-ui …
 ```
 
 Then confirm the app is in your workspace globs (`pnpm-workspace.yaml` /
@@ -116,13 +116,13 @@ dev`. The theme import, `transpilePackages`, and the `@/*` alias all belong in
 ### End-to-end walkthroughs
 
 - **New standalone app**: `npx create-next-app@latest my-app --ts --tailwind
-  --app --no-src-dir --use-npm`, then `cd my-app && npx @viliha/vui-ui init`
+  --app --no-src-dir --use-npm`, then `cd my-app && npx @vui/vui-ui init`
   (fresh + prebuilt). It scaffolds config + shell + demo, installs deps, and you
   run `npm run dev` → `/dashboard`.
 - **New app in a monorepo**: scaffold your app under `apps/<name>` (e.g. with
-  `create-next-app`), then from that app dir run `npx @viliha/vui-ui init` (or
+  `create-next-app`), then from that app dir run `npx @vui/vui-ui init` (or
   `--turbo --dir apps/<name>` from the root) and install deps in that app.
-- **Existing app**: run `npx @viliha/vui-ui init --existing`. It never
+- **Existing app**: run `npx @vui/vui-ui init --existing`. It never
   overwrites your config; wire up the four things it prints (`transpilePackages`,
   the `theme.css` import, the `@/*` alias, `import "./globals.css"`). Prefer only
   the components? Use `--theme-only` (copies nothing) and follow the setup below.
@@ -135,7 +135,7 @@ Rather than reading `node_modules` or guessing at an API, query the package over
 MCP. Register it once:
 
 ```bash
-claude mcp add vui -- npx -y @viliha/vui-ui mcp
+claude mcp add vui -- npx -y @vui/vui-ui mcp
 ```
 
 Other MCP clients (Cursor, Windsurf, VS Code) take the same command in their
@@ -144,7 +144,7 @@ config:
 ```json
 {
   "mcpServers": {
-    "vui": { "command": "npx", "args": ["-y", "@viliha/vui-ui", "mcp"] }
+    "vui": { "command": "npx", "args": ["-y", "@vui/vui-ui", "mcp"] }
   }
 }
 ```
@@ -159,7 +159,7 @@ The ten tools:
 | `get_component` | read one component's source, or its props and exported types when the file is large, plus the docs about it |
 | `list_pages` | list the reference app's pages, layouts, shell components and config (`.env.example`, `next.config.ts`) with their routes |
 | `get_page` | read one of those files in full, and copy the pattern |
-| `list_blocks` | see every marketing block in `@viliha/vui-web`, with what each one is for |
+| `list_blocks` | see every marketing block in `@vui/vui-web`, with what each one is for |
 | `get_block` | read one block's props, source and import specifier |
 | `compose_page` | turn a page description into an ordered block list, before writing any markup |
 | `search_docs` | search this guide, the README and every docs-site guide at once; no query returns the outline |
@@ -172,7 +172,7 @@ marketing page: `compose_page` for the block order, then `get_block` on each one
 This guide still applies. The server is how you look things up in it, not a
 replacement for it.
 
-The block tools read `@viliha/vui-web` wherever it resolves, so they answer with
+The block tools read `@vui/vui-web` wherever it resolves, so they answer with
 whatever version is installed. If it is not installed they say so, rather than
 returning an empty list that reads as "there are no blocks".
 
@@ -181,14 +181,14 @@ returning an empty list that reads as "there are no blocks".
 Transpile the package:
 
 ```ts
-transpilePackages: ["@viliha/vui-ui"]
+transpilePackages: ["@vui/vui-ui"]
 ```
 
 Import the theme once:
 
 ```css
 @import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";
 ```
 
 ## Vite
@@ -199,7 +199,7 @@ Import the theme once. No extra transpilation needed.
 
 # Upgrading
 
-When you bump `@viliha/vui-ui`, follow these steps. The package version and the
+When you bump `@vui/vui-ui`, follow these steps. The package version and the
 scaffolded files in the repo are two separate things.
 
 1. **Read the [CHANGELOG](./CHANGELOG.md) for the target version.** Note anything
@@ -207,17 +207,17 @@ scaffolded files in the repo are two separate things.
    project follows semver: patch/minor are backward-compatible, major may break.
 2. **Bump and install** with the project's package manager:
    ```bash
-   npm i @viliha/vui-ui@latest      # or: pnpm up, yarn up, bun update
+   npm i @vui/vui-ui@latest      # or: pnpm up, yarn up, bun update
    ```
    In a monorepo, install in the specific app (or with a workspace filter, e.g.
-   `pnpm --filter <app> up @viliha/vui-ui`), never at the repo root.
+   `pnpm --filter <app> up @vui/vui-ui`), never at the repo root.
 3. **No rebuild needed.** The package ships TypeScript source, so there's no
    build/dts step; just restart the dev server. If a new version adds a peer
    dependency, install it (the CHANGELOG and the "Module not found" error name it).
 4. **Scaffolded files are yours.** `init` copies the shell and demo pages into
    the repo once; upgrading the package does **not** touch them. To pull
    scaffolder improvements into an existing project, preview first with
-   `npx @viliha/vui-ui@latest init --dry-run`, then re-run with `--force` (commit
+   `npx @vui/vui-ui@latest init --dry-run`, then re-run with `--force` (commit
    or stash your work first so you can review the diff) or copy in just the files
    you want.
    - **Keep-alive tab cache (1.13.1) lives in a scaffolded file**, so an upgrade
@@ -250,14 +250,14 @@ The config work (1.50 to 1.52) is additive: `vuiPreset` is the shipped behaviour
 # Design Tokens
 
 > **Building for another framework?** The tokens below are plain CSS and ship on
-> their own as `@viliha/vui-theme` (no dependencies): `@import
-> "@viliha/vui-theme/theme.css"` with Tailwind v4, or link
-> `@viliha/vui-theme/vui.css` with no build step. Two opt-ins replace the
+> their own as `@vui/vui-theme` (no dependencies): `@import
+> "@vui/vui-theme/theme.css"` with Tailwind v4, or link
+> `@vui/vui-theme/vui.css` with no build step. Two opt-ins replace the
 > React-specific hooks: add `.vui-icon` to an icon for the bordered chip (Radix
 > icons get it automatically), and set `--vui-accordion-height` on accordion
 > content to drive the open/close animation from your own headless library.
 
-**Swapping a default is expected, and documented at `/docs/swapping`.** Icons: any set works, add `.vui-icon` (Radix icons get it automatically), and `--vui-icon-chip-border: none` removes the chip. Fonts: `--font-sans` plus `--font-scale`, or `applyTheme` from `@viliha/vui-core` when people choose their own. Charts: Recharts by default in React, TanStack Charts across frameworks, or any library that reads the chart tokens. Motion: `--vui-duration-fast/base/slow` and `--vui-ease*`, set a duration to `0ms` to switch animation off. What is **not** swappable: the components are Tailwind class strings, so another CSS framework is not a drop-in, and the tokens stay the only source of colour.
+**Swapping a default is expected, and documented at `/docs/swapping`.** Icons: any set works, add `.vui-icon` (Radix icons get it automatically), and `--vui-icon-chip-border: none` removes the chip. Fonts: `--font-sans` plus `--font-scale`, or `applyTheme` from `@vui/vui-core` when people choose their own. Charts: Recharts by default in React, TanStack Charts across frameworks, or any library that reads the chart tokens. Motion: `--vui-duration-fast/base/slow` and `--vui-ease*`, set a duration to `0ms` to switch animation off. What is **not** swappable: the components are Tailwind class strings, so another CSS framework is not a drop-in, and the tokens stay the only source of colour.
 
 VUI is entirely token-driven. Never hardcode colors, spacing, radius, typography, shadows, or borders; reach for the semantic design token instead. For example: `--button-primary`, `--button-primary-hover`, `--background`, `--foreground`, `--border`, `--ring`, `--chart-1`, `--sidebar-primary`.
 
@@ -340,7 +340,7 @@ Navigate with the three provided pieces: breadcrumbs, sidebar, and top navigatio
 
 One trail, **derived from the route, never hand-written per page.**
 
-- Render with the shared `Breadcrumbs` component (`@viliha/vui-ui/breadcrumbs`):
+- Render with the shared `Breadcrumbs` component (`@vui/vui-ui/breadcrumbs`):
   last crumb is the current page (bold, non-interactive), earlier crumbs are
   links, chevron separators.
 - Build the trail from the URL against a single nav config (copy `crumbsFor` +
@@ -440,7 +440,7 @@ Build forms with VUI and shadcn/ui together, reaching for shadcn Form, React Hoo
 
 # Notifications (toasts)
 
-For errors and transient notifications use `toast(...)` from `@viliha/vui-ui/toast` — `toast("Saved")`, `toast({ title, description, action: { label, onClick } })`, or `toast.error(...)` / `toast.success(...)`. It's a module store, so call it from anywhere (event handlers, `catch` blocks) — no provider. `<Toaster />` is mounted once in the scaffold's root layout; keep it there. Don't hand-roll a notification banner or add another toast library.
+For errors and transient notifications use `toast(...)` from `@vui/vui-ui/toast` — `toast("Saved")`, `toast({ title, description, action: { label, onClick } })`, or `toast.error(...)` / `toast.success(...)`. It's a module store, so call it from anywhere (event handlers, `catch` blocks) — no provider. `<Toaster />` is mounted once in the scaffold's root layout; keep it there. Don't hand-roll a notification banner or add another toast library.
 
 # Tables
 
@@ -460,16 +460,16 @@ The leading identity column header is "Name" by default; set `nameLabel` (e.g. `
 
 Sorting follows column visibility by default; use `sortable` to decouple them — `sortable: true` sorts a field with no column (e.g. a `hideInTable` name shown via `getPrimary`), `sortable: false` locks a visible column. Set the flag; don't rewire the Sort dropdown or headers.
 
-Form controls come from the field: `options` → `Select`, `input: "combobox"` → a searchable `Combobox` (`@viliha/vui-ui/combobox`, use for long lists), `input: "number" | "date"` → native inputs, `input: "checkbox"` → a boolean checkbox (Yes/No in read/cells). For anything the built-ins don't cover (radio group, slider, custom widget), set `renderInput({ value, onChange, field, invalid })` on the field — it drops any component into the Add/Edit form while the field keeps its label, required mark, and Save validation. A field can set **both** `render` (the read-only view) and `renderInput` (the edit control): the form shows `render` while viewing and swaps to `renderInput` while editing, so a custom cell like a logo preview or a status badge stays editable in Edit mode. Don't hand-build a `<form>`.
+Form controls come from the field: `options` → `Select`, `input: "combobox"` → a searchable `Combobox` (`@vui/vui-ui/combobox`, use for long lists), `input: "number" | "date"` → native inputs, `input: "checkbox"` → a boolean checkbox (Yes/No in read/cells). For anything the built-ins don't cover (radio group, slider, custom widget), set `renderInput({ value, onChange, field, invalid })` on the field — it drops any component into the Add/Edit form while the field keeps its label, required mark, and Save validation. A field can set **both** `render` (the read-only view) and `renderInput` (the edit control): the form shows `render` while viewing and swaps to `renderInput` while editing, so a custom cell like a logo preview or a status badge stays editable in Edit mode. Don't hand-build a `<form>`.
 
 Validate fields declaratively — don't hand-roll a form to get validation. On a `RecordField` set `min`/`max` (character length, or numeric value for `input:"number"`), `pattern` (+ `patternMessage`), `format: "email" | "phone"` (`"phone"` also auto-formats as you type), a custom `validate(value, draft)` returning a message, and `trim`. The Add/Edit form (slide-over and full-page) runs the rules on blur + before Save, **blocks Save** while anything is invalid, and shows the message inline under the field. `required` still shows the `*`. Reference: the Branches Add/Edit form.
 
 Group fields into form sections with `group`. It takes **any** title, and `RecordForm` renders one section per group in the order the groups first appear — so a profile form can read "Organization information", "Brand assets", "Contact & address", "Localization & units" instead of the default "General". Ungrouped fields fall under "General". Per-field `description` fills the About/info panel beside the form.
 
-**The page frame is a component, not markup to copy.** `Page` (`@viliha/vui-ui/page`) is the standard shape: a full-height column, a 48px action header holding the breadcrumb trail and that page's actions, then the one scrolling `p-4` content region.
+**The page frame is a component, not markup to copy.** `Page` (`@vui/vui-ui/page`) is the standard shape: a full-height column, a 48px action header holding the breadcrumb trail and that page's actions, then the one scrolling `p-4` content region.
 
 ```tsx
-import { Page } from "@viliha/vui-ui/page";
+import { Page } from "@vui/vui-ui/page";
 
 <Page breadcrumbs={<Breadcrumbs />} actions={<Button>New organization</Button>}>
   <section>…</section>
@@ -478,7 +478,7 @@ import { Page } from "@viliha/vui-ui/page";
 
 The frame is deliberately fixed: it is what makes a dozen screens feel like one app, so what varies is the slots, not the layout. `footer` pins a bar below the content and outside the scroll (a Save bar), `bare` drops the standard content wrapper when a page lays itself out (a board with its own horizontal scroll), `hideHeader` covers a page with nothing to put up there, and `className` / `headerClassName` / `contentClassName` open each region for the rest. Don't rebuild the frame by hand; if it can't express what a page needs, that's worth fixing in `Page`.
 
-**Profile pages** (a single record shown read-only, with an Edit button that opens the Cancel + Save footer): don't hand-wire the view/edit toggle — import the pre-designed `ProfileForm` (`@viliha/vui-ui/profile-form`). Feed it `data` + `fields` (+ `onSave`, `getPrimary`, `title`) and it owns the view↔edit modes, revert-on-cancel, the info panel and a loading skeleton. For a company profile, spread the ready-made preset: `import { organizationProfileFields, getOrgPrimary, type OrgProfile } from "@viliha/vui-ui/organization-profile"` (Org information / Brand assets / Contact & address / Localization, plus the `BrandAsset` logo/favicon control). The backoffice `/organization/profile` page is the reference consumer.
+**Profile pages** (a single record shown read-only, with an Edit button that opens the Cancel + Save footer): don't hand-wire the view/edit toggle — import the pre-designed `ProfileForm` (`@vui/vui-ui/profile-form`). Feed it `data` + `fields` (+ `onSave`, `getPrimary`, `title`) and it owns the view↔edit modes, revert-on-cancel, the info panel and a loading skeleton. For a company profile, spread the ready-made preset: `import { organizationProfileFields, getOrgPrimary, type OrgProfile } from "@vui/vui-ui/organization-profile"` (Org information / Brand assets / Contact & address / Localization, plus the `BrandAsset` logo/favicon control). The backoffice `/organization/profile` page is the reference consumer.
 
 **Image fields upload through you, not through the package.** `BrandAsset` (the Logo/Favicon control) never touches your storage. Give it `onPick(file)`, put the file wherever assets belong, and return the URL to display: `orgProfileFields({ logo: { onPick: async (file) => ({ url: await upload(file) }) } })`. Store whatever you like in the field, an id or a URL, since the control only renders the `value` you give it back. It handles the rest itself: `maxBytes` rejects an oversized file before you are called, the button shows "Uploading…" until your promise settles, a rejection prints inline, and `meta` (`name`, `format`, `width`, `height`, `sizeBytes`, `uploadedAt`) prints a details line under the preview. Use `accept` to narrow the file types; it allows every image type by default. There is one escape hatch, `inline`, which stores the picked image as a base64 data URI. It exists for demos with no backend. Don't point it at a real API: a 2 MB logo becomes a ~2.7 MB field value that no ordinary column will take. The prebuilt `organizationProfileFields` uses `inline` for exactly that reason, so reach for `orgProfileFields({ … })` as soon as you have somewhere to put the file.
 
@@ -507,18 +507,18 @@ Many-to-many (multi-select): set `multiple: true` on a choice field — its valu
 
 Dependent/cascading options: make `options` (form) or `filterable.options` (filter) a function — `(draft) => …` in the form, `(values) => …` in the filter — and one field's choices depend on another; RecordView clears the child when the parent change invalidates it. Keep `options` a static array for the bulk "Set {label}" action, and mark the field `editable`: bulk writes follow the same rule as the form, so a field the form won't edit isn't writable in bulk either. If a field has both a function `options` and `renderInput`, guard with `Array.isArray(field.options)` before mapping (renderInput doesn't get the draft to resolve it).
 
-**Fixed named levels as one control** (Region → Country → State → City): use `@viliha/vui-ui/cascading-combobox` (`CascadingCombobox`) instead of wiring N separate cascades by hand. Pass `levels` (ordered `{ key, label }`) and a `CascadeNode[]` tree (`{ value, label, children }`, any depth); it renders one searchable `Combobox` per level, narrows each level from the parent's `children`, clears everything downstream on change, and disables a level until its parent is set. `value` is a `string[]` path; `onValueChange(path, nodes)`. For API-backed levels, keep using per-field `loadOptions` + `dependsOn` on a datatable/form instead.
+**Fixed named levels as one control** (Region → Country → State → City): use `@vui/vui-ui/cascading-combobox` (`CascadingCombobox`) instead of wiring N separate cascades by hand. Pass `levels` (ordered `{ key, label }`) and a `CascadeNode[]` tree (`{ value, label, children }`, any depth); it renders one searchable `Combobox` per level, narrows each level from the parent's `children`, clears everything downstream on change, and disables a level until its parent is set. `value` is a `string[]` path; `onValueChange(path, nodes)`. For API-backed levels, keep using per-field `loadOptions` + `dependsOn` on a datatable/form instead.
 
 ## Filtering
 
 The Filter panel is a single keyword box by default (built in, matches all fields). For a labeled control per field, set `filterable` on the relevant fields and never hand-roll a filter form: `filterable: true` (text) or `filterable: { control, label, placeholder, options }` where `control` is `"text" | "number" | "date" | "select" | "combobox" | "checkbox"`. When any field is filterable the panel shows a control per field plus Search / Clear. It only **collects** values — handle `onFilter(values)` on `RecordView` to run a query or client filter (Search and Clear both call it). Types: `FilterControl`, `FieldFilter`, `FilterValues<T>`. Need a control kind that isn't listed? Extend the `FilterControl` union in the component.
 
-**Layout is fixed: two columns — label │ control, one row per field**, labels aligned across rows. This is the enforced theme default (do not restyle to stacked). It's built from `@viliha/vui-ui/filter-field` (`FilterGrid` + `FilterField`); `RecordView` renders both its `filterable` fields and any custom rows with it.
+**Layout is fixed: two columns — label │ control, one row per field**, labels aligned across rows. This is the enforced theme default (do not restyle to stacked). It's built from `@vui/vui-ui/filter-field` (`FilterGrid` + `FilterField`); `RecordView` renders both its `filterable` fields and any custom rows with it.
 
 **Custom filter rows.** To add your own labelled control to the panel, pass `filterExtras` to `RecordView` composed with `FilterField` — never hand-roll the row layout:
 
 ```tsx
-import { FilterField } from "@viliha/vui-ui/filter-field";
+import { FilterField } from "@vui/vui-ui/filter-field";
 
 <RecordView
   fields={fields}
@@ -564,7 +564,7 @@ One rule governs what happens next: **an action closes the form when it finishes
 
 To change the footer for every form in the app rather than one screen, set it on the provider (see below). A per-screen `formActions` still wins.
 
-**Multi-tenant apps: the organization switcher.** `OrgSwitcher` (`@viliha/vui-ui/org-switcher`) is the brand block at the top of the sidebar: product mark, product name, current organization underneath, opening the list of organizations the person belongs to with a Current badge, a plan line and a create row.
+**Multi-tenant apps: the organization switcher.** `OrgSwitcher` (`@vui/vui-ui/org-switcher`) is the brand block at the top of the sidebar: product mark, product name, current organization underneath, opening the list of organizations the person belongs to with a Current badge, a plan line and a create row.
 
 The design is fixed; the logic is yours. `OrgProvider` ships a working default (pick one, it becomes current and is remembered per browser). Replace it with `onSwitch` when a switch means more:
 
@@ -578,7 +578,7 @@ The design is fixed; the logic is yours. `OrgProvider` ships a working default (
 
 Labels, the plan line, and **where "Add organization" goes** all come from `VuiProvider`'s `orgSwitcher` section: `addHref` sets the destination once for the app (a wizard, your own create page, an external signup) instead of wiring a route into the sidebar. The row renders as a real link so middle-click works; pass `onNavigate={router.push}` to keep a plain click client-side. Creating shouldn't navigate at all? `onAdd` on the component takes over. Neither set means the row hides rather than rendering dead. Switching logic deliberately isn't config, because it's code. Give each `Organization` a `theme` and switching repaints the app in that tenant's brand, with a personal theme still winning over it.
 
-**Theming at runtime: `@viliha/vui-ui/theme-config`.** Colors, font and radius stay in `theme.css`, and this is how those tokens get a runtime source rather than a second styling system. `THEME_FIELDS` is the complete list of what can change (primary colour, text on primary, accent, destructive, background, text, borders, font, text size, radius, logo, favicon); each entry names the CSS variable it writes, so applying a theme is setting variables on an element and every component follows without knowing.
+**Theming at runtime: `@vui/vui-ui/theme-config`.** Colors, font and radius stay in `theme.css`, and this is how those tokens get a runtime source rather than a second styling system. `THEME_FIELDS` is the complete list of what can change (primary colour, text on primary, accent, destructive, background, text, borders, font, text size, radius, logo, favicon); each entry names the CSS variable it writes, so applying a theme is setting variables on an element and every component follows without knowing.
 
 Two layers, and they match how organizations actually work: the organization sets the brand, and each person overrides the parts they care about.
 
@@ -599,7 +599,7 @@ Three things worth knowing before you extend it. **`--brand` is the only colour 
 **One config, layered.** The preconfigured theme is itself a config: `vuiPreset` is a plain value the package applies by default, built from the same API you would use. So nothing is locked and nothing is all-or-nothing. Values resolve **per-instance prop → user preference → `<VuiProvider config>` → `vuiPreset` → package default**, and a layer overrides only the keys it mentions.
 
 ```tsx
-import { VuiProvider } from "@viliha/vui-ui/config";
+import { VuiProvider } from "@vui/vui-ui/config";
 
 <VuiProvider config={{ form: { actions: (d) => [...d, saveAndNew] } }}>
   {children}
@@ -710,7 +710,7 @@ query through `onQueryChange` once the write settles, so the page reloads itself
 For the form on its own URL, render the exported `RecordForm` on a route and use
 controlled data (`data` + `onDataChange`) with `onCreate` / `onView` / `onEdit`
 to navigate instead of opening the overlay. Breadcrumbs everywhere come from the
-shared `@viliha/vui-ui/breadcrumbs` component.
+shared `@vui/vui-ui/breadcrumbs` component.
 
 ---
 
@@ -718,11 +718,11 @@ shared `@viliha/vui-ui/breadcrumbs` component.
 
 Build every chart with `ChartContainer` plus Recharts. Never hardcode chart colors; map them through the chart tokens.
 
-**Two chart engines, pick by reach.** `ChartContainer` (Recharts) stays the default for a React app: it is what the demo uses and nothing about it is changing. `TanStackChart` (`@viliha/vui-ui/tanstack-chart`) wraps [TanStack Charts](https://tanstack.com/charts), whose definitions are framework-neutral, so the same chart renders in React, Vue, Svelte, Solid and Angular. Reach for it when a chart has to exist in more than one framework, or when you want a grammar-of-graphics API instead of a component per chart type. `@tanstack/charts` is an optional peer dependency, so it costs nothing unless you import that component.
+**Two chart engines, pick by reach.** `ChartContainer` (Recharts) stays the default for a React app: it is what the demo uses and nothing about it is changing. `TanStackChart` (`@vui/vui-ui/tanstack-chart`) wraps [TanStack Charts](https://tanstack.com/charts), whose definitions are framework-neutral, so the same chart renders in React, Vue, Svelte, Solid and Angular. Reach for it when a chart has to exist in more than one framework, or when you want a grammar-of-graphics API instead of a component per chart type. `@tanstack/charts` is an optional peer dependency, so it costs nothing unless you import that component.
 
 ```tsx
 import { defineChart, lineY } from "@tanstack/charts";
-import { TanStackChart } from "@viliha/vui-ui/tanstack-chart";
+import { TanStackChart } from "@vui/vui-ui/tanstack-chart";
 
 const chart = defineChart({ marks: [lineY(rows, { id: "revenue", x: "month", y: "revenue" })], … });
 
@@ -735,12 +735,12 @@ Colors are still tokens either way, and still not your problem: the `.vui-chart`
 
 # Multi-step wizards & form layout
 
-**Wizard scaffold** (`@viliha/vui-ui/wizard`): `Wizard` + `WizardSection`. It's a **layout scaffold, not a data-driven form** — you own the step index, field state, and all logic; the scaffold gives the standard structure (stepper + scrolling body + Back/Next footer, and bordered section cards). Never hand-roll the frame or a bare `Steps` + `<div>`s.
+**Wizard scaffold** (`@vui/vui-ui/wizard`): `Wizard` + `WizardSection`. It's a **layout scaffold, not a data-driven form** — you own the step index, field state, and all logic; the scaffold gives the standard structure (stepper + scrolling body + Back/Next footer, and bordered section cards). Never hand-roll the frame or a bare `Steps` + `<div>`s.
 
 - `Wizard` — pass `steps` (named steps → the stepper), `current` (your index), `onBack`/`onNext`, `nextDisabled`/`backDisabled`, and optional `nextLabel`/`backLabel` nodes (override the final step's button). Render the active step's body as children. `footer` replaces the whole footer; `hideFooter` drops it (e.g. a success screen).
 - `WizardSection` — a bordered `title`/`icon`/`description` card. **A step can hold one or many** — stack several `WizardSection`s per step as the business logic needs.
 
-**Two-column field layout** (`@viliha/vui-ui/field-grid`): `FieldGrid` + `Field` — the **form design standard**: two columns, `Label *` │ control on one row, labels left-aligned and sized to `max-content` (no dead space), aligned across rows. Wrap a section's fields in `<FieldGrid>` and give each `<Field label required hint htmlFor>` its own control. This is the same two-column standard as the filter panel (`filter-field`) and auth screens — use it for every wizard/section form; don't rebuild a label+control row or use a wide fixed label column.
+**Two-column field layout** (`@vui/vui-ui/field-grid`): `FieldGrid` + `Field` — the **form design standard**: two columns, `Label *` │ control on one row, labels left-aligned and sized to `max-content` (no dead space), aligned across rows. Wrap a section's fields in `<FieldGrid>` and give each `<Field label required hint htmlFor>` its own control. This is the same two-column standard as the filter panel (`filter-field`) and auth screens — use it for every wizard/section form; don't rebuild a label+control row or use a wide fixed label column.
 
 ---
 
@@ -750,13 +750,13 @@ The package ships an **auth contract**, not an auth engine. Bundling a provider
 (NextAuth, Clerk, Better Auth, Supabase, …) would force its SDK and backend on
 every consumer, so instead:
 
-- `@viliha/vui-ui/auth-context` — `AuthProvider`, `useAuth()`, and the
+- `@vui/vui-ui/auth-context` — `AuthProvider`, `useAuth()`, and the
   `AuthContract` / `AuthUser` / `Credentials` / `SignUpInput` types. Screens
   depend on this; you supply an **adapter** that implements it for your
   provider. Swapping providers is one adapter file, no screen changes.
 
 ```tsx
-import { AuthProvider, useAuth } from "@viliha/vui-ui/auth-context";
+import { AuthProvider, useAuth } from "@vui/vui-ui/auth-context";
 <AuthProvider value={adapter}>{children}</AuthProvider>   // mount once
 const { user, status, signIn, signOut } = useAuth();        // read anywhere
 ```
@@ -782,57 +782,57 @@ adapt them; they are built from published primitives (`Button`, `Input`,
 tokens). The reference app also ships a **Better Auth** adapter
 (`app/_components/auth-provider.tsx`) with a mock fallback for the static demo.
 
-Do not `import … from "@viliha/vui-ui/auth"`; no such entry point exists — the
-contract is `@viliha/vui-ui/auth-context`. Wrap the forms in semantic HTML.
+Do not `import … from "@vui/vui-ui/auth"`; no such entry point exists — the
+contract is `@vui/vui-ui/auth-context`. Wrap the forms in semantic HTML.
 
 ---
 
 # shadcn/ui components
 
 The shadcn/ui component set is being brought **into this package** (Radix-based,
-restyled to VUI tokens) so you import them from `@viliha/vui-ui/<name>` instead of
+restyled to VUI tokens) so you import them from `@vui/vui-ui/<name>` instead of
 running `shadcn add` and maintaining a local `components/ui/`. Shipped so far:
 
 Batch 1:
 
-- `@viliha/vui-ui/accordion` — `Accordion`, `AccordionItem`, `AccordionTrigger`, `AccordionContent`
-- `@viliha/vui-ui/label` — `Label`
-- `@viliha/vui-ui/separator` — `Separator`
-- `@viliha/vui-ui/skeleton` — `Skeleton`
-- `@viliha/vui-ui/switch` — `Switch` (`size?: "sm" | "default"`)
-- `@viliha/vui-ui/tabs` — `Tabs`, `TabsList`, `TabsTrigger`, `TabsContent`
+- `@vui/vui-ui/accordion` — `Accordion`, `AccordionItem`, `AccordionTrigger`, `AccordionContent`
+- `@vui/vui-ui/label` — `Label`
+- `@vui/vui-ui/separator` — `Separator`
+- `@vui/vui-ui/skeleton` — `Skeleton`
+- `@vui/vui-ui/switch` — `Switch` (`size?: "sm" | "default"`)
+- `@vui/vui-ui/tabs` — `Tabs`, `TabsList`, `TabsTrigger`, `TabsContent`
 
 Batch 2 (overlays):
 
-- `@viliha/vui-ui/alert` — `Alert`, `AlertTitle`, `AlertDescription` (`variant?: "default" | "destructive"`)
-- `@viliha/vui-ui/alert-dialog` — `AlertDialog`, `AlertDialogTrigger`, `AlertDialogContent`, `AlertDialogHeader`, `AlertDialogFooter`, `AlertDialogTitle`, `AlertDialogDescription`, `AlertDialogAction`, `AlertDialogCancel` (Action/Cancel take VUI Button `variant`/`size`)
-- `@viliha/vui-ui/collapsible` — `Collapsible`, `CollapsibleTrigger`, `CollapsibleContent`
-- `@viliha/vui-ui/hover-card` — `HoverCard`, `HoverCardTrigger`, `HoverCardContent`
-- `@viliha/vui-ui/popover` — `Popover`, `PopoverTrigger`, `PopoverContent`, `PopoverAnchor`
-- `@viliha/vui-ui/sheet` — `Sheet`, `SheetTrigger`, `SheetContent`, `SheetHeader`, `SheetFooter`, `SheetTitle`, `SheetDescription`, `SheetClose` (`side?: "top" | "right" | "bottom" | "left"`)
+- `@vui/vui-ui/alert` — `Alert`, `AlertTitle`, `AlertDescription` (`variant?: "default" | "destructive"`)
+- `@vui/vui-ui/alert-dialog` — `AlertDialog`, `AlertDialogTrigger`, `AlertDialogContent`, `AlertDialogHeader`, `AlertDialogFooter`, `AlertDialogTitle`, `AlertDialogDescription`, `AlertDialogAction`, `AlertDialogCancel` (Action/Cancel take VUI Button `variant`/`size`)
+- `@vui/vui-ui/collapsible` — `Collapsible`, `CollapsibleTrigger`, `CollapsibleContent`
+- `@vui/vui-ui/hover-card` — `HoverCard`, `HoverCardTrigger`, `HoverCardContent`
+- `@vui/vui-ui/popover` — `Popover`, `PopoverTrigger`, `PopoverContent`, `PopoverAnchor`
+- `@vui/vui-ui/sheet` — `Sheet`, `SheetTrigger`, `SheetContent`, `SheetHeader`, `SheetFooter`, `SheetTitle`, `SheetDescription`, `SheetClose` (`side?: "top" | "right" | "bottom" | "left"`)
 
 Batch 3 (form controls):
 
-- `@viliha/vui-ui/textarea` — `Textarea` (auto-growing, `aria-invalid` styling)
-- `@viliha/vui-ui/radio-group` — `RadioGroup`, `RadioGroupItem`
-- `@viliha/vui-ui/slider` — `Slider` (array value → multiple thumbs / range)
-- `@viliha/vui-ui/toggle` — `Toggle`, `toggleVariants` (`variant?: "default" | "outline"`, `size?: "default" | "sm" | "lg"`)
-- `@viliha/vui-ui/toggle-group` — `ToggleGroup`, `ToggleGroupItem` (`type="single" | "multiple"`; group variant/size cascade to items)
-- `@viliha/vui-ui/input-otp` — `InputOTP`, `InputOTPGroup`, `InputOTPSlot`, `InputOTPSeparator`
+- `@vui/vui-ui/textarea` — `Textarea` (auto-growing, `aria-invalid` styling)
+- `@vui/vui-ui/radio-group` — `RadioGroup`, `RadioGroupItem`
+- `@vui/vui-ui/slider` — `Slider` (array value → multiple thumbs / range)
+- `@vui/vui-ui/toggle` — `Toggle`, `toggleVariants` (`variant?: "default" | "outline"`, `size?: "default" | "sm" | "lg"`)
+- `@vui/vui-ui/toggle-group` — `ToggleGroup`, `ToggleGroupItem` (`type="single" | "multiple"`; group variant/size cascade to items)
+- `@vui/vui-ui/input-otp` — `InputOTP`, `InputOTPGroup`, `InputOTPSlot`, `InputOTPSeparator`
 
 Batch 4 (overlays / data / misc):
 
-- `@viliha/vui-ui/aspect-ratio` — `AspectRatio`
-- `@viliha/vui-ui/breadcrumb` — `Breadcrumb`, `BreadcrumbList`, `BreadcrumbItem`, `BreadcrumbLink`, `BreadcrumbPage`, `BreadcrumbSeparator`, `BreadcrumbEllipsis` (hand-composed; for route-derived app trails use the higher-level `Breadcrumbs`)
-- `@viliha/vui-ui/calendar` — `Calendar` (react-day-picker; `mode="single" | "multiple" | "range"`)
-- `@viliha/vui-ui/command` — `Command`, `CommandInput`, `CommandList`, `CommandEmpty`, `CommandGroup`, `CommandItem`, `CommandSeparator`, `CommandShortcut` (cmdk; **no `CommandDialog`** — use VUI's `command-palette` for a modal ⌘K menu)
-- `@viliha/vui-ui/form` — `Form`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormDescription`, `FormMessage`, `useFormField` (React Hook Form; validate with RHF `rules` or a zod resolver, both consumer-side)
-- `@viliha/vui-ui/progress` — `Progress`
-- `@viliha/vui-ui/scroll-area` — `ScrollArea`, `ScrollBar`
-- `@viliha/vui-ui/sonner` — `Toaster` (follows the `.dark` class; no next-themes). `toast()` comes from `sonner`.
+- `@vui/vui-ui/aspect-ratio` — `AspectRatio`
+- `@vui/vui-ui/breadcrumb` — `Breadcrumb`, `BreadcrumbList`, `BreadcrumbItem`, `BreadcrumbLink`, `BreadcrumbPage`, `BreadcrumbSeparator`, `BreadcrumbEllipsis` (hand-composed; for route-derived app trails use the higher-level `Breadcrumbs`)
+- `@vui/vui-ui/calendar` — `Calendar` (react-day-picker; `mode="single" | "multiple" | "range"`)
+- `@vui/vui-ui/command` — `Command`, `CommandInput`, `CommandList`, `CommandEmpty`, `CommandGroup`, `CommandItem`, `CommandSeparator`, `CommandShortcut` (cmdk; **no `CommandDialog`** — use VUI's `command-palette` for a modal ⌘K menu)
+- `@vui/vui-ui/form` — `Form`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormDescription`, `FormMessage`, `useFormField` (React Hook Form; validate with RHF `rules` or a zod resolver, both consumer-side)
+- `@vui/vui-ui/progress` — `Progress`
+- `@vui/vui-ui/scroll-area` — `ScrollArea`, `ScrollBar`
+- `@vui/vui-ui/sonner` — `Toaster` (follows the `.dark` class; no next-themes). `toast()` comes from `sonner`.
 
 These use VUI's tokens automatically (no shadcn token duplication needed). More
-components land in later batches; prefer the `@viliha/vui-ui/*` import over a local
+components land in later batches; prefer the `@vui/vui-ui/*` import over a local
 shadcn copy. For anything not yet ported, you can still `shadcn add` it locally.
 
 ---

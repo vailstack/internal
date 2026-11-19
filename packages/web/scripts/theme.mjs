@@ -12,9 +12,9 @@ writeFileSync(
   join(dist, "theme.css"),
   `/* VUI website blocks. Import after Tailwind:
  *   @import "tailwindcss";
- *   @import "@viliha/vui-web/theme.css";
+ *   @import "@vui/vui-web/theme.css";
  */
-@import "@viliha/vui-theme/theme.css";
+@import "@vui/vui-theme/theme.css";
 
 /* Scan the compiled blocks so their utilities are emitted. */
 @source "./";

@@ -1,4 +1,4 @@
-import { CardGrid, Cta, Hero } from "@viliha/vui-web";
+import { CardGrid, Cta, Hero } from "@vui/vui-web";
 
 import { INTEGRATIONS } from "@/lib/content";
 import { INTEGRATION_PAGES } from "@/lib/catalog";

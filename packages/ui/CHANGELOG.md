@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@viliha/vui-ui` are documented here. The format follows
+All notable changes to `@vui/vui-ui` are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/): **patch** for fixes, **minor** for
 backward-compatible features, **major** for breaking changes.
@@ -63,7 +63,7 @@ once, and set only the keys you care about:
 
 ```tsx
 // app/(app)/layout.tsx
-import { VuiProvider } from "@viliha/vui-ui/config";
+import { VuiProvider } from "@vui/vui-ui/config";
 
 <VuiProvider config={{ behaviour: { rowClick: "edit" } }}>{children}</VuiProvider>;
 ```
@@ -131,16 +131,16 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Changed
 
-- **The docs and demo moved to `internal.viliha.com`.** Every link in the
+- **The docs and demo moved to `internal.vailstack.com`.** Every link in the
   README, the agent guide and the package metadata points there now. The old
-  `vui.viliha.com` host is gone, so a link that still used it would 404.
+  `vui.vailstack.com` host is gone, so a link that still used it would 404.
 
 ## 1.66.0 — 2026-08-11
 
 ### Added
 
 - **Three MCP tools for building a website.** `list_blocks`, `get_block` and
-  `compose_page` read `@viliha/vui-web` wherever it resolves, a sibling package
+  `compose_page` read `@vui/vui-web` wherever it resolves, a sibling package
   in a monorepo or `node_modules` in a consumer's project, and describe it from
   the file list the way the component tools always have. A new block appears in
   the answers because the file exists.
@@ -167,7 +167,7 @@ No component was renamed, no export was removed, and no prop was made required.
   JavaScript and no observer; browsers without it simply show the content, which
   is the correct fallback.
 
-- **`@viliha/vui-web` 0.2.0** ships the blocks these tools describe: `Marquee`,
+- **`@vui/vui-web` 0.2.0** ships the blocks these tools describe: `Marquee`,
   `CodeBlock`, `RatingBlock`, `PricingCalculator`, `UsagePricingTable`, and a
   `gradient` hero with breadcrumb and search slots. See its own changelog.
 
@@ -256,7 +256,7 @@ No component was renamed, no export was removed, and no prop was made required.
   Vue build.
 
   ```tsx
-  import { TanStackChart } from "@viliha/vui-ui/tanstack-chart";
+  import { TanStackChart } from "@vui/vui-ui/tanstack-chart";
 
   <TanStackChart definition={chart} ariaLabel="Monthly revenue" height={280} />
   ```
@@ -279,7 +279,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **The theme now ships on its own, for any framework: `@viliha/vui-theme`.** The
+- **The theme now ships on its own, for any framework: `@vui/vui-theme`.** The
   stylesheet was always framework-free, it was just locked inside a React package
   with thirteen runtime dependencies. It is now published separately with none, in
   two forms: `theme.css` for anyone running Tailwind v4, and a compiled
@@ -302,7 +302,7 @@ No component was renamed, no export was removed, and no prop was made required.
 ### Changed
 
 - **The README says where the paid tier lives.** One line, pointing at
-  [internal.viliha.com/pricing](https://internal.viliha.com/pricing/). The package itself
+  [internal.vailstack.com/pricing](https://internal.vailstack.com/pricing/). The package itself
   does not change: it is MIT, it stays MIT, and every version already published is
   MIT permanently. Pro is separate, optional and additive, so nothing that is free
   today can move behind it.
@@ -330,9 +330,9 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **An MCP server ships with the package: `npx @viliha/vui-ui mcp`.** An agent
+- **An MCP server ships with the package: `npx @vui/vui-ui mcp`.** An agent
   that wants to know what VUI has can now ask it. Register the server once
-  (`claude mcp add vui -- npx -y @viliha/vui-ui mcp`, or the equivalent
+  (`claude mcp add vui -- npx -y @vui/vui-ui mcp`, or the equivalent
   `mcpServers` entry in Cursor or any other MCP client) and it gets seven tools:
 
   - `list_guides` and `get_guide` serve the whole docs site as markdown, all 49
@@ -636,7 +636,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/org-switcher` — the organization switcher.** The brand block
+- **`@vui/vui-ui/org-switcher` — the organization switcher.** The brand block
   at the top of the sidebar becomes a tenant switcher: product mark, product
   name, and the current organization underneath, opening a list of the
   organizations the person belongs to with a Current badge, a plan line with a
@@ -732,7 +732,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **Theme configuration: `@viliha/vui-ui/theme-config` + `theme-provider`.** The
+- **Theme configuration: `@vui/vui-ui/theme-config` + `theme-provider`.** The
   look of the app is now data, so an organization can set its brand and each
   person in it can override the parts they care about. `THEME_FIELDS` is the
   complete list of what can change (primary colour, text on primary, accent,
@@ -783,7 +783,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/page` — `Page`, the standard page frame.** The shape every
+- **`@vui/vui-ui/page` — `Page`, the standard page frame.** The shape every
   screen copies by hand (full-height column, 48px action header with the
   breadcrumb trail, then the single scrolling `p-4` content region) is now a
   component with slots:
@@ -882,7 +882,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **A config spine: `@viliha/vui-ui/config`.** The preconfigured theme is now
+- **A config spine: `@vui/vui-ui/config`.** The preconfigured theme is now
   itself a config. `vuiPreset` is a plain value the package applies by default,
   built from the same API a host uses, so there is no "configurable" variant of
   a component sitting beside an opinionated one. Values resolve
@@ -1056,7 +1056,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/multi-combobox` — `MultiCombobox`.** A searchable multi-select
+- **`@vui/vui-ui/multi-combobox` — `MultiCombobox`.** A searchable multi-select
   (the multi companion to `Combobox`): holds a `string[]`, renders the selection
   as removable chips, and picking an option toggles it while the popover stays
   open. Static `options` or an async `source` (fetch on open, debounced search,
@@ -1142,21 +1142,21 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/profile-form` — `ProfileForm`.** A pre-designed profile page
+- **`@vui/vui-ui/profile-form` — `ProfileForm`.** A pre-designed profile page
   you import, like `Steps`. Feed it `fields` (grouped into sections via each
   field's `group`) and `data`, and it renders the whole thing: a read-only view,
   an **Edit** button that opens the standard **Cancel + Save** footer, revert on
   Cancel, the About info panel, and a loading skeleton. No page boilerplate.
 
   ```tsx
-  import { ProfileForm } from "@viliha/vui-ui/profile-form";
-  import { organizationProfileFields, getOrgPrimary } from "@viliha/vui-ui/organization-profile";
+  import { ProfileForm } from "@vui/vui-ui/profile-form";
+  import { organizationProfileFields, getOrgPrimary } from "@vui/vui-ui/organization-profile";
 
   <ProfileForm data={org} fields={organizationProfileFields}
     getPrimary={getOrgPrimary} onSave={save} title="Organization" />
   ```
 
-- **`@viliha/vui-ui/organization-profile` — organization preset.** Ready-made
+- **`@vui/vui-ui/organization-profile` — organization preset.** Ready-made
   field definitions for a company profile: `organizationProfileFields` (Org
   information, Brand assets, Contact & address, Localization), the `OrgProfile`
   type, `getOrgPrimary`, `ORGANIZATION_PROFILE_DESCRIPTION`, and the reusable
@@ -1233,7 +1233,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/password-input` — `PasswordInput`.** A password field that
+- **`@vui/vui-ui/password-input` — `PasswordInput`.** A password field that
   masks with **`*`** (not the browser's bullet dots) and adds an **eye toggle**
   to reveal the value. Drop-in for `Input` inside a `Field`: spread `bind(...)`
   and pass `error` for inline validation, and it owns its right edge so the
@@ -1261,7 +1261,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/use-form-fields` — inline field validation as a feature.**
+- **`@vui/vui-ui/use-form-fields` — inline field validation as a feature.**
   `useFormFields(rules)` validates text `Input` / `Textarea` fields on **blur
   and on submit**, surfacing every error through a single channel: the field's
   own inline error. Spread `bind(key)` onto the control, read `errors[key]`,
@@ -1272,7 +1272,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Changed
 
-- **`Field` (`@viliha/vui-ui/field-grid`) now renders the inline validation
+- **`Field` (`@vui/vui-ui/field-grid`) now renders the inline validation
   error itself** — red border via the control's `aria-invalid`, an
   alert-triangle tooltip, no layout shift, auto-clear on edit, re-check on
   blur/submit. Works for `Input` and `Textarea` (`multiline` puts the icon at
@@ -1317,12 +1317,12 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/wizard` — a multi-step wizard layout scaffold.** `Wizard`
+- **`@vui/vui-ui/wizard` — a multi-step wizard layout scaffold.** `Wizard`
   renders the stepper (from `steps` + `current`), a scrolling body for the
   active step, and a Back/Next footer; `WizardSection` is a bordered
   title/icon section. You own the step index, field state, and all logic and
   drop any components inside — it's layout only, not a data-driven form.
-- **`@viliha/vui-ui/field-grid` — `FieldGrid` + `Field`.** The form design
+- **`@vui/vui-ui/field-grid` — `FieldGrid` + `Field`.** The form design
   standard: **two columns, `Label *` │ control on one row**, labels
   left-aligned and sized to `max-content` (no dead space) and aligned across
   rows. Supports `required` and `hint`. Used by the wizard sections and any
@@ -1347,7 +1347,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/cascading-combobox` — `CascadingCombobox`.** A cascading
+- **`@vui/vui-ui/cascading-combobox` — `CascadingCombobox`.** A cascading
   picker for **fixed, named levels** (Region → Country → State → City): one
   searchable `Combobox` per level, where picking a level narrows the next from
   the selected node's `children` and clears everything downstream. A level is
@@ -1360,7 +1360,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/filter-field` — composable filter layout primitives.**
+- **`@vui/vui-ui/filter-field` — composable filter layout primitives.**
   `FilterGrid` + `FilterField` render the theme's enforced filter layout — **two
   columns: label │ control, one row per field, labels aligned across rows**.
   Anyone can add a labelled control to a filter panel with them, and the design
@@ -1380,7 +1380,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 ### Added
 
-- **`@viliha/vui-ui/auth-context` — a provider-agnostic auth contract.**
+- **`@vui/vui-ui/auth-context` — a provider-agnostic auth contract.**
   Exports `AuthProvider`, `useAuth()`, and the `AuthContract` / `AuthUser` /
   `Credentials` / `SignUpInput` types. Auth screens now depend on this small
   interface rather than any provider SDK, so wiring a real backend
@@ -1453,7 +1453,7 @@ No component was renamed, no export was removed, and no prop was made required.
 
 - **shadcn/ui components, batch 1 — now in the package.** Ported (Radix-based,
   restyled to VUI tokens, zero token duplication) so consumers import from
-  `@viliha/vui-ui/<name>` instead of running `shadcn add`:
+  `@vui/vui-ui/<name>` instead of running `shadcn add`:
   `accordion`, `label`, `separator`, `skeleton`, `switch`, `tabs`.
   New runtime deps: `radix-ui`, `class-variance-authority`, `lucide-react`.
   `theme.css` now ships the `accordion-down`/`accordion-up` keyframes so the
@@ -1667,7 +1667,7 @@ demo app on publish._
 
 ### Added
 
-- **`Toaster` + `toast()`** (`@viliha/vui-ui/toast`) — global notifications for
+- **`Toaster` + `toast()`** (`@vui/vui-ui/toast`) — global notifications for
   errors and events, matching the shadcn toast design (title, description, an
   action button like "Undo", close, and `success`/`error`/`warning` variants).
   It's a module store, so `toast(...)` works from anywhere — event handlers,
@@ -1740,7 +1740,7 @@ demo app on publish._
   {singular}` trail — add parents (e.g. an "Access" section), rename the last
   crumb ("New Role"), or reshape it per route. Each crumb is `{ label, onClick? }`;
   the last is the current page. The `Crumb` type is re-exported from
-  `@viliha/vui-ui/record-view` (also in `@viliha/vui-ui/breadcrumbs`).
+  `@vui/vui-ui/record-view` (also in `@vui/vui-ui/breadcrumbs`).
 
 ### Changed
 
@@ -1762,7 +1762,7 @@ demo app on publish._
   The limit defaults to `NEXT_PUBLIC_MAX_CELL_CHARS` (or 25) and is overridable
   per view (`maxCellChars` prop) or per column (a field's `maxChars`; `0` = never
   truncate). Applies to the identity/Name cell and every value column.
-- **`Tooltip`** (`@viliha/vui-ui/tooltip`) — a lightweight, dependency-free themed
+- **`Tooltip`** (`@vui/vui-ui/tooltip`) — a lightweight, dependency-free themed
   tooltip (portal + fixed positioning, hover/focus, auto-flip). Used by the cell
   truncation above; reusable anywhere.
 
@@ -1920,7 +1920,7 @@ demo app on publish._
 
 ### Added
 
-- **`Combobox`** (`@viliha/vui-ui/combobox`) — a searchable single-select. Same
+- **`Combobox`** (`@vui/vui-ui/combobox`) — a searchable single-select. Same
   API as `Select` (drop-in) but the popover leads with a type-to-filter input, so
   it scales to long option lists (an FK / country picker). Keyboard: type to
   filter, ↑/↓ to move, Enter to pick, Esc to close.
@@ -2138,7 +2138,7 @@ demo app on publish._
 
 ### Added
 
-- **`npx @viliha/vui-ui init`** — a scaffolder that copies the app shell (layout,
+- **`npx @vui/vui-ui init`** — a scaffolder that copies the app shell (layout,
   sidebar, open tabs, command palette, nav config, logo) and demo pages into your
   repo. Ships a `bin` and a bundled `template/` regenerated from the reference app
   on publish.

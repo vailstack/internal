@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Cta, Hero } from "@viliha/vui-web";
+import { Cta, Hero } from "@vui/vui-web";
 
 export default function NotFound() {
   return (

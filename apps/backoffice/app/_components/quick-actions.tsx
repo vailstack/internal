@@ -7,8 +7,8 @@ import { LightningBoltIcon } from "@radix-ui/react-icons";
 import {
   CommandPalette,
   type CommandAction,
-} from "@viliha/vui-ui/command-palette";
-import { Shortcut } from "@viliha/vui-ui/kbd";
+} from "@vui/vui-ui/command-palette";
+import { Shortcut } from "@vui/vui-ui/kbd";
 import { cn } from "@/lib/utils";
 import { isGroup, NAV, type IconType } from "./nav-config";
 import { useChrome } from "./chrome-config";
@@ -16,7 +16,7 @@ import { useChrome } from "./chrome-config";
 /**
  * Quick actions — a ⌘K command palette launched from the sidebar. Wires the
  * app-specific bits (NAV destinations + Next router) into the generic
- * `CommandPalette` from @viliha/vui-ui, and exposes a launcher + global
+ * `CommandPalette` from @vui/vui-ui, and exposes a launcher + global
  * shortcuts. New pages added to NAV appear here automatically.
  */
 

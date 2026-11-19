@@ -11,12 +11,12 @@ import {
   LockClosedIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { Select } from "@viliha/vui-ui/select";
-import { Steps, type Step } from "@viliha/vui-ui/steps";
-import { Page } from "@viliha/vui-ui/page";
-import { Breadcrumbs } from "@viliha/vui-ui/breadcrumbs";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { Select } from "@vui/vui-ui/select";
+import { Steps, type Step } from "@vui/vui-ui/steps";
+import { Page } from "@vui/vui-ui/page";
+import { Breadcrumbs } from "@vui/vui-ui/breadcrumbs";
 import { Field } from "@/app/_components/auth";
 import { crumbsFor } from "@/app/_components/route-meta";
 

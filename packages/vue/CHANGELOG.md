@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@viliha/vui-vue` are documented here. The format follows
+All notable changes to `@vui/vui-vue` are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/).
 
@@ -57,7 +57,7 @@ All notable changes to `@viliha/vui-vue` are documented here. The format follows
 ### Changed
 
 - **More class strings moved into the shared source.** Switch, checkbox, tabs
-  and accordion now read their classes from `@viliha/vui-core`, and the React
+  and accordion now read their classes from `@vui/vui-core`, and the React
   components read the same ones. Nothing is copied between the two packages.
 
 ## 0.1.0 — 2026-08-10
@@ -70,7 +70,7 @@ All notable changes to `@viliha/vui-vue` are documented here. The format follows
   a caller's `class` so `h-20` beats the variant's `h-9`.
 
 - **The class strings are shared, not copied.** They moved into
-  `@viliha/vui-core`, and the React components now import them from there too. A
+  `@vui/vui-core`, and the React components now import them from there too. A
   test renders the Vue button through Vue's SSR renderer and compares it against
   the same source the React component uses, so the two cannot drift into looking
   almost alike.
@@ -81,8 +81,8 @@ All notable changes to `@viliha/vui-vue` are documented here. The format follows
   renders here unchanged, wearing the same palette. `@tanstack/charts` is an
   optional peer dependency.
 
-- **One import for the styling**: `@viliha/vui-vue/theme.css` pulls in
-  `@viliha/vui-theme` and adds the `@source` rule Tailwind needs to emit the
+- **One import for the styling**: `@vui/vui-vue/theme.css` pulls in
+  `@vui/vui-theme` and adds the `@source` rule Tailwind needs to emit the
   utilities inside the compiled components.
 
 Version 0.x on purpose. Dialogs, menus, selects, toasts, the command palette and

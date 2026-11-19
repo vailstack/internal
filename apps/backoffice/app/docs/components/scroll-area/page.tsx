@@ -1,7 +1,7 @@
 "use client";
 
-import { ScrollArea } from "@viliha/vui-ui/scroll-area";
-import { Separator } from "@viliha/vui-ui/separator";
+import { ScrollArea } from "@vui/vui-ui/scroll-area";
+import { Separator } from "@vui/vui-ui/separator";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,7 +11,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { ScrollArea } from "@viliha/vui-ui/scroll-area";
+const usage = `import { ScrollArea } from "@vui/vui-ui/scroll-area";
 
 export function Example() {
   return (

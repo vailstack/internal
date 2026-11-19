@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 import { Section, type SectionTone } from "./section";
 import { SectionHeader } from "./section-header";

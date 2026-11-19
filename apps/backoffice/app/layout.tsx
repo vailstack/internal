@@ -10,7 +10,7 @@ import "./globals.css";
 import { themeInitScript } from "./_components/theme-script";
 import { BrandProvider } from "./_components/brand";
 import { AppAuthProvider } from "./_components/auth-provider";
-import { Toaster } from "@viliha/vui-ui/toast";
+import { Toaster } from "@vui/vui-ui/toast";
 import { SITE } from "@/lib/seo";
 
 const inter = Inter({
@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-// The families a user can switch to (FONT_FAMILIES in @viliha/vui-ui/theme-config).
+// The families a user can switch to (FONT_FAMILIES in @vui/vui-ui/theme-config).
 // Every option in that picker must be loaded here, or picking it silently falls
 // back to the generic stack. Self-hosted by next/font, so switching costs no
 // request and can't shift the layout.

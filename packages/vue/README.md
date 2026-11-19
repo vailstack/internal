@@ -1,27 +1,27 @@
-# @viliha/vui-vue
+# @vui/vui-vue
 
-[VUI](https://internal.viliha.com) components for Vue 3 and Nuxt, built on
+[VUI](https://internal.vailstack.com) components for Vue 3 and Nuxt, built on
 [Reka UI](https://reka-ui.com).
 
 They look identical to the React components because they are not a lookalike:
-both render the same class strings, imported from `@viliha/vui-core`. Change a
+both render the same class strings, imported from `@vui/vui-core`. Change a
 button's hover state once and both follow.
 
 > **Status: early.** This is v0. The mechanical components are here; dialogs,
 > menus, selects and the datatable are not yet. See
-> [what ships where](https://internal.viliha.com/docs/frameworks/).
+> [what ships where](https://internal.vailstack.com/docs/frameworks/).
 
 ## Install
 
 ```bash
-npm install @viliha/vui-vue
+npm install @vui/vui-vue
 npm install -D tailwindcss @tailwindcss/vite
 ```
 
 ```css
 /* src/style.css */
 @import "tailwindcss";
-@import "@viliha/vui-vue/theme.css";
+@import "@vui/vui-vue/theme.css";
 ```
 
 That one import brings in the design tokens, dark mode, and a `@source` rule so
@@ -31,7 +31,7 @@ Tailwind emits the utilities these components use.
 
 ```vue
 <script setup lang="ts">
-import { Button, Card, CardHeader, CardTitle, CardContent, Input, Label } from "@viliha/vui-vue";
+import { Button, Card, CardHeader, CardTitle, CardContent, Input, Label } from "@vui/vui-vue";
 </script>
 
 <template>
@@ -51,7 +51,7 @@ import { Button, Card, CardHeader, CardTitle, CardContent, Input, Label } from "
 Import one component and a bundler drops the rest:
 
 ```ts
-import Button from "@viliha/vui-vue/Button";
+import Button from "@vui/vui-vue/Button";
 ```
 
 ## What's here
@@ -78,7 +78,7 @@ takes `class` and merges it, so a caller's `h-20` beats the variant's `h-9`.
 
 Sheets, comboboxes, toasts, the command palette, and the datatable. The calendar and the auth screens are
 React-only for now. The
-[frameworks page](https://internal.viliha.com/docs/frameworks/) is kept honest about
+[frameworks page](https://internal.vailstack.com/docs/frameworks/) is kept honest about
 what exists.
 
 Need one of them? [Say which](https://github.com/myviliha/vui-starter/issues).

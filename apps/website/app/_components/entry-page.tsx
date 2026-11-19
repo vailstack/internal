@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { CardGrid, Cta, Hero, Prose, Section, SectionHeader } from "@viliha/vui-web";
+import { CardGrid, Cta, Hero, Prose, Section, SectionHeader } from "@vui/vui-web";
 
 import { LinkButton } from "@/app/_components/link-button";
 import type { CollectionName, Entry } from "@/lib/catalog";

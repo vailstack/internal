@@ -9,7 +9,7 @@
 import Link from "next/link";
 import { BellIcon } from "@radix-ui/react-icons";
 
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@viliha/vui-ui/hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@vui/vui-ui/hover-card";
 
 import { NotificationList } from "./notification-list";
 import { useNotifications } from "./use-notifications";

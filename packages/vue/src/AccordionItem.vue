@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ACCORDION_ITEM, cn } from "@viliha/vui-core";
+import { ACCORDION_ITEM, cn } from "@vui/vui-core";
 import { AccordionItem } from "reka-ui";
 import { computed } from "vue";
 

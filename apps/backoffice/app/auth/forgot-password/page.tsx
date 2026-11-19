@@ -8,9 +8,9 @@ import {
   EnvelopeOpenIcon as MailCheck,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { useFormFields } from "@viliha/vui-ui/use-form-fields";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { useFormFields } from "@vui/vui-ui/use-form-fields";
 import {
   AuthCard,
   AuthCardAside,

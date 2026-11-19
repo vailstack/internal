@@ -9,9 +9,9 @@ import {
   PersonIcon,
 } from "@radix-ui/react-icons";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@viliha/vui-ui/avatar";
-import { MenuItem } from "@viliha/vui-ui/menu";
-import { useAuth } from "@viliha/vui-ui/auth-context";
+import { Avatar, AvatarFallback, AvatarImage } from "@vui/vui-ui/avatar";
+import { MenuItem } from "@vui/vui-ui/menu";
+import { useAuth } from "@vui/vui-ui/auth-context";
 import { useAvatar } from "@/app/_components/use-avatar";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -19,7 +19,7 @@ import { ThemeToggle } from "./theme-toggle";
 // session/role check when wiring auth; the admin item keys off `isAdmin`.
 const USER = {
   name: "Admin User",
-  email: "admin@viliha.example",
+  email: "admin@voilet.example",
   role: "Administrator",
   initials: "AU",
 };

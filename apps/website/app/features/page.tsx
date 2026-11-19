@@ -1,4 +1,4 @@
-import { CardGrid, Cta, FeatureSplit, FeatureTabs, Hero, LogoCloud, Stats, TrustBadges } from "@viliha/vui-web";
+import { CardGrid, Cta, FeatureSplit, FeatureTabs, Hero, LogoCloud, Stats, TrustBadges } from "@vui/vui-web";
 
 import { FEATURE_PAGES } from "@/lib/catalog";
 import { LOGOS, STATS } from "@/lib/content";
@@ -83,7 +83,7 @@ export default function FeaturesPage() {
       <Cta
         title="See it running"
         lead="A full admin demo with real datatables, forms and charts. No signup."
-        actions={<LinkButton href="https://internal.viliha.com/dashboard/">Open the demo</LinkButton>}
+        actions={<LinkButton href="https://internal.vailstack.com/dashboard/">Open the demo</LinkButton>}
       />
     </>
   );

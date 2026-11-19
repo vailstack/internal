@@ -1,4 +1,4 @@
-import { Benefits, CardGrid, Cta, EmptyState, Hero, ProcessSteps, TeamGrid } from "@viliha/vui-web";
+import { Benefits, CardGrid, Cta, EmptyState, Hero, ProcessSteps, TeamGrid } from "@vui/vui-web";
 
 import { JOBS } from "@/lib/catalog";
 import { LinkButton } from "@/app/_components/link-button";

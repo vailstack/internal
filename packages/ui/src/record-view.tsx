@@ -1111,7 +1111,7 @@ interface RecordViewProps<T extends { id: RowId }> {
   /** Show the Filter panel. Default `true`. */
   showFilter?: boolean;
   /** Extra rows to add to the Filter panel. Compose with `FilterField`
-   *  (from `@viliha/vui-ui/filter-field`) so they inherit the two-column
+   *  (from `@vui/vui-ui/filter-field`) so they inherit the two-column
    *  label │ control layout; render inside the same grid, below the
    *  `filterable` fields. Their state and matching are yours to manage. */
   filterExtras?: React.ReactNode;

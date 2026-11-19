@@ -1,4 +1,4 @@
-import { Benefits, Cta, Hero, QuoteBlock, Stats, TeamGrid, Timeline } from "@viliha/vui-web";
+import { Benefits, Cta, Hero, QuoteBlock, Stats, TeamGrid, Timeline } from "@vui/vui-web";
 
 import { LinkButton } from "@/app/_components/link-button";
 import { MILESTONES, STATS, TEAM, VALUES } from "@/lib/content";

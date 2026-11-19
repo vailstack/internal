@@ -8,9 +8,9 @@ import {
   LockClosedIcon as Lock,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { PasswordInput } from "@viliha/vui-ui/password-input";
-import { useFormFields } from "@viliha/vui-ui/use-form-fields";
+import { Button } from "@vui/vui-ui/button";
+import { PasswordInput } from "@vui/vui-ui/password-input";
+import { useFormFields } from "@vui/vui-ui/use-form-fields";
 import {
   AuthCard,
   AuthCardAside,

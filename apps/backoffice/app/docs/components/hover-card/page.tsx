@@ -4,8 +4,8 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@viliha/vui-ui/hover-card";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/hover-card";
+import { Button } from "@vui/vui-ui/button";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -17,13 +17,13 @@ import {
 
 const usage = `import {
   HoverCard, HoverCardTrigger, HoverCardContent,
-} from "@viliha/vui-ui/hover-card";
+} from "@vui/vui-ui/hover-card";
 
 export function Example() {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
-        <Button variant="link">@viliha</Button>
+        <Button variant="link">@voilet</Button>
       </HoverCardTrigger>
       <HoverCardContent>
         The open-source admin design system.
@@ -40,10 +40,10 @@ export default function Page() {
       <ComponentPreview code={usage}>
         <HoverCard>
           <HoverCardTrigger asChild>
-            <Button variant="link">@viliha</Button>
+            <Button variant="link">@voilet</Button>
           </HoverCardTrigger>
           <HoverCardContent>
-            <p className="text-sm font-semibold">Viliha</p>
+            <p className="text-sm font-semibold">Voilet</p>
             <p className="mt-1 text-sm text-muted-foreground">
               The open-source admin design system: components, datatables, and a
               full backoffice demo.

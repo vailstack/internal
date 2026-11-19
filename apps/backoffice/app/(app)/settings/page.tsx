@@ -10,18 +10,18 @@ import {
 } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@viliha/vui-ui/button";
-import { Checkbox } from "@viliha/vui-ui/checkbox";
-import { Input } from "@viliha/vui-ui/input";
-import { Select } from "@viliha/vui-ui/select";
-import { Switch } from "@viliha/vui-ui/switch";
+import { Button } from "@vui/vui-ui/button";
+import { Checkbox } from "@vui/vui-ui/checkbox";
+import { Input } from "@vui/vui-ui/input";
+import { Select } from "@vui/vui-ui/select";
+import { Switch } from "@vui/vui-ui/switch";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 import { useChromeConfig } from "@/app/_components/chrome-config";
-import { useVuiPreferences } from "@viliha/vui-ui/config";
-import { useThemeConfig } from "@viliha/vui-ui/theme-provider";
+import { useVuiPreferences } from "@vui/vui-ui/config";
+import { useThemeConfig } from "@vui/vui-ui/theme-provider";
 import { AppearancePicker } from "@/app/_components/appearance-picker";
-import { BrandAsset } from "@viliha/vui-ui/organization-profile";
+import { BrandAsset } from "@vui/vui-ui/organization-profile";
 import {
   AVATAR_MAX_BYTES,
   setAvatar,
@@ -104,7 +104,7 @@ export default function SettingsPage() {
   const [theme, setTheme] = React.useState<Theme>("system");
   const avatar = useAvatar();
   const [name, setName] = React.useState("Admin User");
-  const [email, setEmail] = React.useState("admin@viliha.example");
+  const [email, setEmail] = React.useState("admin@voilet.example");
   const [role, setRole] = React.useState("administrator");
   const [notifyEmail, setNotifyEmail] = React.useState(true);
   const [notifyDesktop, setNotifyDesktop] = React.useState(false);

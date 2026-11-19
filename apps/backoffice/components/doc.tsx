@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 import { CopyButton } from "@/components/copy-button";
 
 /** Lightweight documentation prose primitives (Tailwind typography not required). */

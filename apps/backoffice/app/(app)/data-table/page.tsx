@@ -11,7 +11,7 @@ import {
   RecordView,
   type RecordField,
   type ServerQuery,
-} from "@viliha/vui-ui/record-view";
+} from "@vui/vui-ui/record-view";
 
 // A self-contained demo type + dataset. In a real app this lives in your
 // database; here it stands in for the backend table so pagination is visible.

@@ -7,7 +7,7 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  transpilePackages: ["@viliha/vui-ui", "@viliha/vui-web"],
+  transpilePackages: ["@vui/vui-ui", "@vui/vui-web"],
 };
 
 export default nextConfig;

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/laravel/" },
   title: "Use VUI with Laravel and Blade",
   description:
-    "Install @viliha/vui-theme in a Laravel app with Vite and Tailwind v4, then build Blade components from the same class strings the React and Vue components use. Works with Livewire, Alpine and Inertia.",
+    "Install @vui/vui-theme in a Laravel app with Vite and Tailwind v4, then build Blade components from the same class strings the React and Vue components use. Works with Livewire, Alpine and Inertia.",
 };
 
 const withBlade = SNIPPETS.filter((s) => s.blade);
@@ -26,7 +26,7 @@ export default function LaravelPage() {
         Two commands and one import. This assumes a Laravel 11 or 12 app with
         Vite, which is the default.
       </P>
-      <CodeBlock title="terminal">{`npm install @viliha/vui-theme
+      <CodeBlock title="terminal">{`npm install @vui/vui-theme
 npm install -D tailwindcss @tailwindcss/vite`}</CodeBlock>
       <CodeBlock title="vite.config.js">{`import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
@@ -39,7 +39,7 @@ export default defineConfig({
   ],
 });`}</CodeBlock>
       <CodeBlock title="resources/css/app.css">{`@import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";
+@import "@vui/vui-theme/theme.css";
 
 /* Tailwind needs to see your Blade files to emit the utilities they use. */
 @source "../views/**/*.blade.php";`}</CodeBlock>
@@ -107,8 +107,8 @@ export default defineConfig({
         </li>
         <li>
           <strong>Inertia with React or Vue</strong> is the other path, and the
-          most complete one: install <code>@viliha/vui-ui</code> (React) or{" "}
-          <code>@viliha/vui-vue</code> and you get the real components, datatable
+          most complete one: install <code>@vui/vui-ui</code> (React) or{" "}
+          <code>@vui/vui-vue</code> and you get the real components, datatable
           included, inside your Laravel app.
         </li>
       </Ul>

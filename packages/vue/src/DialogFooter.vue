@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DIALOG_FOOTER, cn } from "@viliha/vui-core";
+import { DIALOG_FOOTER, cn } from "@vui/vui-core";
 import { computed } from "vue";
 
 const props = defineProps<{ class?: string }>();

@@ -36,10 +36,10 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.5
         version: 1.3.0(@types/react@19.2.2)(react@19.2.7)
-      '@viliha/vui-core':
+      '@vui/vui-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@viliha/vui-ui':
+      '@vui/vui-ui':
         specifier: workspace:*
         version: link:../../packages/ui
       better-auth:
@@ -160,16 +160,16 @@ importers:
 
   apps/website:
     dependencies:
-      '@viliha/vui-core':
+      '@vui/vui-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@viliha/vui-theme':
+      '@vui/vui-theme':
         specifier: workspace:*
         version: link:../../packages/theme
-      '@viliha/vui-ui':
+      '@vui/vui-ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@viliha/vui-web':
+      '@vui/vui-web':
         specifier: workspace:*
         version: link:../../packages/web
       next:
@@ -363,10 +363,10 @@ importers:
 
   packages/vue:
     dependencies:
-      '@viliha/vui-core':
+      '@vui/vui-core':
         specifier: workspace:^
         version: link:../core
-      '@viliha/vui-theme':
+      '@vui/vui-theme':
         specifier: workspace:^
         version: link:../theme
       reka-ui:
@@ -397,13 +397,13 @@ importers:
 
   packages/web:
     dependencies:
-      '@viliha/vui-core':
+      '@vui/vui-core':
         specifier: workspace:^
         version: link:../core
-      '@viliha/vui-theme':
+      '@vui/vui-theme':
         specifier: workspace:^
         version: link:../theme
-      '@viliha/vui-ui':
+      '@vui/vui-ui':
         specifier: workspace:^
         version: link:../ui
     devDependencies:

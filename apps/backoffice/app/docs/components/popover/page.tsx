@@ -4,10 +4,10 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@viliha/vui-ui/popover";
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { Label } from "@viliha/vui-ui/label";
+} from "@vui/vui-ui/popover";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { Label } from "@vui/vui-ui/label";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -20,7 +20,7 @@ import {
 
 const usage = `import {
   Popover, PopoverTrigger, PopoverContent,
-} from "@viliha/vui-ui/popover";
+} from "@vui/vui-ui/popover";
 
 export function Example() {
   return (

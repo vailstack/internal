@@ -21,7 +21,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@viliha/vui-ui/card";
+} from "@vui/vui-ui/card";
 import {
   ChartContainer,
   ChartLegend,
@@ -29,7 +29,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@viliha/vui-ui/chart";
+} from "@vui/vui-ui/chart";
 
 const revenue = [
   { month: "Jan", revenue: 18600, expenses: 12400 },

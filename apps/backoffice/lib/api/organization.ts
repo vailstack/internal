@@ -13,7 +13,7 @@
 
 // The profile shape ships with the preset. Re-export so the controller and page
 // import it from the data layer as usual.
-import { type OrgProfile } from "@viliha/vui-ui/organization-profile";
+import { type OrgProfile } from "@vui/vui-ui/organization-profile";
 
 export type { OrgProfile };
 

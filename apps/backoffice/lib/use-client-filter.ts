@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import type { FilterValues } from "@viliha/vui-ui/record-view";
+import type { FilterValues } from "@vui/vui-ui/record-view";
 
 /**
  * Match rows against the Filter panel's collected values: contains-match for a

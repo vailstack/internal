@@ -9,8 +9,8 @@ import {
   PersonIcon,
 } from "@radix-ui/react-icons";
 
-import { Badge } from "@viliha/vui-ui/badge";
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
+import { Badge } from "@vui/vui-ui/badge";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
 
 import {
   listUsers,

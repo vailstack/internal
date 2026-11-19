@@ -1,4 +1,4 @@
-import { CardGrid, Cta, Hero, LogoCloud, ProcessSteps } from "@viliha/vui-web";
+import { CardGrid, Cta, Hero, LogoCloud, ProcessSteps } from "@vui/vui-web";
 
 import { LOGOS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";

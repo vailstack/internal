@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /* The article pieces that need the browser: sharing uses the clipboard, the
    table of contents observes scroll position, and the progress bar measures it.

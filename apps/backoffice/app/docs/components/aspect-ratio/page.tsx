@@ -1,6 +1,6 @@
 "use client";
 
-import { AspectRatio } from "@viliha/vui-ui/aspect-ratio";
+import { AspectRatio } from "@vui/vui-ui/aspect-ratio";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -10,7 +10,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { AspectRatio } from "@viliha/vui-ui/aspect-ratio";
+const usage = `import { AspectRatio } from "@vui/vui-ui/aspect-ratio";
 
 export function Example() {
   return (

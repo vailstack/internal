@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 import { CopyButton } from "@/components/copy-button";
 
 /**

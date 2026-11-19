@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { RecordForm } from "@viliha/vui-ui/record-view";
+import { RecordForm } from "@vui/vui-ui/record-view";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 import { addOrganization } from "@/lib/api/organizations";
 import {

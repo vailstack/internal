@@ -1,10 +1,10 @@
-# @viliha/vui-theme
+# @vui/vui-theme
 
 The VUI design system as plain CSS. No JavaScript, no dependencies, no framework.
 
 One stylesheet carries 129 design tokens in `oklch`, class-based dark mode, the
 documented z-scale, motion utilities, and `.vui-scroll` for always-visible
-scrollbars. It is the same file that styles [VUI](https://internal.viliha.com) itself,
+scrollbars. It is the same file that styles [VUI](https://internal.vailstack.com) itself,
 generated from the source rather than copied, so the two can never drift.
 
 Use it in React, Vue, Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine or HTMX,
@@ -14,13 +14,13 @@ hand-written HTML file with no build step at all.
 ## With Tailwind v4
 
 ```bash
-npm install @viliha/vui-theme
+npm install @vui/vui-theme
 npm install -D tailwindcss @tailwindcss/postcss
 ```
 
 ```css
 @import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";
+@import "@vui/vui-theme/theme.css";
 ```
 
 That gives you the tokens plus the `@theme` mapping, so Tailwind utilities such as
@@ -30,7 +30,7 @@ VUI's values.
 ## With no build step
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@viliha/vui-theme/dist/vui.css" />
+<link rel="stylesheet" href="https://unpkg.com/@vui/vui-theme/dist/vui.css" />
 ```
 
 `dist/vui.css` is compiled: it carries the tokens, the base layer, the motion
@@ -62,7 +62,7 @@ Two opt-ins for non-React icon sets and accordions:
 
 This package is the theme only. For React components (datatable, forms, charts,
 command palette, auth screens) install
-[`@viliha/vui-ui`](https://www.npmjs.com/package/@viliha/vui-ui). Other frameworks
-are covered at [internal.viliha.com/docs](https://internal.viliha.com/docs).
+[`@vui/vui-ui`](https://www.npmjs.com/package/@vui/vui-ui). Other frameworks
+are covered at [internal.vailstack.com/docs](https://internal.vailstack.com/docs).
 
 MIT © VILIHA PTE. LTD.

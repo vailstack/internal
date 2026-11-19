@@ -1,7 +1,7 @@
 "use client";
 
-import { Textarea } from "@viliha/vui-ui/textarea";
-import { Label } from "@viliha/vui-ui/label";
+import { Textarea } from "@vui/vui-ui/textarea";
+import { Label } from "@vui/vui-ui/label";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,7 +11,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Textarea } from "@viliha/vui-ui/textarea";
+const usage = `import { Textarea } from "@vui/vui-ui/textarea";
 
 export function Example() {
   return <Textarea placeholder="Type your message here." />;

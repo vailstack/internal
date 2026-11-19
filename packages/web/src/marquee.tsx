@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /**
  * Content that scrolls sideways, forever.

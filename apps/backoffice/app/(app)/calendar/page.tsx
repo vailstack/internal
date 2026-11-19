@@ -27,18 +27,18 @@ import {
   VideoIcon,
 } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { Checkbox } from "@viliha/vui-ui/checkbox";
-import { Select } from "@viliha/vui-ui/select";
+import { cn } from "@vui/vui-ui/utils";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { Checkbox } from "@vui/vui-ui/checkbox";
+import { Select } from "@vui/vui-ui/select";
 import {
   Dialog,
   DialogBody,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@viliha/vui-ui/dialog";
+} from "@vui/vui-ui/dialog";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 

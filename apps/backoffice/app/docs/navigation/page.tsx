@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/navigation/" },
   title: "Navigation, sections & tabs",
   description:
-    "The sidebar, its two section types (titled sections vs collapsible groups), and the browser-style keep-alive open-tabs strip, all driven by one nav config. Copy these reference-app patterns when consuming @viliha/vui-ui.",
+    "The sidebar, its two section types (titled sections vs collapsible groups), and the browser-style keep-alive open-tabs strip, all driven by one nav config. Copy these reference-app patterns when consuming @vui/vui-ui.",
 };
 
 export default function NavigationDocPage() {
@@ -30,7 +30,7 @@ export default function NavigationDocPage() {
 
       <Note title="These are reference-app patterns">
         The sidebar, nav config, and open-tabs system are{" "}
-        <strong>app-shell patterns</strong>, not <InlineCode>@viliha/vui-ui</InlineCode>{" "}
+        <strong>app-shell patterns</strong>, not <InlineCode>@vui/vui-ui</InlineCode>{" "}
         exports. Copy <InlineCode>nav-config.ts</InlineCode>,{" "}
         <InlineCode>route-meta.ts</InlineCode>, <InlineCode>app-sidebar.tsx</InlineCode>,
         and <InlineCode>open-tabs.tsx</InlineCode> from the{" "}

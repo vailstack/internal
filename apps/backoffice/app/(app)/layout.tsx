@@ -1,4 +1,4 @@
-import { PageChromeProvider } from "@viliha/vui-ui/record-view";
+import { PageChromeProvider } from "@vui/vui-ui/record-view";
 import {
   AppSidebar,
   MobileNav,
@@ -9,7 +9,7 @@ import { SiteFooter } from "@/app/_components/site-footer";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { QuickActionsProvider } from "@/app/_components/quick-actions";
 import { GlobalSearchProvider } from "@/app/_components/global-search";
-import { VuiProvider } from "@viliha/vui-ui/config";
+import { VuiProvider } from "@vui/vui-ui/config";
 import { WorkspaceProvider } from "@/app/_components/workspace-provider";
 import { ChromeConfigProvider } from "@/app/_components/chrome-config";
 import { AppearanceProvider } from "@/app/_components/appearance";

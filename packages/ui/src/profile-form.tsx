@@ -52,8 +52,8 @@ export interface ProfileFormProps<T extends { id: RowId }> {
  * separators, required marks and the info panel.
  *
  * ```tsx
- * import { ProfileForm } from "@viliha/vui-ui/profile-form";
- * import { organizationProfileFields, getOrgPrimary } from "@viliha/vui-ui/organization-profile";
+ * import { ProfileForm } from "@vui/vui-ui/profile-form";
+ * import { organizationProfileFields, getOrgPrimary } from "@vui/vui-ui/organization-profile";
  *
  * <ProfileForm data={org} fields={organizationProfileFields}
  *   getPrimary={getOrgPrimary} onSave={save} title="Organization" />

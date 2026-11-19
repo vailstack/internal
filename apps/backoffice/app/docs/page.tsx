@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Badge } from "@viliha/vui-ui/badge";
-import { Input } from "@viliha/vui-ui/input";
-import { Label } from "@viliha/vui-ui/label";
-import { Switch } from "@viliha/vui-ui/switch";
-import { Separator } from "@viliha/vui-ui/separator";
-import { Skeleton } from "@viliha/vui-ui/skeleton";
-import { Tabs, TabsList, TabsTrigger } from "@viliha/vui-ui/tabs";
+import { Button } from "@vui/vui-ui/button";
+import { Badge } from "@vui/vui-ui/badge";
+import { Input } from "@vui/vui-ui/input";
+import { Label } from "@vui/vui-ui/label";
+import { Switch } from "@vui/vui-ui/switch";
+import { Separator } from "@vui/vui-ui/separator";
+import { Skeleton } from "@vui/vui-ui/skeleton";
+import { Tabs, TabsList, TabsTrigger } from "@vui/vui-ui/tabs";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@viliha/vui-ui/accordion";
+} from "@vui/vui-ui/accordion";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/docs/" },

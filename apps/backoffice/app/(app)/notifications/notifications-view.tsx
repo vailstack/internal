@@ -7,10 +7,10 @@
 
 import * as React from "react";
 
-import { Breadcrumbs } from "@viliha/vui-ui/breadcrumbs";
-import { Button } from "@viliha/vui-ui/button";
-import { Page } from "@viliha/vui-ui/page";
-import { Tabs, TabsList, TabsTrigger } from "@viliha/vui-ui/tabs";
+import { Breadcrumbs } from "@vui/vui-ui/breadcrumbs";
+import { Button } from "@vui/vui-ui/button";
+import { Page } from "@vui/vui-ui/page";
+import { Tabs, TabsList, TabsTrigger } from "@vui/vui-ui/tabs";
 
 import { crumbsFor } from "@/app/_components/route-meta";
 import { NotificationList } from "@/app/_components/notification-list";

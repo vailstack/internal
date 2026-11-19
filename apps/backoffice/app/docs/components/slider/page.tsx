@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "@viliha/vui-ui/slider";
+import { Slider } from "@vui/vui-ui/slider";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -10,7 +10,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Slider } from "@viliha/vui-ui/slider";
+const usage = `import { Slider } from "@vui/vui-ui/slider";
 
 export function Example() {
   return <Slider defaultValue={[50]} max={100} step={1} />;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BADGE_BASE, BADGE_VARIANTS, cn, type BadgeVariant } from "@viliha/vui-core";
+import { BADGE_BASE, BADGE_VARIANTS, cn, type BadgeVariant } from "@vui/vui-core";
 import { computed } from "vue";
 
 const props = withDefaults(

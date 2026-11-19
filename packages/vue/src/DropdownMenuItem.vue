@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DROPDOWN_ITEM, cn } from "@viliha/vui-core";
+import { DROPDOWN_ITEM, cn } from "@vui/vui-core";
 import { DropdownMenuItem } from "reka-ui";
 import { computed } from "vue";
 

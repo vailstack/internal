@@ -1,6 +1,6 @@
 # website
 
-The marketing site: 65 static pages built entirely from `@viliha/vui-web`
+The marketing site: 65 static pages built entirely from `@vui/vui-web`
 blocks. If a page here needs markup that is not a block, that is a missing block
 rather than a reason to hand-roll a section.
 
@@ -9,7 +9,7 @@ pnpm --filter website dev     # :3002
 pnpm turbo build --filter=website...
 ```
 
-The `...` matters: `@viliha/vui-core` and `@viliha/vui-theme` ship only generated
+The `...` matters: `@vui/vui-core` and `@vui/vui-theme` ship only generated
 output, so a fresh checkout has nothing to import until turbo builds them first.
 
 ## Where the content lives
@@ -44,7 +44,7 @@ rendering `<EntryPage />`. Detail URLs add themselves to the sitemap through
 It is a static export (`output: "export"`, `trailingSlash: true`), so `out/` goes
 to any static host: Cloudflare Pages, Netlify, S3, nginx. There is no deploy
 workflow in this repo because GitHub Pages serves one site per repository and
-that slot belongs to the admin demo at internal.viliha.com. Point your host at
+that slot belongs to the admin demo at internal.vailstack.com. Point your host at
 `pnpm turbo build --filter=website...` and publish `apps/website/out`.
 
 Set `NEXT_PUBLIC_SITE_URL` before building, or the canonical URLs and the sitemap

@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       // Never bundle React, the component library or the shared logic: the
       // consumer installs those once and every block shares one copy.
-      external: [/^react/, /^react-dom/, /^@viliha\//],
+      external: [/^react/, /^react-dom/, /^@vui\//],
       output: {
         // One file per block, so importing a hero does not pull in the pricing
         // table. Same reasoning as the Vue package.

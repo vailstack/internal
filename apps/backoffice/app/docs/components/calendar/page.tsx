@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Calendar } from "@viliha/vui-ui/calendar";
+import { Calendar } from "@vui/vui-ui/calendar";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,7 +11,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Calendar } from "@viliha/vui-ui/calendar";
+const usage = `import { Calendar } from "@vui/vui-ui/calendar";
 
 export function Example() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());

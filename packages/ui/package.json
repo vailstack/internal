@@ -1,10 +1,10 @@
 {
-  "name": "@viliha/vui-ui",
+  "name": "@vui/vui-ui",
   "version": "1.67.0",
   "description": "Vui UI is a free, token-driven React component library and admin dashboard template for Next.js and Tailwind CSS v4. It bundles the shadcn/ui set plus a full datatable, forms, charts, and auth screens, and ships as TypeScript source so your bundler compiles only what you import.",
   "license": "MIT",
   "author": "VILIHA PTE. LTD.",
-  "homepage": "https://internal.viliha.com",
+  "homepage": "https://internal.vailstack.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/myviliha/vui-starter.git",

@@ -3,7 +3,7 @@
 import * as React from "react";
 import { CheckIcon, CopyIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 
 /** Copy-to-clipboard icon button, used in doc code blocks. */
 export function CopyButton({

@@ -9,7 +9,7 @@ import {
   Prose,
   ShareBlock,
   TableOfContents,
-} from "@viliha/vui-web";
+} from "@vui/vui-web";
 
 import { allPosts, headingId, postBySlug, relatedPosts } from "@/lib/posts";
 import { SITE, pageMeta } from "@/lib/site";

@@ -1,8 +1,8 @@
 "use client";
 
 import { toast } from "sonner";
-import { Toaster } from "@viliha/vui-ui/sonner";
-import { Button } from "@viliha/vui-ui/button";
+import { Toaster } from "@vui/vui-ui/sonner";
+import { Button } from "@vui/vui-ui/button";
 
 import { H2, P, CodeBlock, Note } from "@/components/doc";
 import {
@@ -13,7 +13,7 @@ import {
 } from "../component-doc";
 
 const usage = `// Mount once in your root layout:
-import { Toaster } from "@viliha/vui-ui/sonner";
+import { Toaster } from "@vui/vui-ui/sonner";
 
 <Toaster />
 

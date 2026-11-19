@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { Button } from "@viliha/vui-ui/button";
+import { Button } from "@vui/vui-ui/button";
 import { isSignedIn } from "@/lib/auth-state";
 
 /**

@@ -1,4 +1,4 @@
-import { Badge } from "@viliha/vui-ui/badge";
+import { Badge } from "@vui/vui-ui/badge";
 
 import { PLAN_AREAS, PLAN_MATRIX, PLAN_PLEDGE, type Plan } from "@/lib/plans";
 

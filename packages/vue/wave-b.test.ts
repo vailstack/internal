@@ -5,7 +5,7 @@ import {
   TABS_LIST_VARIANTS,
   TABS_TRIGGER,
   cn,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 import { createSSRApp, h } from "vue";
 import { renderToString } from "vue/server-renderer";
 import { expect, it } from "vitest";

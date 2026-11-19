@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { POPOVER_CONTENT, cn } from "@viliha/vui-core";
+import { POPOVER_CONTENT, cn } from "@vui/vui-core";
 import { PopoverContent, PopoverPortal } from "reka-ui";
 import { computed } from "vue";
 

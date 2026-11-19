@@ -3,7 +3,7 @@
 // scaffolds the real demo shell + pages. The backoffice app stays the single
 // source of truth; this snapshot is git-ignored and rebuilt on prepublish.
 //
-//   pnpm --filter @viliha/vui-ui sync-template
+//   pnpm --filter @vui/vui-ui sync-template
 import {
   cpSync,
   existsSync,
@@ -111,7 +111,7 @@ const nextConfig: NextConfig = {
   // lockfile higher up the tree (e.g. a home-dir bun.lock or an outer monorepo).
   turbopack: { root: __dirname },
   // VUI ships as TypeScript source — Next must transpile it.
-  transpilePackages: ["@viliha/vui-ui"],
+  transpilePackages: ["@vui/vui-ui"],
   // Static export makes the open-tabs keep-alive work (all client at runtime).
   // Remove these three if you need server components rendered per route.
   output: "export",

@@ -8,8 +8,8 @@ import {
   Share2Icon as Network,
 } from "@radix-ui/react-icons";
 
-import { Badge } from "@viliha/vui-ui/badge";
-import { type IconType, type RecordField } from "@viliha/vui-ui/record-view";
+import { Badge } from "@vui/vui-ui/badge";
+import { type IconType, type RecordField } from "@vui/vui-ui/record-view";
 import {
   type DemoOrganization,
   type OrganizationStatus,

@@ -3,4 +3,4 @@
 
 /* Shared VUI Starter design system (tokens, theme mapping, base reset).
    Package path (not a relative one) so it survives folder moves. */
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";

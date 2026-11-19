@@ -14,9 +14,9 @@ writeFileSync(
   join(dist, "theme.css"),
   `/* VUI for Vue. Import after Tailwind:
  *   @import "tailwindcss";
- *   @import "@viliha/vui-vue/theme.css";
+ *   @import "@vui/vui-vue/theme.css";
  */
-@import "@viliha/vui-theme/theme.css";
+@import "@vui/vui-theme/theme.css";
 
 /* Scan this package's components so their utilities are emitted. */
 @source "./";

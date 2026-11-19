@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// @viliha/vui-ui MCP server — lets an AI agent query the library instead of
+// @vui/vui-ui MCP server — lets an AI agent query the library instead of
 // reading node_modules.
 //
-//   npx @viliha/vui-ui mcp          (stdio transport)
-//   claude mcp add vui -- npx -y @viliha/vui-ui mcp
+//   npx @vui/vui-ui mcp          (stdio transport)
+//   claude mcp add vui -- npx -y @vui/vui-ui mcp
 //
 // Everything it serves is read from the installed package: components from
 // src/, the reference app's pages and layouts from template/, and the rules
@@ -132,7 +132,7 @@ function appFiles() {
 
 // ── docs ──────────────────────────────────────────────────────────────────
 
-// docs/ is a snapshot of the docs site (internal.viliha.com/docs), written by
+// docs/ is a snapshot of the docs site (internal.vailstack.com/docs), written by
 // scripts/snapshot-docs.mjs and shipped with the package.
 const GUIDES = join(ROOT, "docs");
 
@@ -220,7 +220,7 @@ function searchDocs(query, limit) {
 }
 
 
-// ── website blocks (@viliha/vui-web) ──────────────────────────────────────
+// ── website blocks (@vui/vui-web) ──────────────────────────────────────
 
 // The block library is a separate package, so it may sit beside this one in a
 // monorepo or under node_modules in a consumer's project. Both are checked, and
@@ -228,9 +228,9 @@ function searchDocs(query, limit) {
 // reads like "there are no blocks".
 const WEB_CANDIDATES = [
   join(ROOT, "../web/src"),
-  join(ROOT, "node_modules/@viliha/vui-web/src"),
-  join(ROOT, "../../node_modules/@viliha/vui-web/src"),
-  join(process.cwd(), "node_modules/@viliha/vui-web/src"),
+  join(ROOT, "node_modules/@vui/vui-web/src"),
+  join(ROOT, "../../node_modules/@vui/vui-web/src"),
+  join(process.cwd(), "node_modules/@vui/vui-web/src"),
 ];
 
 function webSrc() {
@@ -238,7 +238,7 @@ function webSrc() {
 }
 
 const NOT_INSTALLED =
-  "@viliha/vui-web is not installed. Add it with `pnpm add @viliha/vui-web` for the " +
+  "@vui/vui-web is not installed. Add it with `pnpm add @vui/vui-web` for the " +
   "marketing blocks (hero, pricing, testimonials, FAQ, site header and footer).";
 
 /** Every exported block, grouped by the file it lives in. No manifest: the file
@@ -431,16 +431,16 @@ const TOOLS = [
   {
     name: "list_components",
     description:
-      "List every component @viliha/vui-ui exports, with its import specifier and exported symbols.",
+      "List every component @vui/vui-ui exports, with its import specifier and exported symbols.",
     inputSchema: { type: "object", properties: {} },
     run: () =>
       componentFiles()
         .map((name) => {
           if (name === "theme.css")
-            return "@viliha/vui-ui/theme.css — design tokens, the z-scale, vui-scroll (import once in globals.css)";
+            return "@vui/vui-ui/theme.css — design tokens, the z-scale, vui-scroll (import once in globals.css)";
           const src = sourceOf(name);
           const symbols = src ? exportedNames(src.code).join(", ") : "";
-          return `@viliha/vui-ui/${name}${symbols ? ` — ${symbols}` : ""}`;
+          return `@vui/vui-ui/${name}${symbols ? ` — ${symbols}` : ""}`;
         })
         .join("\n"),
   },
@@ -462,8 +462,8 @@ const TOOLS = [
           ? `// Public API only (${lines} lines of source).\n\n${publicApi(src.code)}`
           : src.code;
       const how = src.css
-        ? 'import "@viliha/vui-ui/theme.css"'
-        : `import … from "@viliha/vui-ui/${name}"`;
+        ? 'import "@vui/vui-ui/theme.css"'
+        : `import … from "@vui/vui-ui/${name}"`;
       return `${how}\n\n${body}\n\n---\n\n${searchDocs(name.replace(/[-.]/g, " "), 2)}`;
     },
   },
@@ -475,7 +475,7 @@ const TOOLS = [
     run: () => {
       const files = appFiles();
       if (!files.length)
-        return "No reference app bundled. It ships with the published package; in this repo run `pnpm --filter @viliha/vui-ui sync-template`.";
+        return "No reference app bundled. It ships with the published package; in this repo run `pnpm --filter @vui/vui-ui sync-template`.";
       return files
         .map((f) => `${f.path}\t${f.kind}${f.route ? `\t${f.route}` : ""}`)
         .join("\n");
@@ -507,7 +507,7 @@ const TOOLS = [
     run: () => {
       const slugs = guideFiles();
       if (!slugs.length)
-        return "No guides bundled. They ship with the published package; in this repo run `pnpm --filter backoffice build && pnpm --filter @viliha/vui-ui snapshot-docs`.";
+        return "No guides bundled. They ship with the published package; in this repo run `pnpm --filter backoffice build && pnpm --filter @vui/vui-ui snapshot-docs`.";
       return slugs
         .map((slug) => {
           const title = read(join(GUIDES, `${slug}.md`)).split("\n")[0].replace(/^#\s*/, "");
@@ -537,7 +537,7 @@ const TOOLS = [
   {
     name: "list_blocks",
     description:
-      "List every marketing block @viliha/vui-web exports — heroes, features, pricing, testimonials, FAQ, site header and footer, article pieces — with its import specifier and what it is for. Use these to build a website; use list_components for the admin app.",
+      "List every marketing block @vui/vui-web exports — heroes, features, pricing, testimonials, FAQ, site header and footer, article pieces — with its import specifier and what it is for. Use these to build a website; use list_components for the admin app.",
     inputSchema: { type: "object", properties: {} },
     run: () => {
       const files = blockFiles();
@@ -547,7 +547,7 @@ const TOOLS = [
           f.names
             .map((n) => {
               const summary = blockSummary(f.code, n);
-              return `${n}\t@viliha/vui-web${summary ? `\t${summary}` : ""}`;
+              return `${n}\t@vui/vui-web${summary ? `\t${summary}` : ""}`;
             })
             .join("\n"),
         )
@@ -577,7 +577,7 @@ const TOOLS = [
           : file.code;
       const props = blockProps(file.code, exact);
       return [
-        `import { ${exact} } from "@viliha/vui-web";`,
+        `import { ${exact} } from "@vui/vui-web";`,
         "",
         blockSummary(file.code, exact),
         "",

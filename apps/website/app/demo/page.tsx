@@ -1,4 +1,4 @@
-import { CardGrid, CodeBlock, Cta, Faq, Hero, ProcessSteps, TrustBadges } from "@viliha/vui-web";
+import { CardGrid, CodeBlock, Cta, Faq, Hero, ProcessSteps, TrustBadges } from "@vui/vui-web";
 
 import { FAQS, STEPS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";
@@ -11,7 +11,7 @@ export const metadata = pageMeta({
   path: "/demo/",
 });
 
-const DEMO = "https://internal.viliha.com";
+const DEMO = "https://internal.vailstack.com";
 
 /** The screens worth opening first, in the order they answer the obvious
  *  questions: does the list work, does the form work, does it look like ours. */
@@ -59,7 +59,7 @@ const INSTALL = [
     name: "Terminal",
     language: "bash",
     code: `# Scaffold a new project with the demo app included
-npx @viliha/vui-ui init my-admin
+npx @vui/vui-ui init my-admin
 
 cd my-admin
 pnpm install
@@ -69,16 +69,16 @@ pnpm dev`,
     name: "Existing project",
     language: "bash",
     code: `# Add the library to a project you already have
-pnpm add @viliha/vui-ui
+pnpm add @vui/vui-ui
 
 # Import the theme once, at the root of your app
 # app/globals.css
-@import "@viliha/vui-ui/theme.css";`,
+@import "@vui/vui-ui/theme.css";`,
   },
   {
     name: "First screen",
     language: "tsx",
-    code: `import { RecordView } from "@viliha/vui-ui/record-view";
+    code: `import { RecordView } from "@vui/vui-ui/record-view";
 
 const fields = [
   { key: "name", label: "Name", required: true },

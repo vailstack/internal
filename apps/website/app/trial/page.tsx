@@ -1,4 +1,4 @@
-import { Benefits, Cta, Faq, Hero, ProcessSteps, TrustBadges } from "@viliha/vui-web";
+import { Benefits, Cta, Faq, Hero, ProcessSteps, TrustBadges } from "@vui/vui-web";
 
 import { FAQS, STEPS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";

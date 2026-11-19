@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import {
   CommandPalette,
   type CommandAction,
-} from "@viliha/vui-ui/command-palette";
+} from "@vui/vui-ui/command-palette";
 import { organizations, employees } from "@/lib/demo-data";
 import {
   branches,
@@ -26,7 +26,7 @@ import { useChrome } from "./chrome-config";
  * Global search — a ⌘⌥K palette that searches across *records* (organizations,
  * people, opportunities, reference data…), as opposed to Quick actions (⌘K),
  * which navigates between *pages*. Both reuse the same headless `CommandPalette`
- * from @viliha/vui-ui; only the action list differs.
+ * from @vui/vui-ui; only the action list differs.
  *
  * The record index below is the demo's stand-in for a real search backend —
  * swap `INDEX` for results from your API and everything else stays the same.

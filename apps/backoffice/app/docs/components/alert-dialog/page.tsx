@@ -10,8 +10,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@viliha/vui-ui/alert-dialog";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/alert-dialog";
+import { Button } from "@vui/vui-ui/button";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -25,8 +25,8 @@ const usage = `import {
   AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader,
   AlertDialogTitle, AlertDialogDescription, AlertDialogFooter,
   AlertDialogCancel, AlertDialogAction,
-} from "@viliha/vui-ui/alert-dialog";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/alert-dialog";
+import { Button } from "@vui/vui-ui/button";
 
 export function Example() {
   return (

@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Steps } from "@viliha/vui-ui/steps";
+import { Button } from "@vui/vui-ui/button";
+import { Steps } from "@vui/vui-ui/steps";
 import { CodeBlock, DocPager, H2, Note, P, PageTitle } from "@/components/doc";
 
 const WIZARD_STEPS = [
@@ -55,7 +55,7 @@ export default function StepsDocPage() {
       </div>
 
       <H2>Usage</H2>
-      <CodeBlock title="steps.tsx">{`import { Steps, type Step } from "@viliha/vui-ui/steps";
+      <CodeBlock title="steps.tsx">{`import { Steps, type Step } from "@vui/vui-ui/steps";
 
 const steps: Step[] = [
   { label: "Organization", description: "Business details" },
@@ -82,7 +82,7 @@ function Steps(props: {
       <H2>Wizard scaffold</H2>
       <P>
         <code>Steps</code> is only the indicator. For a full multi-step form use
-        the <strong>wizard scaffold</strong> (<code>@viliha/vui-ui/wizard</code>),
+        the <strong>wizard scaffold</strong> (<code>@vui/vui-ui/wizard</code>),
         it&apos;s <strong>layout only</strong>, so you keep your own step index,
         field state, and logic and drop any components inside. <code>Wizard</code>{" "}
         gives you the stepper, a scrolling body, and a Back/Next footer;{" "}
@@ -90,11 +90,11 @@ function Steps(props: {
         <strong>one or many per step</strong>. Fields go in a{" "}
         <code>FieldGrid</code> as the two-column{" "}
         <code>Label&nbsp;*&nbsp;│&nbsp;control</code> standard (from{" "}
-        <code>@viliha/vui-ui/field-grid</code>).
+        <code>@vui/vui-ui/field-grid</code>).
       </P>
-      <CodeBlock title="wizard.tsx">{`import { Wizard, WizardSection } from "@viliha/vui-ui/wizard";
-import { FieldGrid, Field } from "@viliha/vui-ui/field-grid";
-import { Input } from "@viliha/vui-ui/input";
+      <CodeBlock title="wizard.tsx">{`import { Wizard, WizardSection } from "@vui/vui-ui/wizard";
+import { FieldGrid, Field } from "@vui/vui-ui/field-grid";
+import { Input } from "@vui/vui-ui/input";
 
 const STEPS = [
   { label: "Organization", description: "Business details" },

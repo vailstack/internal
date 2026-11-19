@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CHECKBOX, cn } from "@viliha/vui-core";
+import { CHECKBOX, cn } from "@vui/vui-core";
 import { computed } from "vue";
 
 // A native checkbox, like the React one: the browser's is accessible, keyboard

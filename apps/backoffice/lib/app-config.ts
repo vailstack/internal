@@ -1,9 +1,9 @@
-import type { OrgSwitcherConfig } from "@viliha/vui-ui/config";
+import type { OrgSwitcherConfig } from "@vui/vui-ui/config";
 import {
   FONT_FAMILIES,
   THEME_FIELDS,
   type ThemeConfig,
-} from "@viliha/vui-ui/theme-config";
+} from "@vui/vui-ui/theme-config";
 
 /**
  * Top-bar chrome feature flags.
@@ -158,5 +158,5 @@ export const PRO = {
   checkoutUrl:
     process.env.NEXT_PUBLIC_PRO_CHECKOUT_URL ??
     "https://github.com/myviliha/vui-starter/discussions",
-  contactEmail: "hello@viliha.com",
+  contactEmail: "hello@vailstack.com",
 } as const;

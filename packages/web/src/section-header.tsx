@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /**
  * Eyebrow, heading, lead and actions. Nearly every other block renders one, so

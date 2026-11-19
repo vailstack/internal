@@ -8,8 +8,8 @@ import {
   getOrgPrimary,
   ORGANIZATION_PROFILE_DESCRIPTION,
   organizationProfileFields,
-} from "@viliha/vui-ui/organization-profile";
-import { ProfileForm } from "@viliha/vui-ui/profile-form";
+} from "@vui/vui-ui/organization-profile";
+import { ProfileForm } from "@vui/vui-ui/profile-form";
 
 import { SetPageTitle } from "@/app/_components/set-page-title";
 import { useOrgProfile } from "./use-org-profile";

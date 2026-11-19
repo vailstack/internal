@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/frameworks/" },
   title: "Use VUI with any framework (Vue, Svelte, Angular, Astro, HTMX)",
   description:
-    "The VUI theme is plain CSS with no JavaScript, so it works in Vue, Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine, HTMX and hand-written HTML. Install @viliha/vui-theme, or link the compiled stylesheet with no build step.",
+    "The VUI theme is plain CSS with no JavaScript, so it works in Vue, Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine, HTMX and hand-written HTML. Install @vui/vui-theme, or link the compiled stylesheet with no build step.",
 };
 
 /** What each level actually gives you, and what it costs us to keep true. */
 const LEVELS: { level: string; ships: string; where: string }[] = [
   {
     level: "Theme",
-    ships: "@viliha/vui-theme: tokens, dark mode, z-scale, motion, scrollbars. No JavaScript, no dependencies.",
+    ships: "@vui/vui-theme: tokens, dark mode, z-scale, motion, scrollbars. No JavaScript, no dependencies.",
     where: "Every framework on this page, today.",
   },
   {
     level: "Core",
     ships:
-      "@viliha/vui-core: the logic without the framework. Runtime theming, table import and export, class merging. Plain TypeScript, no UI framework.",
+      "@vui/vui-core: the logic without the framework. Runtime theming, table import and export, class merging. Plain TypeScript, no UI framework.",
     where: "Every framework, and Node.",
   },
   {
@@ -30,7 +30,7 @@ const LEVELS: { level: string; ships: string; where: string }[] = [
   },
   {
     level: "Starter kit",
-    ships: "A scaffolded app: shell, sidebar, open tabs, command palette, demo pages, via npx @viliha/vui-ui init.",
+    ships: "A scaffolded app: shell, sidebar, open tabs, command palette, demo pages, via npx @vui/vui-ui init.",
     where: "React and Next.js.",
   },
 ];
@@ -55,7 +55,7 @@ export default function FrameworksPage() {
       <PageTitle
         eyebrow="Getting started"
         title="Use VUI with any framework"
-        lead="The theme is plain CSS with no JavaScript in it, so it works anywhere that renders HTML. Install @viliha/vui-theme and you have the tokens, dark mode, the z-scale and the motion utilities in Vue, Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine or a hand-written page."
+        lead="The theme is plain CSS with no JavaScript in it, so it works anywhere that renders HTML. Install @vui/vui-theme and you have the tokens, dark mode, the z-scale and the motion utilities in Vue, Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine or a hand-written page."
       />
 
       <H2>How do I add VUI to a non-React project?</H2>
@@ -65,32 +65,32 @@ export default function FrameworksPage() {
       </P>
       <FrameworkTabs
         snippets={{
-          vue: `npm install @viliha/vui-theme
+          vue: `npm install @vui/vui-theme
 npm install -D tailwindcss @tailwindcss/vite
 
 /* src/style.css */
 @import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";`,
-          svelte: `npm install @viliha/vui-theme
+@import "@vui/vui-theme/theme.css";`,
+          svelte: `npm install @vui/vui-theme
 npm install -D tailwindcss @tailwindcss/vite
 
 /* src/app.css */
 @import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";`,
-          any: `npm install @viliha/vui-theme
+@import "@vui/vui-theme/theme.css";`,
+          any: `npm install @vui/vui-theme
 npm install -D tailwindcss @tailwindcss/postcss
 
 /* your global stylesheet */
 @import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";`,
+@import "@vui/vui-theme/theme.css";`,
           cdn: `<!-- Nothing to install. Compiled, tokens and utilities included. -->
-<link rel="stylesheet" href="https://unpkg.com/@viliha/vui-theme/dist/vui.css" />`,
-          react: `npm install @viliha/vui-ui
+<link rel="stylesheet" href="https://unpkg.com/@vui/vui-theme/dist/vui.css" />`,
+          react: `npm install @vui/vui-ui
 npm install -D tailwindcss @tailwindcss/postcss
 
 /* app/globals.css — the React package carries the theme */
 @import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";`,
+@import "@vui/vui-ui/theme.css";`,
         }}
       />
       <P>
@@ -132,11 +132,11 @@ npm install -D tailwindcss @tailwindcss/postcss
         Some of what a design system does is not markup at all: turning a theme
         into CSS variables, exporting a table to CSV, merging class names without
         conflicts. That part ships as{" "}
-        <code>@viliha/vui-core</code>, plain TypeScript with no UI framework in it.
+        <code>@vui/vui-core</code>, plain TypeScript with no UI framework in it.
       </P>
-      <CodeBlock title="theming and exporting, in any framework">{`npm install @viliha/vui-core
+      <CodeBlock title="theming and exporting, in any framework">{`npm install @vui/vui-core
 
-import { mergeThemes, applyTheme, rowsToCSV, downloadFile } from "@viliha/vui-core";
+import { mergeThemes, applyTheme, rowsToCSV, downloadFile } from "@vui/vui-core";
 
 // An organization's theme with one person's overrides on top.
 applyTheme(document.documentElement, mergeThemes(orgTheme, userTheme));

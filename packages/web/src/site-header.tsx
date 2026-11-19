@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /* The site header: logo, navigation, actions, and a mobile drawer. */
 
