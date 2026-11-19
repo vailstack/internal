@@ -20,8 +20,8 @@ import { type IconType, type RecordField } from "./record-view";
  * and spread/override `organizationProfileFields` to fit your schema.
  *
  * ```tsx
- * import { ProfileForm } from "@viliha/vui-ui/profile-form";
- * import { organizationProfileFields, getOrgPrimary, type OrgProfile } from "@viliha/vui-ui/organization-profile";
+ * import { ProfileForm } from "@vui/vui-ui/profile-form";
+ * import { organizationProfileFields, getOrgPrimary, type OrgProfile } from "@vui/vui-ui/organization-profile";
  *
  * <ProfileForm data={org} fields={organizationProfileFields}
  *   getPrimary={getOrgPrimary} onSave={save} title="Organization" />

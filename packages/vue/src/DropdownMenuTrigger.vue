@@ -4,7 +4,7 @@ import {
   DROPDOWN_TRIGGER_ACTIVE,
   DROPDOWN_TRIGGER_IDLE,
   cn,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 import { DropdownMenuTrigger } from "reka-ui";
 import { computed } from "vue";
 

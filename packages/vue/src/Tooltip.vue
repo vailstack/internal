@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TOOLTIP_CONTENT, cn } from "@viliha/vui-core";
+import { TOOLTIP_CONTENT, cn } from "@vui/vui-core";
 import {
   TooltipContent,
   TooltipPortal,

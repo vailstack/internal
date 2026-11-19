@@ -8,10 +8,10 @@ rationale, see [`Enterprise_NextJS_React_Coding_Standards.md`](./Enterprise_Next
 Turborepo + pnpm monorepo. Three apps + five published packages:
 
 - `apps/backoffice` — Admin app **and** the docs site (docs are routes under `app/docs`, served at `/docs`). Dev on **:3000**.
-- `apps/website` — The **marketing site**: 65 static pages composed entirely from `@viliha/vui-web` blocks. Dev on **:3002**. If a page there needs markup that is not a block, that is a missing block, not a reason to hand-roll a section.
+- `apps/website` — The **marketing site**: 65 static pages composed entirely from `@vui/vui-web` blocks. Dev on **:3002**. If a page there needs markup that is not a block, that is a missing block, not a reason to hand-roll a section.
 - `apps/e2e` — **Playwright tests** for both apps. Route lists live in `tests/routes.ts`, so adding a page adds it to the smoke, SEO and accessibility passes at once. See `apps/e2e/README.md`.
-- `packages/ui` — `@viliha/vui-ui`, the React components, shipped as **TypeScript source** (no build).
-- `packages/theme` — `@viliha/vui-theme`, the same design system as **plain CSS with no dependencies**, for every other framework. Both of its outputs (`theme.css` and the compiled `dist/vui.css`) are **generated from `packages/ui/src/theme.css`** by `packages/theme/scripts/build.mjs` and git-ignored, so there is never a second copy to keep in sync. Edit the tokens in `packages/ui/src/theme.css` as before.
+- `packages/ui` — `@vui/vui-ui`, the React components, shipped as **TypeScript source** (no build).
+- `packages/theme` — `@vui/vui-theme`, the same design system as **plain CSS with no dependencies**, for every other framework. Both of its outputs (`theme.css` and the compiled `dist/vui.css`) are **generated from `packages/ui/src/theme.css`** by `packages/theme/scripts/build.mjs` and git-ignored, so there is never a second copy to keep in sync. Edit the tokens in `packages/ui/src/theme.css` as before.
 
   Two rules keep that stylesheet framework-neutral: the icon chip matches
   `svg[width="15"], .vui-icon` (Radix icons get it for free, everyone else opts in
@@ -19,16 +19,16 @@ Turborepo + pnpm monorepo. Three apps + five published packages:
   `accordion.tsx` maps from Radix and a port maps from its own library. Don't
   reintroduce a React-only selector or a growing `var()` fallback chain.
 
-- `packages/vue` — `@viliha/vui-vue`, the **Vue 3 components**, built on Reka UI
+- `packages/vue` — `@vui/vui-vue`, the **Vue 3 components**, built on Reka UI
   (the Radix port for Vue) and compiled with Vite. It is not a lookalike: the
   class strings live in `class-variants.ts` and reach it through
-  `@viliha/vui-core`, so React and Vue render the same markup by construction. A
+  `@vui/vui-core`, so React and Vue render the same markup by construction. A
   render test compares the two against that shared source. **Never paste a class
   string into a `.vue` file that a `.tsx` file also uses**: move it to
   `class-variants.ts` and import it in both. Early (v0): mechanical components
   only, no dialogs, menus, selects or datatable yet.
 
-- `packages/web` — `@viliha/vui-web`, the **marketing blocks**: hero, features,
+- `packages/web` — `@vui/vui-web`, the **marketing blocks**: hero, features,
   pricing, testimonials, FAQ, article pieces, site header and footer. Around 60
   of them, all taking their content as props so an agent can fill them in. They
   read the same tokens as the admin components, so a landing page and the
@@ -37,7 +37,7 @@ Turborepo + pnpm monorepo. Three apps + five published packages:
   browser. **Keep it that way**: a whole-file `"use client"` stops a page passing
   a block a function, which is how `ArticleTags` broke once already.
 
-- `packages/core` — `@viliha/vui-core`, the **framework-free TypeScript**: the
+- `packages/core` — `@vui/vui-core`, the **framework-free TypeScript**: the
   theming engine (`theme-config.ts`), table import/export (`table-io.ts`) and
   `cn` (`utils.ts`). Same trick as the theme: generated from `packages/ui/src` by
   `packages/core/scripts/build.mjs`, both `src/` and `dist/` git-ignored, so
@@ -51,7 +51,7 @@ Turborepo + pnpm monorepo. Three apps + five published packages:
 
 | Task | Location |
 | --- | --- |
-| New reusable component | `packages/ui/src/<name>.tsx` → auto-exported as `@viliha/vui-ui/<name>` (the `./*` export map; **no barrel edit needed**) |
+| New reusable component | `packages/ui/src/<name>.tsx` → auto-exported as `@vui/vui-ui/<name>` (the `./*` export map; **no barrel edit needed**) |
 | New marketing block | `packages/web/src/<group>.tsx` + an export in `src/index.ts`. **Give it a doc comment**: a test fails if any exported block has no summary, because that summary is what an agent reads to choose between blocks |
 | New marketing page | `apps/website/app/<route>/page.tsx`, composed from blocks, with copy in `lib/content.ts` or `lib/catalog.ts`. Add it to `ROUTES` in `lib/site.ts` (sitemap) and to `apps/e2e/tests/routes.ts` |
 | New e2e test | `apps/e2e/tests/<app>/<area>.spec.ts`. Query by role and accessible name; `test.skip` with a reason for anything optional |
@@ -69,7 +69,7 @@ Turborepo + pnpm monorepo. Three apps + five published packages:
 - **Tokens/colors/typography/radius/dark-mode** → `theme.css`.
 - **Navigation** → `nav-config.ts` (sidebar + breadcrumb trail both derive from it).
 - **Page layout / section cards / dialogs / menus / datatable** → documented at docs `/layout` and `/data-table`. Reuse `Dialog`, `Menu`, `RecordView`, `ChartContainer` — don't re-implement.
-- **`cn`** → `@viliha/vui-ui/utils`. `utils.ts` is intentional; do not "fix" it.
+- **`cn`** → `@vui/vui-ui/utils`. `utils.ts` is intentional; do not "fix" it.
 - **Site footer** → `_components/site-footer.tsx` (`SiteFooter`). The app shell, auth screens, legal pages, and the 404/500 pages all render it — edit once. It carries the copyright line plus the Terms and Privacy links, so those links exist on every surface by construction. The **auth/404/500 shell** (brand header + footer, no menus) is `AuthHeader` + `SiteFooter`; reuse them, don't rebuild a header/footer per page.
 
 ## Architecture: three layers (Data → Controller → Presentation)
@@ -119,7 +119,7 @@ Both come from the same `RecordForm`; **pick one, don't invent a third:**
 
 - **Slide-over (standard / default).** Add/edit/view open as an overlay panel from `RecordView`. Nothing to configure. Uncontrolled (`initialData`). Example: `departments`.
 - **Full-page route.** `formMode="page"` + dedicated `/new` & `/edit` routes rendering `<RecordForm layout="page" columns={1|2} … />`; controlled, config shared via `*-config.tsx`. Adds a breadcrumb bar, a **dynamic Info panel** (from `formDescription` + per-field `description`), and a fixed Save/Cancel footer. Use for long forms or when the flow needs its own URL. Example: `organizations/new`.
-- **Full-page profile (view → edit).** A single record shown read-only, with an **Edit** button that opens the same Cancel + Save footer. Don't hand-wire it — use the shipped `ProfileForm` (`@viliha/vui-ui/profile-form`): `<ProfileForm data={…} fields={…} onSave={…} getPrimary={…} title="Organization" />`. For a company profile, spread the `organizationProfileFields` preset (`@viliha/vui-ui/organization-profile`). Example: `organization/profile` (the current org — company info, branding, contact, locale), a thin consumer of both.
+- **Full-page profile (view → edit).** A single record shown read-only, with an **Edit** button that opens the same Cancel + Save footer. Don't hand-wire it — use the shipped `ProfileForm` (`@vui/vui-ui/profile-form`): `<ProfileForm data={…} fields={…} onSave={…} getPrimary={…} title="Organization" />`. For a company profile, spread the `organizationProfileFields` preset (`@vui/vui-ui/organization-profile`). Example: `organization/profile` (the current org — company info, branding, contact, locale), a thin consumer of both.
 
 When asked to add a page, **state which variant and default to slide-over.** Both inherit the blue Save, header/body/footer separators and token colors from the component — you never copy those styles. Same rule downstream in `packages/ui/AGENT.md`.
 
@@ -131,7 +131,7 @@ When asked to add a page, **state which variant and default to slide-over.** Bot
 
 ## Command palette (Quick actions & Global search)
 
-Two ⌘K palettes, **both the same headless `CommandPalette`** (`@viliha/vui-ui/command-palette`) — never hand-roll a search dropdown:
+Two ⌘K palettes, **both the same headless `CommandPalette`** (`@vui/vui-ui/command-palette`) — never hand-roll a search dropdown:
 
 - **Quick actions** (`⌘K` / `/`) → navigates **pages**; actions derived from `nav-config.ts`. Wiring: `app/_components/quick-actions.tsx`.
 - **Global search** (`⌘⌥K`) → searches **records**; index built from the data modules. Wiring: `app/_components/global-search.tsx`.
@@ -149,17 +149,17 @@ Gate a feature by reading `useChrome().<feature>` where it renders (hide the con
 
 ## Theme config (`VuiProvider`)
 
-The theme ships configured and stays changeable. `vuiPreset` (`@viliha/vui-ui/config`) is the shipped behaviour as a plain value, applied by default, so there is no separate "configurable" component set. Values resolve **per-instance prop → user preference → `<VuiProvider config>` → `vuiPreset` → package default**, and a layer overrides only the keys it names.
+The theme ships configured and stays changeable. `vuiPreset` (`@vui/vui-ui/config`) is the shipped behaviour as a plain value, applied by default, so there is no separate "configurable" component set. Values resolve **per-instance prop → user preference → `<VuiProvider config>` → `vuiPreset` → package default**, and a layer overrides only the keys it names.
 
 - **App-wide config** → `<VuiProvider config={…}>`, mounted in `(app)/layout.tsx`. Sections: `form` (footer `actions`) and `behaviour` (`rowClick`, `closeOnSave`, `flashMs`, `confirmDelete`, `confirmDiscardWhenDirty`).
 - **Per screen** → `behaviour` / `formActions` / `renderFooter` props on `RecordView`. A prop always wins.
 - **Per person** → `userConfigurable` lists the keys the app hands to whoever is using it; their choices persist in localStorage (`vui.prefs`) and are edited on the Settings page's *Data tables* section via `useVuiPreferences()`. The allow-list lives in `lib/app-config.ts` (`DATA_TABLE_PREFERENCES` + `DATA_TABLE_PREFERENCE_FIELDS`), next to the chrome flags it mirrors.
 
-Colors, radius, spacing and typography are **not** in here: they stay in `theme.css`. What they do have is a **runtime source**: `ThemeConfigProvider` (`@viliha/vui-ui/theme-provider`) applies a `ThemeConfig` as CSS variables, with the organization's theme as the floor and each user's overrides on top. `THEME_FIELDS` in `theme-config.ts` is the complete themeable list; `ORG_THEME` and `THEME_CHOICES` in `lib/app-config.ts` wire the demo, and Settings → *Theme* is the reference UI. To persist per user, pass `source={{ load, save }}` pointing at your API. Never add a per-component colour prop instead. Adding a behaviour key is fine when a screen genuinely needs it and the alternative is forking a component; it is not the place for anything the tokens already own. Roadmap for the remaining slices: `docs/proposals/configurable-theme-roadmap.md`.
+Colors, radius, spacing and typography are **not** in here: they stay in `theme.css`. What they do have is a **runtime source**: `ThemeConfigProvider` (`@vui/vui-ui/theme-provider`) applies a `ThemeConfig` as CSS variables, with the organization's theme as the floor and each user's overrides on top. `THEME_FIELDS` in `theme-config.ts` is the complete themeable list; `ORG_THEME` and `THEME_CHOICES` in `lib/app-config.ts` wire the demo, and Settings → *Theme* is the reference UI. To persist per user, pass `source={{ load, save }}` pointing at your API. Never add a per-component colour prop instead. Adding a behaviour key is fine when a screen genuinely needs it and the alternative is forking a component; it is not the place for anything the tokens already own. Roadmap for the remaining slices: `docs/proposals/configurable-theme-roadmap.md`.
 
 ## Organization switcher (multi-tenant)
 
-The sidebar's brand block is the tenant switcher: `OrgSwitcher` (`@viliha/vui-ui/org-switcher`) mounted in `app-sidebar.tsx`, fed by `WorkspaceProvider` (`app/_components/workspace-provider.tsx`) over the `lib/api/workspaces.ts` data layer. Three layers as usual: the API lists the tenants, the provider owns the switch, the component only renders.
+The sidebar's brand block is the tenant switcher: `OrgSwitcher` (`@vui/vui-ui/org-switcher`) mounted in `app-sidebar.tsx`, fed by `WorkspaceProvider` (`app/_components/workspace-provider.tsx`) over the `lib/api/workspaces.ts` data layer. Three layers as usual: the API lists the tenants, the provider owns the switch, the component only renders.
 
 - **Switching logic lives in the host**, in `WorkspaceProvider`'s `onSwitch`. It runs before the change and throwing cancels it, so a refused API call doesn't drop someone into a tenant they can't see. The package's default (set current, remember per browser) is what you get without one.
 - **Chrome is config**: `heading`, `currentLabel`, `addLabel`, `showPlan`, `showAdd` under `orgSwitcher` in `VuiProvider`. Don't add a prop for something that belongs there.
@@ -178,13 +178,13 @@ A browser-style strip of opened pages (labelled "Tabs") lives in the shell: `Ope
 
 ## Multi-step wizards
 
-For guided flows (registration, onboarding, checkout) use the exported `Steps` indicator (`@viliha/vui-ui/steps`) + your own step index — never hand-roll a stepper. Build each step's body from `Input`/`Select`/`Field` in a section card with a Back/Next footer. Reference: `app/register-business/`. See docs `/layout` ("Multi-step wizard") and the workflow requirement template at `/docs/templates`.
+For guided flows (registration, onboarding, checkout) use the exported `Steps` indicator (`@vui/vui-ui/steps`) + your own step index — never hand-roll a stepper. Build each step's body from `Input`/`Select`/`Field` in a section card with a Back/Next footer. Reference: `app/register-business/`. See docs `/layout` ("Multi-step wizard") and the workflow requirement template at `/docs/templates`.
 
 ## Breadcrumbs
 
 One trail, **route-derived, never hand-written per page.** Two layers:
 
-- **Design** → the shared `Breadcrumbs` component (`@viliha/vui-ui/breadcrumbs`). Last crumb = current page (bold, non-interactive); earlier crumbs are links; chevron separators; optional back arrow. Never build a trail from raw `<a>`/`<span>`.
+- **Design** → the shared `Breadcrumbs` component (`@vui/vui-ui/breadcrumbs`). Last crumb = current page (bold, non-interactive); earlier crumbs are links; chevron separators; optional back arrow. Never build a trail from raw `<a>`/`<span>`.
 - **Logic** → `crumbsFor(pathname)` in `app/_components/route-meta.ts`, driven by `nav-config.ts`. The trail is computed from the URL:
   - always rooted at **Home** (`/dashboard`);
   - one crumb per path segment; label from `SEGMENT_LABELS`, else Title-cased;
@@ -202,9 +202,9 @@ To change the trail, edit `nav-config.ts` (structure/order) and the label/color 
 3. **No hard-coded design values** — use theme tokens / shared components.
 4. **No new dependency** for what a few lines can do. Prefer stdlib/native/existing deps.
 5. **Any scroll region gets `vui-scroll`.** macOS hides overlay scrollbars until you scroll, so a wide table looks like it ends at the last column and a long form looks complete at the fold. The class (in `theme.css`) keeps both bars visible whenever there is somewhere to scroll, in theme colours, with the gutter reserved so content doesn't shift. `RecordView` applies it to its table and form body; apply it to anything scrollable you add.
-6. **Follow the page pattern:** `flex h-full flex-col` → action header with `<Breadcrumbs/>` → content `min-h-0 flex-1 overflow-y-auto` → `flex flex-col gap-4 p-4`. Content padding is always `p-4`/`gap-4`. Prefer the shipped `Page` component (`@viliha/vui-ui/page`), which **is** that pattern with slots for `breadcrumbs`, `actions` and `footer`: `<Page breadcrumbs={<Breadcrumbs />} actions={…}>`. Reference: the `dashboard` page. Hand-rolled frames are being migrated to it, so don't add new ones.
+6. **Follow the page pattern:** `flex h-full flex-col` → action header with `<Breadcrumbs/>` → content `min-h-0 flex-1 overflow-y-auto` → `flex flex-col gap-4 p-4`. Content padding is always `p-4`/`gap-4`. Prefer the shipped `Page` component (`@vui/vui-ui/page`), which **is** that pattern with slots for `breadcrumbs`, `actions` and `footer`: `<Page breadcrumbs={<Breadcrumbs />} actions={…}>`. Reference: the `dashboard` page. Hand-rolled frames are being migrated to it, so don't add new ones.
 7. **Import and Export are placeholders with a working default.** The CSV/Excel/JSON/PDF entries ship and work in the browser; they are built from the same `IoAction` type a host uses, so `importActions` / `exportActions` (per table, or `table.*` on `VuiProvider`) replace or extend them with the same API. A function edits the shipped list, an array replaces it, an empty array hides the menu. For anything server-side use `ctx.query`, not `ctx.rows`: in `fetcher` mode the browser only holds the page on screen, so "export all" means asking your API with the query.
-8. **Datatables & record forms:** use `RecordView`/`RecordForm` (`@viliha/vui-ui/record-view`) with a `fields` array; never hand-roll a table, an add/edit form, **or a filter form**. This is what enforces the design — the blue primary `Save` (`--button-primary`), the section-header / body / footer separators, and the field-icon accent all come from the component. A hand-built `<form>` gets none of it. For **per-field filtering**, set `filterable` on the fields (`true`, or `{ control, options, … }`) and handle `onFilter(values)` — don't build your own filter inputs. See docs `/layout` and `/data-table`.
+8. **Datatables & record forms:** use `RecordView`/`RecordForm` (`@vui/vui-ui/record-view`) with a `fields` array; never hand-roll a table, an add/edit form, **or a filter form**. This is what enforces the design — the blue primary `Save` (`--button-primary`), the section-header / body / footer separators, and the field-icon accent all come from the component. A hand-built `<form>` gets none of it. For **per-field filtering**, set `filterable` on the fields (`true`, or `{ control, options, … }`) and handle `onFilter(values)` — don't build your own filter inputs. See docs `/layout` and `/data-table`.
 9. **Floating UI: one surface, and it must clear what opened it and be portalled.** Menus, popovers, selects, hover cards and tooltips all use `bg-popover` with a border and shadow; backdrops all use `bg-foreground/25`. Never a dark bubble or `bg-black` (both ignore the theme).  Dropdowns, pickers, popovers, tooltips and confirms have to sit above the panel, dialog or scrolling card they were opened from, or they are invisible or unclickable. Use the documented z-scale at the top of `packages/ui/src/theme.css` (60 slide-over · 70 Dialog · 80 confirm · 100 palette · 200 pickers/menus · 210 HoverCard · 220 Tooltip · 250 Toast) and never invent a value: `packages/ui/src/z-layers.test.ts` fails on anything off it. Position alone isn't enough, portal to the body as well, since a section card's `overflow-hidden` clips an `absolute` child at any z-index.
 10. **Lists/menus:** use `Menu`/`MenuItem` (bordered-row standard) or the shared `Dropdown`/`Select`; don't hand-roll list borders.
 11. **Icons:** Radix Icons (`@radix-ui/react-icons`) for app chrome; leave shadcn's internal Lucide icons as-is.
@@ -253,17 +253,17 @@ If you're unsure whether a doc applies, it does, so update it. A change that tou
 and `packages/vue` ship only **generated** output (from `packages/ui/src`), and it is
 git-ignored, so a fresh clone or a CI checkout has nothing to import until those
 packages build. `pnpm --filter backoffice build` skips them and fails with "Module not
-found: @viliha/vui-core"; `pnpm turbo build --filter=backoffice...` builds them first
+found: @vui/vui-core"; `pnpm turbo build --filter=backoffice...` builds them first
 because `turbo.json` declares `dependsOn: ["^build"]`. `check-types` and `dev` declare
 it too. If you add a package whose output is generated, give it a `build` script and
 let turbo order it.
 
 ```bash
 pnpm turbo build --filter=backoffice...   # the app plus its generated deps
-pnpm --filter @viliha/vui-ui check-types
+pnpm --filter @vui/vui-ui check-types
 pnpm --filter backoffice lint            # eslint --max-warnings 0
 pnpm --filter backoffice build           # or the app you changed
-pnpm --filter @viliha/vui-ui test      # includes the MCP coverage tests
+pnpm --filter @vui/vui-ui test      # includes the MCP coverage tests
 ```
 
 Plus (not optional): the **CHANGELOG + docs update** from the "Changelog & docs" rule above, a `packages/ui` version bump if the change ships in the package, and the **MCP check** from hard rule 13 (ask the server the question a consumer's agent would ask, and see that it answers).
@@ -303,7 +303,7 @@ This repo ships a prebuilt knowledge graph so an agent can answer "how does X wo
 
 ## MCP server (`bin/mcp.mjs`)
 
-The package ships an MCP server (`npx @viliha/vui-ui mcp`, a `mcp` subcommand of
+The package ships an MCP server (`npx @vui/vui-ui mcp`, a `mcp` subcommand of
 the same `bin/vui.mjs` CLI) so a consumer's agent can query VUI over stdio. It
 serves seven tools: `list_guides`, `get_guide`, `list_components`,
 `get_component`, `list_pages`, `get_page`, `search_docs`.
@@ -324,7 +324,7 @@ question is about a release.
 
 Both snapshots are git-ignored and regenerated on `prepublishOnly`, so a publish
 now needs the docs site built first (`pnpm --filter backoffice build`, then
-`pnpm --filter @viliha/vui-ui snapshot-docs`). `bin/mcp.test.mjs` covers the
+`pnpm --filter @vui/vui-ui snapshot-docs`). `bin/mcp.test.mjs` covers the
 handshake, each tool, and the path guards on `get_page` and `get_guide`; the
 guide assertions skip themselves when `docs/` hasn't been generated locally.
 Adding a tool means adding an entry to `TOOLS` and a case to that test, nothing

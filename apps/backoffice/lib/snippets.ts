@@ -1,7 +1,7 @@
 // Copy-paste markup for people with no component package: plain HTML, Blade,
 // Twig, ERB, anything that emits tags.
 //
-// The classes are read from `@viliha/vui-core`, the same source the React and
+// The classes are read from `@vui/vui-core`, the same source the React and
 // Vue components render, so a snippet on the docs site cannot drift from the
 // components. Change a button's hover state once and every snippet follows.
 
@@ -21,7 +21,7 @@ import {
   DROPDOWN_ITEM,
   SELECT_TRIGGER,
   cn,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 
 export type Snippet = {
   id: string;

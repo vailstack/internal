@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@viliha/vui-ui/skeleton";
+import { Skeleton } from "@vui/vui-ui/skeleton";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -10,7 +10,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Skeleton } from "@viliha/vui-ui/skeleton";
+const usage = `import { Skeleton } from "@vui/vui-ui/skeleton";
 
 export function Example() {
   return (

@@ -1,6 +1,6 @@
-# @viliha/vui-web
+# @vui/vui-web
 
-Marketing blocks for [VUI](https://internal.viliha.com): heroes, features, testimonials,
+Marketing blocks for [VUI](https://internal.vailstack.com): heroes, features, testimonials,
 pricing, FAQ, headers and footers.
 
 They are not a separate design system. Blocks read the same tokens and the same
@@ -8,14 +8,14 @@ class strings as the admin components, so a landing page and the dashboard it
 sells look like one product.
 
 ```bash
-npm install @viliha/vui-web
+npm install @vui/vui-web
 npm install -D tailwindcss @tailwindcss/postcss
 ```
 
 ```css
 /* app/globals.css */
 @import "tailwindcss";
-@import "@viliha/vui-web/theme.css";
+@import "@vui/vui-web/theme.css";
 ```
 
 ## Compose a page
@@ -24,7 +24,7 @@ Every block takes its content as props. There is no hard-coded copy, which is
 what lets an agent fill them in.
 
 ```tsx
-import { Hero, LogoCloud, FeatureGrid, Pricing, Faq, Cta } from "@viliha/vui-web";
+import { Hero, LogoCloud, FeatureGrid, Pricing, Faq, Cta } from "@vui/vui-web";
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
 Import one block and a bundler drops the rest:
 
 ```tsx
-import { Hero } from "@viliha/vui-web/hero";
+import { Hero } from "@vui/vui-web/hero";
 ```
 
 ## What's here
@@ -106,7 +106,7 @@ grid, columns) · `QuoteBlock` · `RatingBlock` · `TrustBadges` · `CaseStudyGr
 - **Only three blocks are client components.** `ShareBlock`, `TableOfContents`
   and `ReadingProgress` need the browser. Everything else renders on the server,
   which is what lets a page pass a block a function like `hrefFor`.
-- **An agent can ask what exists.** The MCP server in `@viliha/vui-ui` gained
+- **An agent can ask what exists.** The MCP server in `@vui/vui-ui` gained
   `list_blocks`, `get_block` and `compose_page`, and they read this package
   wherever it resolves. `compose_page "SaaS landing page"` returns the block
   order; `get_block Hero` returns its props and source.

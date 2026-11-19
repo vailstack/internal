@@ -26,7 +26,7 @@ export default function HtmlPage() {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/@viliha/vui-theme/dist/vui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@vui/vui-theme/dist/vui.css" />
   </head>
   <body class="bg-background text-foreground">
     <!-- paste any snippet from this page -->

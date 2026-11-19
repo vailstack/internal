@@ -41,13 +41,13 @@ export default function ChartsPage() {
       <CodeBlock title="terminal">{`npm install recharts`}</CodeBlock>
       <Note title="Monorepo">
         In this repo Recharts is already a dependency of{" "}
-        <code>@viliha/vui-ui</code> and the backoffice app, so no install is
+        <code>@vui/vui-ui</code> and the backoffice app, so no install is
         needed.
       </Note>
 
       <H2>The wrapper</H2>
       <P>
-        Import the themed pieces from <code>@viliha/vui-ui/chart</code>, and pull
+        Import the themed pieces from <code>@vui/vui-ui/chart</code>, and pull
         the chart primitives (AreaChart, Bar, XAxis, …) straight from{" "}
         <code>recharts</code>.
       </P>
@@ -81,7 +81,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@viliha/vui-ui/chart";
+} from "@vui/vui-ui/chart";
 
 const data = [
   { month: "Jan", revenue: 18600 },
@@ -131,7 +131,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@viliha/vui-ui/chart";
+} from "@vui/vui-ui/chart";
 
 const data = [
   { name: "Direct", value: 4200, color: "var(--chart-1)" },
@@ -183,7 +183,7 @@ const data = [
 import { defineChart, lineY } from "@tanstack/charts";
 import { scaleLinear } from "@tanstack/charts/scales/linear";
 import { scalePoint } from "@tanstack/charts/scales/point";
-import { TanStackChart } from "@viliha/vui-ui/tanstack-chart";
+import { TanStackChart } from "@vui/vui-ui/tanstack-chart";
 
 const revenue = [
   { month: "Jan", revenue: 42_000 },
@@ -203,7 +203,7 @@ export function RevenueChart() {
 
       <H3>The same chart in Vue</H3>
       <CodeBlock title="RevenueChart.vue">{`<script setup lang="ts">
-import { Chart } from "@viliha/vui-vue";
+import { Chart } from "@vui/vui-vue";
 // \`chart\` is the exact definition from the React example: it is framework-neutral.
 import { chart } from "./revenue-definition";
 </script>

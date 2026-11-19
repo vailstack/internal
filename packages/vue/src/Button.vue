@@ -6,10 +6,10 @@ import {
   cn,
   type ButtonSize,
   type ButtonVariant,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 import { computed } from "vue";
 
-// The class strings come from @viliha/vui-core, the same ones the React button
+// The class strings come from @vui/vui-core, the same ones the React button
 // renders, so the two cannot drift apart.
 const props = withDefaults(
   defineProps<{

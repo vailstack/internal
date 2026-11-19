@@ -6,7 +6,7 @@ import {
   TextAlignLeftIcon as AlignLeft,
 } from "@radix-ui/react-icons";
 
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
 import { businesses, type Business } from "@/lib/mock-data";
 import { useClientFilter } from "@/lib/use-client-filter";
 

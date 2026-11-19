@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@viliha/vui-core` are documented here. The format follows
+All notable changes to `@vui/vui-core` are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/).
 
@@ -20,5 +20,5 @@ All notable changes to `@viliha/vui-core` are documented here. The format follow
   `packages/ui/src`, which is why the two cannot drift, and it fails outright if
   one of those modules ever picks up a framework import.
 
-  Pair it with `@viliha/vui-theme` and you have the look and the logic in any
+  Pair it with `@vui/vui-theme` and you have the look and the logic in any
   framework. What is still React-only is the components themselves.

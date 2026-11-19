@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SWITCH_ROOT, SWITCH_THUMB, cn } from "@viliha/vui-core";
+import { SWITCH_ROOT, SWITCH_THUMB, cn } from "@vui/vui-core";
 import { SwitchRoot, SwitchThumb } from "reka-ui";
 import { computed } from "vue";
 

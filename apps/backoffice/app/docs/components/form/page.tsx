@@ -9,9 +9,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@viliha/vui-ui/form";
-import { Input } from "@viliha/vui-ui/input";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/form";
+import { Input } from "@vui/vui-ui/input";
+import { Button } from "@vui/vui-ui/button";
 
 import { H2, P, CodeBlock, Note } from "@/components/doc";
 import {
@@ -25,9 +25,9 @@ const usage = `import { useForm } from "react-hook-form";
 import {
   Form, FormField, FormItem, FormLabel, FormControl,
   FormDescription, FormMessage,
-} from "@viliha/vui-ui/form";
-import { Input } from "@viliha/vui-ui/input";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/form";
+import { Input } from "@vui/vui-ui/input";
+import { Button } from "@vui/vui-ui/button";
 
 export function Example() {
   const form = useForm({ defaultValues: { username: "" } });
@@ -42,7 +42,7 @@ export function Example() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="viliha" {...field} />
+                <Input placeholder="voilet" {...field} />
               </FormControl>
               <FormDescription>Your public display name.</FormDescription>
               <FormMessage />
@@ -77,7 +77,7 @@ export default function Page() {
                 <FormItem>
                   <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="viliha" {...field} />
+                    <Input placeholder="voilet" {...field} />
                   </FormControl>
                   <FormDescription>
                     This is your public display name.

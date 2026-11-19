@@ -402,7 +402,7 @@ const { data, loading, save } = useOrganizations();
       <H2>Command palette: Quick actions &amp; Global search</H2>
       <P>
         Two ⌘K-style palettes ship in the shell, both built on the same headless{" "}
-        <code>CommandPalette</code> from <code>@viliha/vui-ui</code>. The only
+        <code>CommandPalette</code> from <code>@vui/vui-ui</code>. The only
         difference between them is <em>what</em> they search:
       </P>
       <Ul>
@@ -440,7 +440,7 @@ const { data, loading, save } = useOrganizations();
       <CodeBlock title="a command-palette provider (the whole pattern)">{`"use client";
 import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { CommandPalette, type CommandAction } from "@viliha/vui-ui/command-palette";
+import { CommandPalette, type CommandAction } from "@vui/vui-ui/command-palette";
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -603,7 +603,7 @@ NEXT_PUBLIC_SHOW_NOTIFICATIONS=0`}</CodeBlock>
         <code>Field</code>) inside a section card, with a Back/Next footer. See
         the live demo at <code>/register-business</code>.
       </P>
-      <CodeBlock title="a stepper-driven wizard">{`import { Steps, type Step } from "@viliha/vui-ui/steps";
+      <CodeBlock title="a stepper-driven wizard">{`import { Steps, type Step } from "@vui/vui-ui/steps";
 
 const STEPS: Step[] = [
   { label: "Organization", description: "Business details" },
@@ -649,7 +649,7 @@ function Wizard() {
         primitive: it bakes in the divider, hover and last-row handling, so a
         hand-rolled list can&apos;t miss the border.
       </P>
-      <CodeBlock title="account-menu.tsx">{`import { Menu, MenuItem, MenuLabel } from "@viliha/vui-ui/menu";
+      <CodeBlock title="account-menu.tsx">{`import { Menu, MenuItem, MenuLabel } from "@vui/vui-ui/menu";
 
 <Menu className="w-56">
   <MenuLabel>Account</MenuLabel>
@@ -662,7 +662,7 @@ function Wizard() {
         The shipped <code>Dropdown</code>, <code>Select</code> and account menu
         already follow this, so you get it for free by using them. If you need
         the raw class for a bespoke element, import <code>menuItemClass</code>{" "}
-        from <code>@viliha/vui-ui/menu</code>.
+        from <code>@vui/vui-ui/menu</code>.
       </P>
 
       <H2>Dialogs</H2>
@@ -676,8 +676,8 @@ function Wizard() {
       </P>
       <CodeBlock title="invite-dialog.tsx">{`import {
   Dialog, DialogHeader, DialogTitle, DialogBody, DialogFooter,
-} from "@viliha/vui-ui/dialog";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/dialog";
+import { Button } from "@vui/vui-ui/button";
 
 <Dialog open={open} onClose={close} label="Invite teammate">
   <DialogHeader>
@@ -696,7 +696,7 @@ import { Button } from "@viliha/vui-ui/button";
         For a yes/no prompt such as a delete, <code>ConfirmDialog</code> is built
         on <code>Dialog</code>; pass it a title, a description and the handlers:
       </P>
-      <CodeBlock title="delete-confirm.tsx">{`import { ConfirmDialog } from "@viliha/vui-ui/confirm-dialog";
+      <CodeBlock title="delete-confirm.tsx">{`import { ConfirmDialog } from "@vui/vui-ui/confirm-dialog";
 
 <ConfirmDialog
   open={open}

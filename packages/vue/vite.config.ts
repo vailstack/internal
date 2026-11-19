@@ -12,9 +12,9 @@ export default defineConfig({
     rollupOptions: {
       // Never bundle the framework, the headless primitives or our own core: the
       // consumer installs those once and shares one copy.
-      external: [/^vue$/, /^reka-ui/, /^@viliha\/vui-core/, /^@tanstack\/charts/],
+      external: [/^vue$/, /^reka-ui/, /^@vui\/vui-core/, /^@tanstack\/charts/],
       output: {
-        // One output file per source file, so `@viliha/vui-vue/Button` resolves
+        // One output file per source file, so `@vui/vui-vue/Button` resolves
         // to just that component and a bundler drops the rest. Bundling them
         // into shared chunks would make every import pull in all of them.
         preserveModules: true,

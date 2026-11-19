@@ -13,9 +13,9 @@ import {
 
 import { cn } from "@/lib/utils";
 import { useBrand } from "./brand";
-import { Menu as MenuPanel } from "@viliha/vui-ui/menu";
+import { Menu as MenuPanel } from "@vui/vui-ui/menu";
 import { Logo } from "./logo";
-import { OrgSwitcher } from "@viliha/vui-ui/org-switcher";
+import { OrgSwitcher } from "@vui/vui-ui/org-switcher";
 import { QuickActionsLauncher } from "./quick-actions";
 import { useOpenTabs } from "./open-tabs";
 import {

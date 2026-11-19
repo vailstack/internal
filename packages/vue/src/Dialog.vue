@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DIALOG_OVERLAY, DIALOG_PANEL, cn } from "@viliha/vui-core";
+import { DIALOG_OVERLAY, DIALOG_PANEL, cn } from "@vui/vui-core";
 import { DialogContent, DialogOverlay, DialogPortal, DialogRoot } from "reka-ui";
 import { computed } from "vue";
 

@@ -13,12 +13,12 @@ import {
   LockClosedIcon as KeyRound,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Checkbox } from "@viliha/vui-ui/checkbox";
-import { Input } from "@viliha/vui-ui/input";
-import { PasswordInput } from "@viliha/vui-ui/password-input";
-import { useAuth } from "@viliha/vui-ui/auth-context";
-import { useFormFields } from "@viliha/vui-ui/use-form-fields";
+import { Button } from "@vui/vui-ui/button";
+import { Checkbox } from "@vui/vui-ui/checkbox";
+import { Input } from "@vui/vui-ui/input";
+import { PasswordInput } from "@vui/vui-ui/password-input";
+import { useAuth } from "@vui/vui-ui/auth-context";
+import { useFormFields } from "@vui/vui-ui/use-form-fields";
 import { BrandName } from "@/app/_components/brand";
 import {
   AuthCard,
@@ -82,7 +82,7 @@ export function SignInScreen({ onSignIn, providers = true }: SignInScreenProps =
   async function finish() {
     setBusy(true);
     try {
-      const email = f.values.email.trim() || "admin@viliha.example";
+      const email = f.values.email.trim() || "admin@voilet.example";
       const password = f.values.password || "demo-password";
       if (onSignIn) {
         await onSignIn({ email, password, remember });

@@ -36,7 +36,7 @@ export default function ConfigurationPage() {
         separate &quot;configurable&quot; set of components beside the
         opinionated ones.
       </P>
-      <CodeBlock title="app/(app)/layout.tsx">{`import { VuiProvider } from "@viliha/vui-ui/config";
+      <CodeBlock title="app/(app)/layout.tsx">{`import { VuiProvider } from "@vui/vui-ui/config";
 
 <VuiProvider
   config={{ behaviour: { rowClick: "edit", confirmDiscardWhenDirty: true } }}
@@ -108,7 +108,7 @@ export default function ConfigurationPage() {
         how five people in one organization can each have their own colour while
         the company default still applies to everyone who hasn&apos;t chosen.
       </P>
-      <CodeBlock title="app/(app)/layout.tsx">{`import { ThemeConfigProvider } from "@viliha/vui-ui/theme-provider";
+      <CodeBlock title="app/(app)/layout.tsx">{`import { ThemeConfigProvider } from "@vui/vui-ui/theme-provider";
 
 <ThemeConfigProvider
   orgTheme={org.theme}                                  // the company brand

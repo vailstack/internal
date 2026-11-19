@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@viliha/vui-theme` are documented here. The format follows
+All notable changes to `@vui/vui-theme` are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/).
 
@@ -47,8 +47,8 @@ All notable changes to `@viliha/vui-theme` are documented here. The format follo
 
 - **The VUI theme as a package of its own.** 129 design tokens, class-based dark
   mode, the z-scale, motion utilities and `.vui-scroll`, with no JavaScript and no
-  dependencies. Two entry points: `@viliha/vui-theme/theme.css` for anyone running
-  Tailwind v4, and `@viliha/vui-theme/vui.css` compiled for people with no build
+  dependencies. Two entry points: `@vui/vui-theme/theme.css` for anyone running
+  Tailwind v4, and `@vui/vui-theme/vui.css` compiled for people with no build
   step at all.
 
   Both are generated from `packages/ui/src/theme.css` at publish time, so the

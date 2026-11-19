@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/installation/" },
   title: "Installation",
   description:
-    "Install @viliha/vui-ui and set it up in a new Next.js app, Vite + React, an existing project, or a Turborepo monorepo.",
+    "Install @vui/vui-ui and set it up in a new Next.js app, Vite + React, an existing project, or a Turborepo monorepo.",
 };
 
 export default function InstallationPage() {
@@ -25,16 +25,16 @@ export default function InstallationPage() {
       <PageTitle
         eyebrow="Getting started"
         title="Installation"
-        lead="@viliha/vui-ui ships as TypeScript source, so your bundler compiles it alongside your own code. Install the package, add Tailwind v4, import the theme, and you're ready."
+        lead="@vui/vui-ui ships as TypeScript source, so your bundler compiles it alongside your own code. Install the package, add Tailwind v4, import the theme, and you're ready."
       />
 
-      <H2>How do I install @viliha/vui-ui?</H2>
+      <H2>How do I install @vui/vui-ui?</H2>
       <PackageManagerTabs
         commands={{
-          npm: "npm install @viliha/vui-ui\nnpm install -D tailwindcss @tailwindcss/postcss",
-          pnpm: "pnpm add @viliha/vui-ui\npnpm add -D tailwindcss @tailwindcss/postcss",
-          yarn: "yarn add @viliha/vui-ui\nyarn add -D tailwindcss @tailwindcss/postcss",
-          bun: "bun add @viliha/vui-ui\nbun add -d tailwindcss @tailwindcss/postcss",
+          npm: "npm install @vui/vui-ui\nnpm install -D tailwindcss @tailwindcss/postcss",
+          pnpm: "pnpm add @vui/vui-ui\npnpm add -D tailwindcss @tailwindcss/postcss",
+          yarn: "yarn add @vui/vui-ui\nyarn add -D tailwindcss @tailwindcss/postcss",
+          bun: "bun add @vui/vui-ui\nbun add -d tailwindcss @tailwindcss/postcss",
         }}
       />
       <P>
@@ -44,7 +44,7 @@ export default function InstallationPage() {
       </P>
       <Note title="Not using React?">
         The theme is plain CSS and ships on its own as{" "}
-        <code>@viliha/vui-theme</code>, with no dependencies. It works in Vue,
+        <code>@vui/vui-theme</code>, with no dependencies. It works in Vue,
         Svelte, Angular, Solid, Astro, Qwik, Lit, Alpine, HTMX or hand-written HTML.
         See{" "}
         <a
@@ -66,10 +66,10 @@ export default function InstallationPage() {
       </P>
       <PackageManagerTabs
         commands={{
-          npm: "npx @viliha/vui-ui init",
-          pnpm: "pnpm dlx @viliha/vui-ui init",
-          yarn: "yarn dlx @viliha/vui-ui init",
-          bun: "bunx @viliha/vui-ui init",
+          npm: "npx @vui/vui-ui init",
+          pnpm: "pnpm dlx @vui/vui-ui init",
+          yarn: "yarn dlx @vui/vui-ui init",
+          bun: "bunx @vui/vui-ui init",
         }}
       />
       <P>
@@ -80,10 +80,10 @@ export default function InstallationPage() {
       </P>
       <PackageManagerTabs
         commands={{
-          npm: "npx create-next-app@latest my-app --ts --tailwind --app --no-src-dir --use-npm\ncd my-app && npx @viliha/vui-ui init && npm run dev",
-          pnpm: "pnpm create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && pnpm dlx @viliha/vui-ui init && pnpm dev",
-          yarn: "yarn create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && yarn dlx @viliha/vui-ui init && yarn dev",
-          bun: "bun create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && bunx @viliha/vui-ui init && bun dev",
+          npm: "npx create-next-app@latest my-app --ts --tailwind --app --no-src-dir --use-npm\ncd my-app && npx @vui/vui-ui init && npm run dev",
+          pnpm: "pnpm create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && pnpm dlx @vui/vui-ui init && pnpm dev",
+          yarn: "yarn create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && yarn dlx @vui/vui-ui init && yarn dev",
+          bun: "bun create next-app my-app --ts --tailwind --app --no-src-dir\ncd my-app && bunx @vui/vui-ui init && bun dev",
         }}
       />
       <P>
@@ -143,7 +143,7 @@ export default function InstallationPage() {
         (<code>transpilePackages</code>, the <code>theme.css</code> import, the{" "}
         <code>@/*</code> alias, and <code>import &quot;./globals.css&quot;</code>).
         <strong> Preview first</strong> with{" "}
-        <code>npx @viliha/vui-ui init --existing --prebuilt --dry-run</code> to see
+        <code>npx @vui/vui-ui init --existing --prebuilt --dry-run</code> to see
         exactly what lands. Only want the components?{" "}
         <code>--theme-only</code> copies nothing and just prints the wiring, or skip{" "}
         <code>init</code> entirely (Setup section 3 below).{" "}
@@ -159,12 +159,12 @@ export default function InstallationPage() {
       <CodeBlock title="app/globals.css">{`@import "tailwindcss";
 /* Design tokens, @theme mapping, base reset, and scanning of the
    library's component classes, all in one import. */
-@import "@viliha/vui-ui/theme.css";`}</CodeBlock>
+@import "@vui/vui-ui/theme.css";`}</CodeBlock>
       <H3>b. Transpile the source package</H3>
       <CodeBlock title="next.config.ts">{`import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@viliha/vui-ui"],
+  transpilePackages: ["@vui/vui-ui"],
   // Pin the workspace root to this app so Next doesn't infer it from a
   // stray lockfile higher up the tree (a home-dir bun.lock, an outer monorepo).
   turbopack: { root: __dirname },
@@ -180,7 +180,7 @@ export default nextConfig;`}</CodeBlock>
       <H2>2 · New Vite + React app</H2>
       <CodeBlock title="terminal">{`npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm install @viliha/vui-ui
+npm install @vui/vui-ui
 npm install -D tailwindcss @tailwindcss/vite`}</CodeBlock>
       <CodeBlock title="vite.config.ts">{`import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
@@ -188,13 +188,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({ plugins: [react(), tailwindcss()] });`}</CodeBlock>
       <CodeBlock title="src/index.css">{`@import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";`}</CodeBlock>
+@import "@vui/vui-ui/theme.css";`}</CodeBlock>
       <P>Vite transpiles the package's TypeScript automatically, with no extra config.</P>
 
       <H2>3 · Existing project</H2>
       <P>
         This manual wiring is exactly what{" "}
-        <code className="font-mono text-[0.9em]">npx @viliha/vui-ui init --existing --theme-only</code>{" "}
+        <code className="font-mono text-[0.9em]">npx @vui/vui-ui init --existing --theme-only</code>{" "}
         prints. It is the <strong>safe path</strong> that copies no files and touches
         no config. Do it by hand, or run that command and follow its output.
       </P>
@@ -203,14 +203,14 @@ export default defineConfig({ plugins: [react(), tailwindcss()] });`}</CodeBlock
           Install the package, then confirm you're on <strong>Tailwind CSS v4</strong>.
         </li>
         <li>
-          Add <code className="font-mono text-[0.9em]">@import "@viliha/vui-ui/theme.css";</code>{" "}
+          Add <code className="font-mono text-[0.9em]">@import "@vui/vui-ui/theme.css";</code>{" "}
           after <code className="font-mono text-[0.9em]">@import "tailwindcss";</code>.
         </li>
         <li>
           <strong>Next.js:</strong> add{" "}
-          <code className="font-mono text-[0.9em]">transpilePackages: ["@viliha/vui-ui"]</code>.{" "}
+          <code className="font-mono text-[0.9em]">transpilePackages: ["@vui/vui-ui"]</code>.{" "}
           <strong>Vite:</strong> nothing extra. <strong>Other bundlers:</strong>{" "}
-          ensure <code className="font-mono text-[0.9em]">node_modules/@viliha/vui-ui</code> is transpiled.
+          ensure <code className="font-mono text-[0.9em]">node_modules/@vui/vui-ui</code> is transpiled.
         </li>
         <li>
           Already define shadcn tokens (<code className="font-mono text-[0.9em]">--primary</code>, …)?
@@ -238,17 +238,17 @@ export default defineConfig({ plugins: [react(), tailwindcss()] });`}</CodeBlock
       </Note>
       <CodeBlock title="scaffold into apps/web">{`# from inside the app (simplest)
 cd apps/web
-npx @viliha/vui-ui init
+npx @vui/vui-ui init
 
 # …or from the repo root, name the target app
-npx @viliha/vui-ui init --turbo --dir apps/web`}</CodeBlock>
+npx @vui/vui-ui init --turbo --dir apps/web`}</CodeBlock>
       <CodeBlock title="then install the deps in that app">{`cd apps/web
-pnpm add @viliha/vui-ui   # + the peer deps the CLI prints
-# or from the root:  pnpm --filter web add @viliha/vui-ui …
+pnpm add @vui/vui-ui   # + the peer deps the CLI prints
+# or from the root:  pnpm --filter web add @vui/vui-ui …
 pnpm --filter web dev`}</CodeBlock>
       <Ul>
         <li>
-          Add <code className="font-mono text-[0.9em]">transpilePackages: ["@viliha/vui-ui"]</code>,
+          Add <code className="font-mono text-[0.9em]">transpilePackages: ["@vui/vui-ui"]</code>,
           the <code className="font-mono text-[0.9em]">theme.css</code> import, and
           the <code className="font-mono text-[0.9em]">@/*</code> alias to{" "}
           <strong>that app</strong>: its <code>next.config</code>,{" "}
@@ -262,8 +262,8 @@ pnpm --filter web dev`}</CodeBlock>
       </Ul>
 
       <H2>How do I use a component?</H2>
-      <CodeBlock title="example.tsx">{`import { Button } from "@viliha/vui-ui/button";
-import { Badge } from "@viliha/vui-ui/badge";
+      <CodeBlock title="example.tsx">{`import { Button } from "@vui/vui-ui/button";
+import { Badge } from "@vui/vui-ui/badge";
 
 export function Example() {
   return (

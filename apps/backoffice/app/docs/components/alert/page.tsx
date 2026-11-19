@@ -4,7 +4,7 @@ import {
   ExclamationTriangleIcon,
   InfoCircledIcon,
 } from "@radix-ui/react-icons";
-import { Alert, AlertDescription, AlertTitle } from "@viliha/vui-ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@vui/vui-ui/alert";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -14,7 +14,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Alert, AlertTitle, AlertDescription } from "@viliha/vui-ui/alert";
+const usage = `import { Alert, AlertTitle, AlertDescription } from "@vui/vui-ui/alert";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 export function Example() {

@@ -57,7 +57,7 @@ pnpm dev            # backoffice + docs on :3000`}</CodeBlock>
         change must pass before it&apos;s &quot;done&quot;. Point your agent at
         the repo and it holds to the same standards a human reviewer expects.
       </P>
-      <CodeBlock title="verify before a PR">{`pnpm --filter @viliha/vui-ui check-types
+      <CodeBlock title="verify before a PR">{`pnpm --filter @vui/vui-ui check-types
 pnpm --filter backoffice lint     # eslint --max-warnings 0
 pnpm --filter backoffice build`}</CodeBlock>
 
@@ -70,7 +70,7 @@ pnpm check-types    # type-check`}</CodeBlock>
       <H2>Where things live</H2>
       <Ul>
         <li>
-          <code>packages/ui</code>: the <code>@viliha/vui-ui</code> library
+          <code>packages/ui</code>: the <code>@vui/vui-ui</code> library
           (edit components + <code>theme.css</code> here).
         </li>
         <li>

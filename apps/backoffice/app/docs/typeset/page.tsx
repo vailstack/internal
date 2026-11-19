@@ -50,12 +50,12 @@ export default function TypesetPage() {
       <P>
         Code uses Geist Mono. Inline:{" "}
         <code className="rounded-[4px] border border-border bg-muted/60 px-1.5 py-0.5 font-mono text-[0.85em]">
-          @viliha/vui-ui
+          @vui/vui-ui
         </code>
         .
       </P>
       <pre className="overflow-x-auto rounded-lg border border-border bg-card p-4 font-mono text-[13px] leading-relaxed text-foreground">
-        <code>{`import { Button } from "@viliha/vui-ui/button";
+        <code>{`import { Button } from "@vui/vui-ui/button";
 
 export function Save() {
   return <Button variant="primary">Save</Button>;

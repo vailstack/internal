@@ -890,7 +890,7 @@ export const NEWS: Entry[] = [
 export const PRESS_KIT = {
   boilerplate:
     "VUI is an open-source component library and admin starter for React and Vue. It ships datatables, record forms, auth screens and a theming system as MIT-licensed source, scaffolded directly into a team's repository rather than served from a hosted runtime.",
-  contact: "press@viliha.com",
+  contact: "press@vailstack.com",
   assets: [
     { label: "Logo, SVG", href: "/logo.svg", meta: "Vector, light and dark" },
     { label: "Product screenshots", href: "/contact/", meta: "PNG, 2560 wide" },

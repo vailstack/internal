@@ -30,7 +30,7 @@ export default function TemplatesPage() {
       <P>
         Point your agent at the shipped guide first. It encodes the rules these
         templates lean on. Copy{" "}
-        <code>node_modules/@viliha/vui-ui/CLAUDE.template.md</code> into your repo
+        <code>node_modules/@vui/vui-ui/CLAUDE.template.md</code> into your repo
         as <code>CLAUDE.md</code> or <code>AGENTS.md</code>. With that in place,
         every template below can stay short: you name <em>what</em> and{" "}
         <em>where</em>, and the guide supplies the <em>how</em>: tokens, page

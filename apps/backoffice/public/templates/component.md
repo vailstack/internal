@@ -1,7 +1,7 @@
 Build a reusable component: <Name>
 
 Purpose:    <one line — what it renders / does>
-Location:   packages/ui/src/<name>.tsx  (auto-exported as @viliha/vui-ui/<name>)
+Location:   packages/ui/src/<name>.tsx  (auto-exported as @vui/vui-ui/<name>)
 Props:      # the public API
   - <prop>: <type> — <meaning> (required? default?)
 Variants:   <e.g. primary | secondary — or "none">

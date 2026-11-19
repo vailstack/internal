@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/changelog/" },
   title: "Change Log",
   description:
-    "Release history for @viliha/vui-ui: every version's new features, changes, and fixes, pulled straight from the package CHANGELOG so it never drifts from what shipped.",
+    "Release history for @vui/vui-ui: every version's new features, changes, and fixes, pulled straight from the package CHANGELOG so it never drifts from what shipped.",
 };
 
 // Single source of truth: read the package CHANGELOG at build time. Docs pages
@@ -79,7 +79,7 @@ export default function ChangelogPage() {
       <PageTitle
         eyebrow="Community"
         title="Change Log"
-        lead="What's new in @viliha/vui-ui: features, changes, and fixes, newest first. Rendered straight from the package changelog, so it always matches what actually shipped. Filter by change type, or browse by release."
+        lead="What's new in @vui/vui-ui: features, changes, and fixes, newest first. Rendered straight from the package changelog, so it always matches what actually shipped. Filter by change type, or browse by release."
       />
       <Note title="Upgrading from 1.44 to 1.52">
         Upgrade, restart, change nothing: everything from 1.50 on is additive,

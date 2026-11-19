@@ -1,4 +1,4 @@
-import { Cta, Faq, Hero } from "@viliha/vui-web";
+import { Cta, Faq, Hero } from "@vui/vui-web";
 
 import { FAQS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";

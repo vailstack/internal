@@ -7,7 +7,7 @@ import {
   ReloadIcon as Reload,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
+import { Button } from "@vui/vui-ui/button";
 import { ErrorScreen } from "@/app/_components/error-screen";
 
 /** Root error boundary — shown when a route throws. Same shell as the 404, so a

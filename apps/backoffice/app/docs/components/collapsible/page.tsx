@@ -6,8 +6,8 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@viliha/vui-ui/collapsible";
-import { Button } from "@viliha/vui-ui/button";
+} from "@vui/vui-ui/collapsible";
+import { Button } from "@vui/vui-ui/button";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -19,7 +19,7 @@ import {
 
 const usage = `import {
   Collapsible, CollapsibleTrigger, CollapsibleContent,
-} from "@viliha/vui-ui/collapsible";
+} from "@vui/vui-ui/collapsible";
 
 export function Example() {
   const [open, setOpen] = React.useState(false);
@@ -44,7 +44,7 @@ export default function Page() {
           className="w-full max-w-xs space-y-2"
         >
           <div className="flex items-center justify-between gap-4 rounded-md border border-border px-4 py-2 text-sm font-medium">
-            @viliha starred 3 repositories
+            @voilet starred 3 repositories
             <CollapsibleTrigger asChild>
               <Button variant="ghost" size="icon">
                 <CaretSortIcon className="size-4" />
@@ -52,7 +52,7 @@ export default function Page() {
             </CollapsibleTrigger>
           </div>
           <CollapsibleContent className="space-y-2">
-            {["@viliha/vui-ui", "@viliha/starter", "@viliha/docs"].map((r) => (
+            {["@vui/vui-ui", "@vui/starter", "@vui/docs"].map((r) => (
               <div
                 key={r}
                 className="rounded-md border border-border px-4 py-2 text-sm text-muted-foreground"

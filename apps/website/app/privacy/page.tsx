@@ -1,4 +1,4 @@
-import { Hero, Prose } from "@viliha/vui-web";
+import { Hero, Prose } from "@vui/vui-web";
 
 import { SITE, pageMeta } from "@/lib/site";
 

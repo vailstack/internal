@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@viliha/vui-ui/accordion";
+} from "@vui/vui-ui/accordion";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -21,7 +21,7 @@ const usage = `import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@viliha/vui-ui/accordion";
+} from "@vui/vui-ui/accordion";
 
 export function Example() {
   return (

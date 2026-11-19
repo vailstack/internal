@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TABS_CONTENT, cn } from "@viliha/vui-core";
+import { TABS_CONTENT, cn } from "@vui/vui-core";
 import { TabsContent } from "reka-ui";
 import { computed } from "vue";
 

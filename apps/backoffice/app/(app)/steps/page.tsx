@@ -9,12 +9,12 @@ import {
   RowsIcon,
 } from "@radix-ui/react-icons";
 
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { Select } from "@viliha/vui-ui/select";
-import { type Step } from "@viliha/vui-ui/steps";
-import { Wizard, WizardSection } from "@viliha/vui-ui/wizard";
-import { FieldGrid, Field } from "@viliha/vui-ui/field-grid";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { Select } from "@vui/vui-ui/select";
+import { type Step } from "@vui/vui-ui/steps";
+import { Wizard, WizardSection } from "@vui/vui-ui/wizard";
+import { FieldGrid, Field } from "@vui/vui-ui/field-grid";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 

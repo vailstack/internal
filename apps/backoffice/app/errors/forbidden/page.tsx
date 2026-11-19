@@ -1,7 +1,7 @@
 import { CrossCircledIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-import { Button } from "@viliha/vui-ui/button";
+import { Button } from "@vui/vui-ui/button";
 import { ErrorScreen } from "@/app/_components/error-screen";
 import { pageMeta } from "@/lib/seo";
 

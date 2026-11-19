@@ -39,7 +39,7 @@ export interface WizardProps {
  * (from `steps` + `current`), a scrolling body for the active step, and a
  * Back/Next footer; you own the step index, the field state, and all logic, and
  * you drop your own components inside {@link WizardSection}s. Fields inside a
- * section should use `FieldGrid` / `Field` (`@viliha/vui-ui/field-grid`) so they
+ * section should use `FieldGrid` / `Field` (`@vui/vui-ui/field-grid`) so they
  * follow the two-column design standard.
  *
  * ```tsx

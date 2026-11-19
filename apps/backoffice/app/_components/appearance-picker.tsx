@@ -9,7 +9,7 @@
 
 import { CheckIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 
 import {
   DENSITIES,

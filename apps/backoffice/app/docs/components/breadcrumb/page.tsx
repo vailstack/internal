@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@viliha/vui-ui/breadcrumb";
+} from "@vui/vui-ui/breadcrumb";
 
 import { H2, P, CodeBlock, Note } from "@/components/doc";
 import {
@@ -21,7 +21,7 @@ import {
 const usage = `import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink,
   BreadcrumbPage, BreadcrumbSeparator,
-} from "@viliha/vui-ui/breadcrumb";
+} from "@vui/vui-ui/breadcrumb";
 
 export function Example() {
   return (

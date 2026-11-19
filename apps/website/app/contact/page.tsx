@@ -1,4 +1,4 @@
-import { ContactForm, Faq, Hero } from "@viliha/vui-web";
+import { ContactForm, Faq, Hero } from "@vui/vui-web";
 
 import { FAQS } from "@/lib/content";
 import { SITE, pageMeta } from "@/lib/site";

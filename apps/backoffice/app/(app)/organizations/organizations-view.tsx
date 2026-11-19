@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { RecordView, type FilterValues } from "@viliha/vui-ui/record-view";
-import { toast } from "@viliha/vui-ui/toast";
+import { RecordView, type FilterValues } from "@vui/vui-ui/record-view";
+import { toast } from "@vui/vui-ui/toast";
 import { type DemoOrganization } from "@/lib/demo-data";
 import { filterRows, reconcile } from "@/lib/use-client-filter";
 

@@ -11,8 +11,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@viliha/vui-ui/command";
-import { Shortcut } from "@viliha/vui-ui/kbd";
+} from "@vui/vui-ui/command";
+import { Shortcut } from "@vui/vui-ui/kbd";
 import { COMPONENTS } from "@/app/docs/components/registry";
 
 /** Searchable non-component doc pages (mirrors the sidebar). */

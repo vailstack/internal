@@ -11,7 +11,7 @@ import {
   RecordView,
   type FilterValues,
   type RecordField,
-} from "@viliha/vui-ui/record-view";
+} from "@vui/vui-ui/record-view";
 import { cities, type City } from "@/lib/mock-data";
 
 // Option lists derived from the data.

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /* The two bars that sit outside the page: an announcement above it, and a
    cookie notice over it. Both remember being dismissed, and neither may shift

@@ -12,8 +12,8 @@ import {
 
 import { usePathname } from "next/navigation";
 
-import { Badge } from "@viliha/vui-ui/badge";
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
+import { Badge } from "@vui/vui-ui/badge";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
 import { branches, type Branch } from "@/lib/mock-data";
 import { useClientFilter } from "@/lib/use-client-filter";
 

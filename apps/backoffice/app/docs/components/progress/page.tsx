@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Progress } from "@viliha/vui-ui/progress";
+import { Progress } from "@vui/vui-ui/progress";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,7 +11,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { Progress } from "@viliha/vui-ui/progress";
+const usage = `import { Progress } from "@vui/vui-ui/progress";
 
 export function Example() {
   return <Progress value={66} />;

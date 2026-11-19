@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 import { Chart, type ChartDefinition } from "@tanstack/charts/vue";
 import { computed } from "vue";
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ACCORDION_CHEVRON, ACCORDION_TRIGGER, cn } from "@viliha/vui-core";
+import { ACCORDION_CHEVRON, ACCORDION_TRIGGER, cn } from "@vui/vui-core";
 import { AccordionHeader, AccordionTrigger } from "reka-ui";
 import { computed } from "vue";
 

@@ -7,15 +7,15 @@
 # graphify falls back to .gitignore when this file is absent, but these are
 # declared in nested per-package .gitignore files, so they are spelled out here.
 
-# @viliha/vui-core: a literal copy of packages/ui/src, compiled.
+# @vui/vui-core: a literal copy of packages/ui/src, compiled.
 packages/core/src/
 packages/core/dist/
 
-# @viliha/vui-theme: generated from packages/ui/src/theme.css.
+# @vui/vui-theme: generated from packages/ui/src/theme.css.
 packages/theme/theme.css
 packages/theme/dist/
 
-# @viliha/vui-vue: compiled SFCs.
+# @vui/vui-vue: compiled SFCs.
 packages/vue/dist/
 
 # The scaffold `vui init` copies: a snapshot of apps/backoffice, so every file

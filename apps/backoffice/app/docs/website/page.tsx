@@ -24,7 +24,7 @@ export default function WebsitePage() {
       <PageTitle
         eyebrow="Guides"
         title="Website blocks"
-        lead="VUI is two halves. The admin half generates screens from data. This half builds the public site in front of it: 60 marketing blocks in @viliha/vui-web, on the same tokens, composable by an agent."
+        lead="VUI is two halves. The admin half generates screens from data. This half builds the public site in front of it: 60 marketing blocks in @vui/vui-web, on the same tokens, composable by an agent."
       />
 
       <H2>What are website blocks?</H2>
@@ -41,11 +41,11 @@ export default function WebsitePage() {
         not need the datatable, and an admin app does not need a cookie banner.
       </P>
 
-      <CodeBlock title="Install">{`pnpm add @viliha/vui-web
+      <CodeBlock title="Install">{`pnpm add @vui/vui-web
 
 # The theme comes from the same file the admin app uses.
 # app/globals.css
-@import "@viliha/vui-ui/theme.css";`}</CodeBlock>
+@import "@vui/vui-ui/theme.css";`}</CodeBlock>
 
       <H2>How do I build a page?</H2>
       <P>
@@ -53,7 +53,7 @@ export default function WebsitePage() {
         full. There is no bespoke markup in it, which is the test the library has
         to pass.
       </P>
-      <CodeBlock title="app/page.tsx">{`import { Cta, Faq, FeatureGrid, Hero, LogoCloud, Pricing, Stats } from "@viliha/vui-web";
+      <CodeBlock title="app/page.tsx">{`import { Cta, Faq, FeatureGrid, Hero, LogoCloud, Pricing, Stats } from "@vui/vui-web";
 
 export default function HomePage() {
   return (
@@ -138,7 +138,7 @@ export default function HomePage() {
 
       <H2>How does an agent build my site?</H2>
       <P>
-        The MCP server that ships inside <code>@viliha/vui-ui</code> gained three
+        The MCP server that ships inside <code>@vui/vui-ui</code> gained three
         tools for this. An agent asks the installed package what to build with,
         rather than guessing from documentation that is a year older than your
         version.
@@ -156,7 +156,7 @@ export default function HomePage() {
           <code>get_block</code> returns one block&rsquo;s props and source
         </li>
       </Ul>
-      <CodeBlock title="Connect it">{`claude mcp add vui -- npx -y @viliha/vui-ui mcp`}</CodeBlock>
+      <CodeBlock title="Connect it">{`claude mcp add vui -- npx -y @vui/vui-ui mcp`}</CodeBlock>
       <P>
         The recipes behind <code>compose_page</code> are filtered against the
         blocks actually installed, so it can never recommend one that was

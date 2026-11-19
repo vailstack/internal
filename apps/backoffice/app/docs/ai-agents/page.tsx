@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs/ai-agents/" },
   title: "Building with AI agents (AGENT.md + MCP server)",
   description:
-    "Standards for generating UI with VUI using AI coding agents (Claude Code, Cursor, Copilot). Ships as AGENT.md inside the @viliha/vui-ui package, plus an MCP server that answers component, page, and layout questions on demand.",
+    "Standards for generating UI with VUI using AI coding agents (Claude Code, Cursor, Copilot). Ships as AGENT.md inside the @vui/vui-ui package, plus an MCP server that answers component, page, and layout questions on demand.",
 };
 
 export default function AiAgentsPage() {
@@ -43,21 +43,21 @@ export default function AiAgentsPage() {
       <H2>Where the guide lives</H2>
       <P>
         The full guide ships <strong>inside the npm package</strong> at{" "}
-        <code>node_modules/@viliha/vui-ui/AGENT.md</code>. The fastest way to
+        <code>node_modules/@vui/vui-ui/AGENT.md</code>. The fastest way to
         wire it up is the ready-made <code>CLAUDE.template.md</code> that comes
         with the package: copy it to your project root as <code>CLAUDE.md</code>{" "}
         (Claude Code) or <code>AGENTS.md</code> (Cursor, Copilot). It&apos;s a
         one-line <code>@import</code> of <code>AGENT.md</code>, so the rules stay
         in one place and you never paste them by hand.
       </P>
-      <CodeBlock title="wire up the guide (recommended)">{`# after: npm install @viliha/vui-ui
-cp node_modules/@viliha/vui-ui/CLAUDE.template.md ./CLAUDE.md
+      <CodeBlock title="wire up the guide (recommended)">{`# after: npm install @vui/vui-ui
+cp node_modules/@vui/vui-ui/CLAUDE.template.md ./CLAUDE.md
 # or ./AGENTS.md, and your agent reads it automatically`}</CodeBlock>
       <P>
         Prefer a self-contained copy over the <code>@import</code>? Copy{" "}
         <code>AGENT.md</code> itself:
       </P>
-      <CodeBlock title="or copy the guide verbatim">{`cp node_modules/@viliha/vui-ui/AGENT.md AGENTS.md`}</CodeBlock>
+      <CodeBlock title="or copy the guide verbatim">{`cp node_modules/@vui/vui-ui/AGENT.md AGENTS.md`}</CodeBlock>
       <Note title="Also on GitHub">
         The repo carries two companion files:{" "}
         <a
@@ -80,7 +80,7 @@ cp node_modules/@viliha/vui-ui/CLAUDE.template.md ./CLAUDE.md
 
       <H2>How do I connect the VUI MCP server?</H2>
       <P>
-        Run <code>npx @viliha/vui-ui mcp</code> and register it with your agent.
+        Run <code>npx @vui/vui-ui mcp</code> and register it with your agent.
         The package ships an MCP server so an assistant can ask VUI direct
         questions (how do I install it, what components exist, what props a
         component takes, how the organizations page is built) instead of reading
@@ -89,12 +89,12 @@ cp node_modules/@viliha/vui-ui/CLAUDE.template.md ./CLAUDE.md
         answers for whatever version of the package you installed.
       </P>
       <CodeBlock title="register the server">{`# Claude Code
-claude mcp add vui -- npx -y @viliha/vui-ui mcp
+claude mcp add vui -- npx -y @vui/vui-ui mcp
 
 # Cursor, Windsurf, or any MCP client (.mcp.json / mcp.json)
 {
   "mcpServers": {
-    "vui": { "command": "npx", "args": ["-y", "@viliha/vui-ui", "mcp"] }
+    "vui": { "command": "npx", "args": ["-y", "@vui/vui-ui", "mcp"] }
   }
 }`}</CodeBlock>
       <P>Seven tools come with it:</P>

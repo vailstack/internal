@@ -34,8 +34,8 @@ describe("vui mcp server", () => {
 
   it("lists components with their import specifiers", () => {
     const out = text(call("list_components"));
-    expect(out).toContain("@viliha/vui-ui/record-view");
-    expect(out).toContain("@viliha/vui-ui/utils — cn");
+    expect(out).toContain("@vui/vui-ui/record-view");
+    expect(out).toContain("@vui/vui-ui/utils — cn");
   });
 
   it("returns the public API of a big component, not 4k lines", () => {
@@ -54,7 +54,7 @@ describe("vui mcp server", () => {
     expect(out).not.toContain("Public API only");
     expect(out).toContain("--background");
     expect(out).toContain("vui-scroll");
-    expect(text(call("list_components"))).toContain("@viliha/vui-ui/theme.css");
+    expect(text(call("list_components"))).toContain("@vui/vui-ui/theme.css");
   });
 
   it("ranks the section that answers the query, not the longest one", () => {
@@ -80,7 +80,7 @@ describe("vui mcp server", () => {
     expect(list).toContain("installation\t");
     const guide = text(call("get_guide", { slug: "installation" }));
     expect(guide).toContain("Source: /docs/installation/");
-    expect(guide).toContain("npm install @viliha/vui-ui");
+    expect(guide).toContain("npm install @vui/vui-ui");
     expect(text(call("search_docs", { query: "install the package" }))).toMatch(/install/i);
   });
 
@@ -97,13 +97,13 @@ describe("vui mcp server", () => {
     const files = readdirSync(join(ROOT, "src"))
       .filter((f) => f.endsWith(".tsx") && !f.includes(".test."))
       .map((f) => f.replace(/\.tsx$/, ""));
-    for (const name of files) expect(served).toContain(`@viliha/vui-ui/${name}`);
+    for (const name of files) expect(served).toContain(`@vui/vui-ui/${name}`);
 
     // Named export-map entries (./utils, ./theme.css, …) aren't covered by the
     // "./*" glob, so each one has to be listed explicitly.
     const { exports: map } = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
     for (const key of Object.keys(map).filter((k) => k !== "./*"))
-      expect(served).toContain(`@viliha/vui-ui/${key.slice(2)}`);
+      expect(served).toContain(`@vui/vui-ui/${key.slice(2)}`);
   });
 
   it("serves every page of the docs site", () => {
@@ -151,7 +151,7 @@ describe("vui mcp server", () => {
 
     it("returns props and source for one block", () => {
       const out = text(call("get_block", { name: "Hero" }));
-      expect(out).toContain('import { Hero } from "@viliha/vui-web"');
+      expect(out).toContain('import { Hero } from "@vui/vui-web"');
       expect(out).toContain("interface HeroProps");
       expect(out).toContain("variant?: HeroVariant");
     });

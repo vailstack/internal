@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { usePageChrome } from "@viliha/vui-ui/record-view";
+import { usePageChrome } from "@vui/vui-ui/record-view";
 
 import { SidebarToggle } from "@/app/_components/app-sidebar";
 import { UserMenu } from "@/app/_components/user-menu";
@@ -18,7 +18,7 @@ import { useGlobalSearch } from "@/app/_components/global-search";
 import { useChrome } from "@/app/_components/chrome-config";
 import { colorFor } from "@/app/_components/route-meta";
 import { NotificationsBell } from "@/app/_components/notifications-bell";
-import { Shortcut } from "@viliha/vui-ui/kbd";
+import { Shortcut } from "@vui/vui-ui/kbd";
 
 /** One shared size for every top-bar icon control, so the cluster is uniform. */
 const iconControl =

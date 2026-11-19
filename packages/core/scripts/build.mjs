@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// Generate @viliha/vui-core from the one source of truth, packages/ui/src.
+// Generate @vui/vui-core from the one source of truth, packages/ui/src.
 //
 // The React package already contains framework-free modules: the theming
 // engine, the table import/export helpers, and `cn`. Rather than move them out
-// (which would make @viliha/vui-ui depend on this package, and every React
+// (which would make @vui/vui-ui depend on this package, and every React
 // consumer pay for a refactor that buys them nothing), this package compiles
 // the same files for everyone else.
 //

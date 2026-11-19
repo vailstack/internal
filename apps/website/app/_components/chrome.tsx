@@ -9,7 +9,7 @@ import {
   Newsletter,
   SiteFooter,
   SiteHeader,
-} from "@viliha/vui-web";
+} from "@vui/vui-web";
 
 import { FOOTER_COLUMNS, LEGAL, NAV, SITE } from "@/lib/site";
 import { ThemeToggle } from "./theme-toggle";

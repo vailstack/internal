@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SELECT_TRIGGER, SELECT_PLACEHOLDER, cn } from "@viliha/vui-core";
+import { SELECT_TRIGGER, SELECT_PLACEHOLDER, cn } from "@vui/vui-core";
 import {
   SelectContent,
   SelectIcon,

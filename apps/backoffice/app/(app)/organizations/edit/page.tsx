@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { RecordForm } from "@viliha/vui-ui/record-view";
+import { RecordForm } from "@vui/vui-ui/record-view";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 import { getOrganization, updateOrganization } from "@/lib/api/organizations";
 import {

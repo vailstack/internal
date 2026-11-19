@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { OrgProvider, useOrg, type Organization } from "@viliha/vui-ui/org-switcher";
-import { ThemeConfigProvider } from "@viliha/vui-ui/theme-provider";
+import { OrgProvider, useOrg, type Organization } from "@vui/vui-ui/org-switcher";
+import { ThemeConfigProvider } from "@vui/vui-ui/theme-provider";
 import { listWorkspaces, switchWorkspace } from "@/lib/api/workspaces";
 import { ORG_THEME } from "@/lib/app-config";
 

@@ -10,8 +10,8 @@ import {
   PlusIcon,
 } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
-import { Button } from "@viliha/vui-ui/button";
+import { cn } from "@vui/vui-ui/utils";
+import { Button } from "@vui/vui-ui/button";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 

@@ -1,8 +1,8 @@
 # Vui Starter
 
-[![live](https://img.shields.io/badge/live-internal.viliha.com-266df0)](https://internal.viliha.com)
-[![npm](https://img.shields.io/npm/v/@viliha/vui-ui?color=266df0&label=%40viliha%2Fvui-ui)](https://www.npmjs.com/package/@viliha/vui-ui)
-[![license](https://img.shields.io/npm/l/@viliha/vui-ui)](./LICENSE)
+[![live](https://img.shields.io/badge/live-internal.vailstack.com-266df0)](https://internal.vailstack.com)
+[![npm](https://img.shields.io/npm/v/@vui/vui-ui?color=266df0&label=%40vui%2Fvui-ui)](https://www.npmjs.com/package/@vui/vui-ui)
+[![license](https://img.shields.io/npm/l/@vui/vui-ui)](./LICENSE)
 [![Sponsor @myviliha](https://img.shields.io/badge/Sponsor-%40myviliha-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/myviliha)
 
 ## ❤️ Sponsoring is what keeps Vui free
@@ -28,7 +28,7 @@ fraction of the people using Vui chipped in, that would be plenty.
 
 **Vui Starter** is a free, open-source **admin dashboard template** and **CRM
 design system** for **React** and **Next.js**. It pairs a clean, token-driven
-component library (**`@viliha/vui-ui`**) with a full backoffice demo you can
+component library (**`@vui/vui-ui`**) with a full backoffice demo you can
 clone and run in minutes.
 
 It's built on **Next.js, React 19, Tailwind CSS v4, shadcn/ui components, and
@@ -37,16 +37,16 @@ working admin UI (datatables, forms, charts, auth, dark mode) with no backend to
 stand up.
 
 > This repo is both the **library** (`packages/ui`, published to npm as
-> `@viliha/vui-ui`) and a **reference app** (`apps/backoffice`) that shows
+> `@vui/vui-ui`) and a **reference app** (`apps/backoffice`) that shows
 > every component in a real admin UI.
 
-There is a second half. `@viliha/vui-web` is 60 marketing blocks (hero, features,
+There is a second half. `@vui/vui-web` is 60 marketing blocks (hero, features,
 pricing, testimonials, FAQ, site header and footer) and `apps/website` is a
 65-page starter site built entirely from them. Same tokens, so the landing page
 and the dashboard it sells look like one product. An agent can compose a page
 from those blocks through the MCP server: `compose_page "SaaS landing page"`
 returns the block order, `get_block` returns the props. See
-[the website guide](https://internal.viliha.com/docs/website/).
+[the website guide](https://internal.vailstack.com/docs/website/).
 
 ![Vui Starter admin dashboard template: the organizations datatable with sorting, filtering, and row actions](./.github/screenshots/organizations.png)
 
@@ -70,8 +70,8 @@ permanently, so nothing listed as free can move behind a paywall later.
 | **Support** | Issues and discussions, in the open | Priority support and a commercial licence |
 
 Pro is optional and additive: net-new work that does not exist yet. The full
-breakdown is at [internal.viliha.com/docs/free-and-pro](https://internal.viliha.com/docs/free-and-pro/),
-and the tiers are at [/pricing](https://internal.viliha.com/pricing/).
+breakdown is at [internal.vailstack.com/docs/free-and-pro](https://internal.vailstack.com/docs/free-and-pro/),
+and the tiers are at [/pricing](https://internal.vailstack.com/pricing/).
 
 ## Contents
 
@@ -155,7 +155,7 @@ pnpm dev
 Or click **“Use this template”** on the GitHub repo to create your own copy.
 
 > Only want the component library in an existing app? Install it from npm instead
-> with `npm install @viliha/vui-ui`. See
+> with `npm install @vui/vui-ui`. See
 > [Use the library in your project](#use-the-library-in-your-project).
 
 ---
@@ -165,12 +165,12 @@ Or click **“Use this template”** on the GitHub repo to create your own copy.
 Install the package and its peers:
 
 ```bash
-npm install @viliha/vui-ui           # or: pnpm add / yarn add / bun add
+npm install @vui/vui-ui           # or: pnpm add / yarn add / bun add
 npm install -D tailwindcss @tailwindcss/postcss
 ```
 
 `react` and `react-dom` are peer dependencies, so your app's own versions are
-used. Because `@viliha/vui-ui` ships **TypeScript source**, your app's bundler
+used. Because `@vui/vui-ui` ships **TypeScript source**, your app's bundler
 compiles it. The per-toolchain setup is below.
 
 ### 1 · New Next.js app
@@ -178,7 +178,7 @@ compiles it. The per-toolchain setup is below.
 ```bash
 npx create-next-app@latest my-app     # TypeScript + App Router
 cd my-app
-npm install @viliha/vui-ui
+npm install @vui/vui-ui
 ```
 
 **a. Tailwind v4:** in your global stylesheet (e.g. `app/globals.css`):
@@ -187,7 +187,7 @@ npm install @viliha/vui-ui
 @import "tailwindcss";
 /* Design tokens, @theme mapping, base reset, AND scanning of the library’s
    component classes, all in one import. */
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";
 ```
 
 **b. Transpile the source package:** in `next.config.ts`:
@@ -196,20 +196,20 @@ npm install @viliha/vui-ui
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@viliha/vui-ui"],
+  transpilePackages: ["@vui/vui-ui"],
 };
 
 export default nextConfig;
 ```
 
-That's all it takes: `import { Button } from "@viliha/vui-ui/button"` and go.
+That's all it takes: `import { Button } from "@vui/vui-ui/button"` and go.
 
 ### 2 · New Vite + React app
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
-npm install @viliha/vui-ui
+npm install @vui/vui-ui
 npm install -D tailwindcss @tailwindcss/vite
 ```
 
@@ -227,25 +227,25 @@ export default defineConfig({ plugins: [react(), tailwindcss()] });
 
 ```css
 @import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";
 ```
 
 Vite transpiles the package's TypeScript automatically, with no extra config.
 
 ### 3 · Existing project
 
-1. `npm install @viliha/vui-ui`
+1. `npm install @vui/vui-ui`
 2. Make sure you’re on **Tailwind CSS v4**, then add
-   `@import "@viliha/vui-ui/theme.css";` after `@import "tailwindcss";`.
-3. **Next.js:** add `transpilePackages: ["@viliha/vui-ui"]`.
-   **Vite:** nothing extra. **Other bundlers:** ensure `node_modules/@viliha/vui-ui`
+   `@import "@vui/vui-ui/theme.css";` after `@import "tailwindcss";`.
+3. **Next.js:** add `transpilePackages: ["@vui/vui-ui"]`.
+   **Vite:** nothing extra. **Other bundlers:** ensure `node_modules/@vui/vui-ui`
    is transpiled (e.g. include it in your Babel/SWC/ts-loader rule).
 4. If you already define shadcn-style tokens (`--primary`, `--background`, …),
    note that `theme.css` will set them too. Remove your duplicates, or import it
    first and override afterward.
 5. **Using an AI agent?** Load the design rules so it builds *with* VUI instead of
    reinventing it:
-   `cp node_modules/@viliha/vui-ui/CLAUDE.template.md ./CLAUDE.md`
+   `cp node_modules/@vui/vui-ui/CLAUDE.template.md ./CLAUDE.md`
    (or `./AGENTS.md`). That file `@`-imports the package's `AGENT.md` (the single
    source of truth), so you never copy the rules by hand.
 
@@ -258,13 +258,13 @@ app in your workspace:
 // apps/web/package.json
 {
   "dependencies": {
-    "@viliha/vui-ui": "^0.1.0" // or "workspace:*" if vendored in your monorepo
+    "@vui/vui-ui": "^0.1.0" // or "workspace:*" if vendored in your monorepo
   }
 }
 ```
 
-- Add `transpilePackages: ["@viliha/vui-ui"]` to each Next.js app that uses it.
-- Import `@viliha/vui-ui/theme.css` once in each app’s global stylesheet.
+- Add `transpilePackages: ["@vui/vui-ui"]` to each Next.js app that uses it.
+- Import `@vui/vui-ui/theme.css` once in each app’s global stylesheet.
 - No build or `dts` step is required. The package is consumed as source
   (“just-in-time”), so Turborepo caches your app build rather than a library build.
 
@@ -273,9 +273,9 @@ app in your workspace:
 ## Using components
 
 ```tsx
-import { Button } from "@viliha/vui-ui/button";
-import { Badge } from "@viliha/vui-ui/badge";
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
+import { Button } from "@vui/vui-ui/button";
+import { Badge } from "@vui/vui-ui/badge";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
 
 export function Example() {
   return (
@@ -287,14 +287,14 @@ export function Example() {
 }
 ```
 
-Every component is its own entry point (`@viliha/vui-ui/<name>`), so you only pull
+Every component is its own entry point (`@vui/vui-ui/<name>`), so you only pull
 in what you actually use.
 
 ---
 
 ## Theming
 
-All design decisions live in **`@viliha/vui-ui/theme.css`** as CSS variables:
+All design decisions live in **`@vui/vui-ui/theme.css`** as CSS variables:
 
 ```css
 :root {
@@ -313,7 +313,7 @@ after the import** in your own CSS:
 
 ```css
 @import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";
 
 :root {
   --primary: oklch(0.55 0.2 260);   /* your brand */
@@ -350,7 +350,7 @@ Env vars cover branding. Everything else is config, and it starts from what the
 theme already ships:
 
 ```tsx
-import { VuiProvider } from "@viliha/vui-ui/config";
+import { VuiProvider } from "@vui/vui-ui/config";
 
 <VuiProvider
   config={{ behaviour: { rowClick: "edit", confirmDiscardWhenDirty: true } }}
@@ -391,12 +391,12 @@ apps/
   website/             # The marketing site (:3002), 65 pages built from blocks
   e2e/                 # Playwright tests for both apps
 packages/
-  ui/                  # @viliha/vui-ui, the published component library
+  ui/                  # @vui/vui-ui, the published component library
                        #   (ships AGENT.md + CLAUDE.template.md, the AI-agent guide)
-  web/                 # @viliha/vui-web, the marketing blocks
-  core/                # @viliha/vui-core, framework-free helpers (generated)
-  theme/               # @viliha/vui-theme, the CSS on its own (generated)
-  vue/                 # @viliha/vui-vue, the Vue components
+  web/                 # @vui/vui-web, the marketing blocks
+  core/                # @vui/vui-core, framework-free helpers (generated)
+  theme/               # @vui/vui-theme, the CSS on its own (generated)
+  vue/                 # @vui/vui-vue, the Vue components
   eslint-config/       # Shared ESLint config
   typescript-config/   # Shared tsconfig
 ```
@@ -433,8 +433,8 @@ The core stays MIT: the component library, the CLI, the demo app, the templates
 and the docs. Every version already published is MIT permanently, so nothing that
 is free today moves behind a paywall later. Teams who want more than that (premium
 blocks, components for other frameworks, an invoice and someone to ask) can read
-about [Pro](https://internal.viliha.com/pricing/), which is optional and additive.
+about [Pro](https://internal.vailstack.com/pricing/), which is optional and additive.
 
 ---
 
-Made with ♥ from Vietnam by the [Viliha Team](https://viliha.com).
+Made with ♥ from Vietnam by the [Voilet Team](https://vailstack.com).

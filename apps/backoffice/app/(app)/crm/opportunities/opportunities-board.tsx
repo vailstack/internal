@@ -15,10 +15,10 @@ import {
 } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "@viliha/vui-ui/badge";
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
-import { RecordFormPanel, type RecordField } from "@viliha/vui-ui/record-view";
+import { Badge } from "@vui/vui-ui/badge";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
+import { RecordFormPanel, type RecordField } from "@vui/vui-ui/record-view";
 import {
   OPPORTUNITY_STAGES,
   opportunities as initialOpportunities,

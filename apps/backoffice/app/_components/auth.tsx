@@ -37,9 +37,9 @@ export function OrDivider({ label = "or" }: { label?: string }) {
 }
 
 // The two-column form layout and the inline-validation Field now live in the
-// package (@viliha/vui-ui/field-grid) so any form gets them as a feature.
+// package (@vui/vui-ui/field-grid) so any form gets them as a feature.
 // Re-exported here so the auth screens keep importing from one place.
-export { FieldGrid, Field } from "@viliha/vui-ui/field-grid";
+export { FieldGrid, Field } from "@vui/vui-ui/field-grid";
 
 
 /** Circular icon badge used on confirmation screens ("check your email"). */

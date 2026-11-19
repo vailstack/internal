@@ -90,7 +90,7 @@ component under `app/docs`.
 Every design value comes from one place:
 
 ```css
-@import "@viliha/vui-ui/theme.css";
+@import "@vui/vui-ui/theme.css";
 ```
 
 Never hardcode colors, spacing, radius, shadows, typography, or z-index. Reach for
@@ -183,7 +183,7 @@ This applies to everyone, humans and AI agents alike, no exceptions:
 A change that touches code but not the changelog and docs is **incomplete** and
 will not be merged.
 
-# Publishing `@viliha/vui-ui`
+# Publishing `@vui/vui-ui`
 
 Publish with **one command, from any package manager**:
 

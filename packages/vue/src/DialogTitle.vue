@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DIALOG_TITLE, cn } from "@viliha/vui-core";
+import { DIALOG_TITLE, cn } from "@vui/vui-core";
 import { computed } from "vue";
 
 const props = defineProps<{ class?: string }>();

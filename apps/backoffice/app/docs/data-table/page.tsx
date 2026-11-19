@@ -28,7 +28,7 @@ export default function DataTablePage() {
       />
 
       <H2>Import</H2>
-      <CodeBlock title="terminal">{`import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";`}</CodeBlock>
+      <CodeBlock title="terminal">{`import { RecordView, type RecordField } from "@vui/vui-ui/record-view";`}</CodeBlock>
       <Note title="One component, many features">
         Editable cells · resizable columns (on by default) · sticky header · sort ·
         filter · column show/hide · pagination · row actions (view / edit /
@@ -41,10 +41,10 @@ export default function DataTablePage() {
         For a single record shown read-only with an Edit → Cancel + Save flow,
         don&apos;t hand-wire it — import the pre-designed{" "}
         <code>ProfileForm</code> from{" "}
-        <code>@viliha/vui-ui/profile-form</code> and feed it{" "}
+        <code>@vui/vui-ui/profile-form</code> and feed it{" "}
         <code>data</code> + <code>fields</code>. For a company profile, spread the{" "}
         <code>organizationProfileFields</code> preset from{" "}
-        <code>@viliha/vui-ui/organization-profile</code>. The{" "}
+        <code>@vui/vui-ui/organization-profile</code>. The{" "}
         <code>/organization/profile</code> page is the reference consumer.
       </Note>
 
@@ -67,8 +67,8 @@ export default function DataTablePage() {
       </P>
       <CodeBlock title="organizations-table.tsx">{`"use client";
 
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
-import { Badge } from "@viliha/vui-ui/badge";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
+import { Badge } from "@vui/vui-ui/badge";
 
 type Org = {
   id: number;
@@ -239,13 +239,13 @@ export function OrganizationsTable({ data }: { data: Org[] }) {
       <P>
         Need a control the built-in kinds don&apos;t cover? Add your own row with{" "}
         <code>filterExtras</code>, composed with <code>FilterField</code> from{" "}
-        <code>@viliha/vui-ui/filter-field</code> so it inherits the same
+        <code>@vui/vui-ui/filter-field</code> so it inherits the same
         two-column layout. Never hand-roll the row. It renders below the{" "}
         <code>filterable</code> fields in the same grid; its state and matching
         are yours (RecordView&apos;s Search / Clear drive the{" "}
         <code>filterable</code> values only).
       </P>
-      <CodeBlock title="filterExtras">{`import { FilterField } from "@viliha/vui-ui/filter-field";
+      <CodeBlock title="filterExtras">{`import { FilterField } from "@vui/vui-ui/filter-field";
 
 <RecordView
   fields={fields}
@@ -915,7 +915,7 @@ const fields = [
         source, and use <code>onCreate</code> / <code>onView</code> /{" "}
         <code>onEdit</code> to navigate rather than open the built-in overlay.
       </P>
-      <CodeBlock title="routed create form">{`import { RecordForm } from "@viliha/vui-ui/record-view";
+      <CodeBlock title="routed create form">{`import { RecordForm } from "@vui/vui-ui/record-view";
 
 // table row: navigate instead of opening the overlay
 <RecordView
@@ -943,7 +943,7 @@ const fields = [
         parent, rename the last crumb, whatever the route needs (each crumb is{" "}
         <code>{`{ label, onClick? }`}</code>; the last is the current page):
       </P>
-      <CodeBlock title="custom breadcrumb">{`import type { Crumb } from "@viliha/vui-ui/breadcrumbs";
+      <CodeBlock title="custom breadcrumb">{`import type { Crumb } from "@vui/vui-ui/breadcrumbs";
 
 <RecordForm
   crumbs={[
@@ -956,7 +956,7 @@ const fields = [
 />`}</CodeBlock>
       <Note title="Consistent breadcrumbs">
         Both layouts and the rest of the app pages share a single{" "}
-        <code>@viliha/vui-ui/breadcrumbs</code> component, so the trail, chevron,
+        <code>@vui/vui-ui/breadcrumbs</code> component, so the trail, chevron,
         and back button look identical everywhere.
       </Note>
 

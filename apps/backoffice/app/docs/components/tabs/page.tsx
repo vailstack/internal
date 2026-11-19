@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@viliha/vui-ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@vui/vui-ui/tabs";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -16,7 +16,7 @@ const usage = `import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@viliha/vui-ui/tabs";
+} from "@vui/vui-ui/tabs";
 
 export function Example() {
   return (

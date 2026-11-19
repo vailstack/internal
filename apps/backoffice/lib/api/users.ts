@@ -11,7 +11,7 @@
 // over millions. Generating a literal 1M array client-side would jank the
 // browser — which is exactly why pagination lives on the server.
 
-import type { ServerQuery } from "@viliha/vui-ui/record-view";
+import type { ServerQuery } from "@vui/vui-ui/record-view";
 
 export type UserStatus = "active" | "invited" | "suspended";
 export type User = {

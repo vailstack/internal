@@ -3,7 +3,7 @@
 import * as React from "react";
 import { usePathname } from "next/navigation";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 
 type Heading = { id: string; text: string; level: number };
 

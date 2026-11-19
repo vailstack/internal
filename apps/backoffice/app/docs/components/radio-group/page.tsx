@@ -1,7 +1,7 @@
 "use client";
 
-import { RadioGroup, RadioGroupItem } from "@viliha/vui-ui/radio-group";
-import { Label } from "@viliha/vui-ui/label";
+import { RadioGroup, RadioGroupItem } from "@vui/vui-ui/radio-group";
+import { Label } from "@vui/vui-ui/label";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,8 +11,8 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { RadioGroup, RadioGroupItem } from "@viliha/vui-ui/radio-group";
-import { Label } from "@viliha/vui-ui/label";
+const usage = `import { RadioGroup, RadioGroupItem } from "@vui/vui-ui/radio-group";
+import { Label } from "@vui/vui-ui/label";
 
 export function Example() {
   return (

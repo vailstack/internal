@@ -3,7 +3,7 @@ import {
   DROPDOWN_TRIGGER_ACTIVE,
   DROPDOWN_TRIGGER_IDLE,
   SELECT_TRIGGER,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 import { createSSRApp, h } from "vue";
 import { renderToString } from "vue/server-renderer";
 import { expect, it } from "vitest";

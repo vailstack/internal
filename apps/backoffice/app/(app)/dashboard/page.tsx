@@ -6,8 +6,8 @@ import {
 } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback } from "@viliha/vui-ui/avatar";
-import { Badge } from "@viliha/vui-ui/badge";
+import { Avatar, AvatarFallback } from "@vui/vui-ui/avatar";
+import { Badge } from "@vui/vui-ui/badge";
 import {
   Table,
   TableBody,
@@ -15,8 +15,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@viliha/vui-ui/table";
-import { Page } from "@viliha/vui-ui/page";
+} from "@vui/vui-ui/table";
+import { Page } from "@vui/vui-ui/page";
 import { Breadcrumbs } from "@/app/_components/breadcrumbs";
 import { SetPageTitle } from "@/app/_components/set-page-title";
 import { StatCard } from "@/app/_components/stat-card";

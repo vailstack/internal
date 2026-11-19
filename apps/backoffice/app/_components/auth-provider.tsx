@@ -6,7 +6,7 @@ import {
   AuthProvider,
   type AuthContract,
   type AuthUser,
-} from "@viliha/vui-ui/auth-context";
+} from "@vui/vui-ui/auth-context";
 import { authClient } from "@/lib/auth/client";
 import { isSignedIn, setSignedIn } from "@/lib/auth-state";
 
@@ -17,7 +17,7 @@ const USE_BETTER_AUTH = Boolean(process.env.NEXT_PUBLIC_AUTH_BASE_URL);
 
 const DEMO_USER: AuthUser = {
   id: "demo-admin",
-  email: "admin@viliha.example",
+  email: "admin@voilet.example",
   name: "Admin User",
 };
 

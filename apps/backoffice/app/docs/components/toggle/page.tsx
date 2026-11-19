@@ -1,7 +1,7 @@
 "use client";
 
 import { FontBoldIcon, FontItalicIcon } from "@radix-ui/react-icons";
-import { Toggle } from "@viliha/vui-ui/toggle";
+import { Toggle } from "@vui/vui-ui/toggle";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -12,7 +12,7 @@ import {
   PropsTable,
 } from "../component-doc";
 
-const usage = `import { Toggle } from "@viliha/vui-ui/toggle";
+const usage = `import { Toggle } from "@vui/vui-ui/toggle";
 import { FontBoldIcon } from "@radix-ui/react-icons";
 
 export function Example() {

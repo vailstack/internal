@@ -1,4 +1,4 @@
-import { CardGrid, CaseStudyGrid, Cta, Hero, LogoCloud, Stats, Testimonials } from "@viliha/vui-web";
+import { CardGrid, CaseStudyGrid, Cta, Hero, LogoCloud, Stats, Testimonials } from "@vui/vui-web";
 
 import { CASE_STUDIES } from "@/lib/catalog";
 import { CUSTOMERS, LOGOS, STATS, TESTIMONIALS } from "@/lib/content";

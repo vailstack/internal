@@ -1,5 +1,5 @@
-// Barrel for `import { Button } from "@viliha/vui-vue"`. Subpath imports
-// (@viliha/vui-vue/Button) work too and let a bundler drop the rest.
+// Barrel for `import { Button } from "@vui/vui-vue"`. Subpath imports
+// (@vui/vui-vue/Button) work too and let a bundler drop the rest.
 export { default as Accordion } from './Accordion.vue';
 export { default as AccordionContent } from './AccordionContent.vue';
 export { default as AccordionItem } from './AccordionItem.vue';

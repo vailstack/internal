@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@viliha/vui-web` are documented here. The format follows
+All notable changes to `@vui/vui-web` are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project uses
 [semantic versioning](https://semver.org/).
 

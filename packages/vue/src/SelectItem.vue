@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SELECT_ITEM, SELECT_ITEM_CHECKED, cn } from "@viliha/vui-core";
+import { SELECT_ITEM, SELECT_ITEM_CHECKED, cn } from "@vui/vui-core";
 import { SelectItem, SelectItemIndicator, SelectItemText } from "reka-ui";
 import { computed } from "vue";
 

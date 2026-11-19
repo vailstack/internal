@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GitHubLogoIcon, HeartFilledIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
+import { cn } from "@vui/vui-ui/utils";
 import { Wordmark as BrandWordmark } from "@/app/_components/wordmark";
 import { ThemeToggle } from "@/app/_components/theme-toggle";
 import { TableOfContents } from "@/components/table-of-contents";
@@ -181,10 +181,10 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
           <DocsSearch />
           <ThemeToggle />
           <a
-            href="https://www.npmjs.com/package/@viliha/vui-ui"
+            href="https://www.npmjs.com/package/@vui/vui-ui"
             target="_blank"
             rel="noreferrer"
-            aria-label="@viliha/vui-ui on npm"
+            aria-label="@vui/vui-ui on npm"
             title="View on npm"
             className="grid size-8 place-items-center rounded-md transition-colors hover:bg-accent"
           >
@@ -252,12 +252,12 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
         <span>
           Made with <span className="text-rose-500">♥</span> from Vietnam by the{" "}
           <a
-            href="https://viliha.com"
+            href="https://vailstack.com"
             target="_blank"
             rel="noreferrer"
             className="font-medium text-foreground hover:underline"
           >
-            Viliha Team
+            Voilet Team
           </a>
         </span>
         <iframe

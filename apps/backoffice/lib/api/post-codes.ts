@@ -4,7 +4,7 @@
 // a real API; nothing above this file changes when you swap the bodies for
 // `fetch(url, { signal })`.
 
-import type { AsyncOption } from "@viliha/vui-ui/record-view";
+import type { AsyncOption } from "@vui/vui-ui/record-view";
 
 // Generate a few thousand codes deterministically (no Math.random) so search has
 // something to chew on. Real data lives in your DB.

@@ -160,15 +160,15 @@ import { Star } from "lucide-vue-next";
         snippets={{
           any: `/* Tailwind v4: utilities are generated from your source as usual */
 @import "tailwindcss";
-@import "@viliha/vui-theme/theme.css";`,
+@import "@vui/vui-theme/theme.css";`,
           cdn: `<!-- No build step: the utilities VUI uses are pre-compiled -->
-<link rel="stylesheet" href="https://unpkg.com/@viliha/vui-theme/dist/vui.css" />`,
+<link rel="stylesheet" href="https://unpkg.com/@vui/vui-theme/dist/vui.css" />`,
           react: `/* app/globals.css */
 @import "tailwindcss";
-@import "@viliha/vui-ui/theme.css";`,
+@import "@vui/vui-ui/theme.css";`,
           vue: `/* src/style.css */
 @import "tailwindcss";
-@import "@viliha/vui-vue/theme.css";`,
+@import "@vui/vui-vue/theme.css";`,
         }}
       />
       <H3>Using the tokens with Bootstrap or another framework</H3>
@@ -177,7 +177,7 @@ import { Star } from "lucide-vue-next";
         theirs once and their components follow your theme, including dark mode,
         because the values change and the names do not.
       </P>
-      <CodeBlock title="bridge.css">{`@import "@viliha/vui-theme/theme.css";
+      <CodeBlock title="bridge.css">{`@import "@vui/vui-theme/theme.css";
 
 :root {
   --bs-body-bg: var(--background);
@@ -206,10 +206,10 @@ import { Star } from "lucide-vue-next";
       <P>
         In an app that lets people choose, use the theming engine rather than
         hand-written CSS. <code>THEME_FIELDS</code> in{" "}
-        <code>@viliha/vui-core</code> lists every themeable value, fonts included,
+        <code>@vui/vui-core</code> lists every themeable value, fonts included,
         and <code>applyTheme</code> writes them as variables on any element.
       </P>
-      <CodeBlock title="any framework">{`import { applyTheme, mergeThemes, FONT_FAMILIES } from "@viliha/vui-core";
+      <CodeBlock title="any framework">{`import { applyTheme, mergeThemes, FONT_FAMILIES } from "@vui/vui-core";
 
 applyTheme(document.documentElement, mergeThemes(orgTheme, { fontSans: "geist" }));`}</CodeBlock>
 

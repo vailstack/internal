@@ -7,7 +7,7 @@
  * once and both follow.
  *
  * Framework-free on purpose. It ships to non-React consumers through
- * `@viliha/vui-core` (see packages/core/scripts/build.mjs), so nothing in this
+ * `@vui/vui-core` (see packages/core/scripts/build.mjs), so nothing in this
  * file may import React, Vue or Svelte.
  */
 

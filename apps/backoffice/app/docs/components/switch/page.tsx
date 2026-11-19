@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Switch } from "@viliha/vui-ui/switch";
-import { Label } from "@viliha/vui-ui/label";
+import { Switch } from "@vui/vui-ui/switch";
+import { Label } from "@vui/vui-ui/label";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -13,8 +13,8 @@ import {
   PropsTable,
 } from "../component-doc";
 
-const usage = `import { Switch } from "@viliha/vui-ui/switch";
-import { Label } from "@viliha/vui-ui/label";
+const usage = `import { Switch } from "@vui/vui-ui/switch";
+import { Label } from "@vui/vui-ui/label";
 
 export function Example() {
   const [on, setOn] = React.useState(false);

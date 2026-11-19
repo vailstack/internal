@@ -5,7 +5,7 @@ import {
   FontItalicIcon,
   UnderlineIcon,
 } from "@radix-ui/react-icons";
-import { ToggleGroup, ToggleGroupItem } from "@viliha/vui-ui/toggle-group";
+import { ToggleGroup, ToggleGroupItem } from "@vui/vui-ui/toggle-group";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -15,7 +15,7 @@ import {
   Install,
 } from "../component-doc";
 
-const usage = `import { ToggleGroup, ToggleGroupItem } from "@viliha/vui-ui/toggle-group";
+const usage = `import { ToggleGroup, ToggleGroupItem } from "@vui/vui-ui/toggle-group";
 
 export function Example() {
   return (

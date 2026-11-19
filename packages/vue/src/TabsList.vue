@@ -4,7 +4,7 @@ import {
   TABS_LIST_VARIANTS,
   cn,
   type TabsListVariant,
-} from "@viliha/vui-core";
+} from "@vui/vui-core";
 import { TabsList } from "reka-ui";
 import { computed } from "vue";
 

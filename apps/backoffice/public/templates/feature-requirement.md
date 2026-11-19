@@ -29,7 +29,7 @@
   - **List → Data table** (`RecordView` + a `fields` array). Search, pagination, row selection, bulk actions in the header.
   - **Create / Edit → Record form** (`RecordForm`, same fields both times; Edit pre-fills):
     `<slide-over overlay (default) · full-page route (long forms / own URL)>`.
-  - **Multi-step?** Use the **Steps** wizard (`@viliha/vui-ui/steps`).
+  - **Multi-step?** Use the **Steps** wizard (`@vui/vui-ui/steps`).
   - Overview screen → **Dashboard**; settings-style form → **Settings**; pipeline → **Board**.
 - **Empty state:** `<"No <Entities> found" + one line of guidance + the primary "+ Add <Entity>" action>`.
 - **Search:** across `<which fields>`. **Bulk:** `<select-all + bulk delete/edit; note any guard behaviour>`.

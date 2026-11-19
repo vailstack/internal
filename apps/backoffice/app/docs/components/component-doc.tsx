@@ -8,8 +8,8 @@ import {
   ExternalLinkIcon,
 } from "@radix-ui/react-icons";
 
-import { cn } from "@viliha/vui-ui/utils";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@viliha/vui-ui/tabs";
+import { cn } from "@vui/vui-ui/utils";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@vui/vui-ui/tabs";
 import { CopyButton } from "@/components/copy-button";
 import { DocPager } from "@/components/doc";
 import { COMPONENTS, componentNeighbors, type ComponentMeta } from "./registry";
@@ -24,7 +24,7 @@ function meta(slug: string): ComponentMeta {
 export function ComponentDocHeader({ slug }: { slug: string }) {
   const m = meta(slug);
   const { prev, next } = componentNeighbors(slug);
-  const markdown = `# ${m.title}\n\n${m.description}\n\nimport { … } from "@viliha/vui-ui/${m.slug}";`;
+  const markdown = `# ${m.title}\n\n${m.description}\n\nimport { … } from "@vui/vui-ui/${m.slug}";`;
   return (
     <header className="mb-8">
       <nav className="mb-3 flex items-center gap-1.5 text-[13px] text-muted-foreground">
@@ -143,7 +143,7 @@ export function Install({ slug }: { slug: string }) {
           ))}
         </TabsList>
         {PMS.map((p) => {
-          const cmd = `${p.add} @viliha/vui-ui`;
+          const cmd = `${p.add} @vui/vui-ui`;
           return (
             <TabsContent key={p.key} value={p.key}>
               <div className="relative overflow-hidden rounded-lg border border-border bg-card">
@@ -161,7 +161,7 @@ export function Install({ slug }: { slug: string }) {
       <p className="mt-3 text-sm text-muted-foreground">
         Then import from{" "}
         <code className="rounded-[4px] border border-border bg-muted/60 px-1.5 py-0.5 font-mono text-[0.85em]">
-          @viliha/vui-ui/{slug}
+          @vui/vui-ui/{slug}
         </code>
         .
       </p>

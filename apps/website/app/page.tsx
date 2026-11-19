@@ -9,7 +9,7 @@ import {
   Pricing,
   Stats,
   Testimonials,
-} from "@viliha/vui-web";
+} from "@vui/vui-web";
 
 import { CUSTOMERS, FAQS, FEATURES, LOGOS, PLANS, STATS, STEPS, TESTIMONIALS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";

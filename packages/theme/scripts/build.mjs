@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Generate @viliha/vui-theme from the one source of truth,
+// Generate @vui/vui-theme from the one source of truth,
 // packages/ui/src/theme.css. Two outputs, both git-ignored:
 //
 //   theme.css      the source minus the React package's @source line, for anyone

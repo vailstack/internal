@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 /**
  * The frame every block sits in: vertical rhythm from `--section-y`, a centred

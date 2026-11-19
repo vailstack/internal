@@ -1,4 +1,4 @@
-import { Cta, Hero, LogoCloud, RatingBlock, Testimonials } from "@viliha/vui-web";
+import { Cta, Hero, LogoCloud, RatingBlock, Testimonials } from "@vui/vui-web";
 
 import { LOGOS, TESTIMONIALS } from "@/lib/content";
 import { LinkButton } from "@/app/_components/link-button";

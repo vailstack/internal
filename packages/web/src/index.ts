@@ -1,5 +1,5 @@
 // Marketing blocks. Import the barrel, or a single block by subpath
-// (`@viliha/vui-web/hero`) and let the bundler drop the rest.
+// (`@vui/vui-web/hero`) and let the bundler drop the rest.
 export { Section, type SectionProps, type SectionTone, type SectionWidth } from "./section";
 export { SectionHeader, type SectionHeaderProps, type HeadingLevel, type HeadingSize } from "./section-header";
 export { Hero, type HeroProps, type HeroVariant } from "./hero";

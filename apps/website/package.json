@@ -10,10 +10,10 @@
     "check-types": "next typegen && tsgo --noEmit"
   },
   "dependencies": {
-    "@viliha/vui-core": "workspace:*",
-    "@viliha/vui-theme": "workspace:*",
-    "@viliha/vui-ui": "workspace:*",
-    "@viliha/vui-web": "workspace:*",
+    "@vui/vui-core": "workspace:*",
+    "@vui/vui-theme": "workspace:*",
+    "@vui/vui-ui": "workspace:*",
+    "@vui/vui-web": "workspace:*",
     "next": "^16.2.11",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

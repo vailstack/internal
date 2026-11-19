@@ -1,6 +1,6 @@
 "use client";
 
-import { Separator } from "@viliha/vui-ui/separator";
+import { Separator } from "@vui/vui-ui/separator";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -11,7 +11,7 @@ import {
   PropsTable,
 } from "../component-doc";
 
-const usage = `import { Separator } from "@viliha/vui-ui/separator";
+const usage = `import { Separator } from "@vui/vui-ui/separator";
 
 export function Example() {
   return (

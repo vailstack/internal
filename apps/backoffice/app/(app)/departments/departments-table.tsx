@@ -9,7 +9,7 @@ import {
 
 import { usePathname } from "next/navigation";
 
-import { RecordView, type RecordField } from "@viliha/vui-ui/record-view";
+import { RecordView, type RecordField } from "@vui/vui-ui/record-view";
 import { departments, type Department } from "@/lib/mock-data";
 import { useClientFilter } from "@/lib/use-client-filter";
 

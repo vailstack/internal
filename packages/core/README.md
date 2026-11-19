@@ -1,13 +1,13 @@
-# @viliha/vui-core
+# @vui/vui-core
 
-The framework-free half of [VUI](https://internal.viliha.com). Plain TypeScript, no UI
+The framework-free half of [VUI](https://internal.vailstack.com). Plain TypeScript, no UI
 framework, so it runs in Vue, Svelte, Angular, Solid, React or plain Node.
 
 ```bash
-npm install @viliha/vui-core
+npm install @vui/vui-core
 ```
 
-It pairs with [`@viliha/vui-theme`](https://www.npmjs.com/package/@viliha/vui-theme),
+It pairs with [`@vui/vui-theme`](https://www.npmjs.com/package/@vui/vui-theme),
 which is the same design system as CSS. Theme gives you the look; core gives you
 the logic underneath it.
 
@@ -17,7 +17,7 @@ The complete themeable surface as data, plus the functions that turn a theme int
 CSS variables you can set on any element.
 
 ```ts
-import { themeToCssVars, mergeThemes, applyTheme, THEME_FIELDS } from "@viliha/vui-core";
+import { themeToCssVars, mergeThemes, applyTheme, THEME_FIELDS } from "@vui/vui-core";
 
 // An organization's theme, with one person's overrides on top.
 const theme = mergeThemes(orgTheme, userTheme);
@@ -36,7 +36,7 @@ CSV and JSON round-trip, "Excel" is an HTML table saved as `.xls` (Excel opens i
 and PDF is browser print. No dependencies, no worker, no 400 kB spreadsheet library.
 
 ```ts
-import { rowsToCSV, parseCSV, downloadFile, printTable } from "@viliha/vui-core";
+import { rowsToCSV, parseCSV, downloadFile, printTable } from "@vui/vui-core";
 
 const csv = rowsToCSV([{ key: "name", label: "Name" }], rows);
 downloadFile("people.csv", csv, "text/csv");
@@ -48,7 +48,7 @@ Quoting, embedded commas, quotes and newlines are handled, so a value like
 ## Class merging
 
 ```ts
-import { cn } from "@viliha/vui-core";
+import { cn } from "@vui/vui-core";
 
 cn("p-2", isWide && "p-4"); // "p-4" — the later Tailwind utility wins
 ```

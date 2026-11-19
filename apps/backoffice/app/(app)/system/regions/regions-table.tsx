@@ -7,7 +7,7 @@ import {
   RecordView,
   type FilterValues,
   type RecordField,
-} from "@viliha/vui-ui/record-view";
+} from "@vui/vui-ui/record-view";
 import { regions, type Region } from "@/lib/mock-data";
 
 // `filterable` opts a field into the Filter panel. With any field filterable the

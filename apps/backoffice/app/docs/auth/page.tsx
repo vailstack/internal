@@ -58,11 +58,11 @@ export default function AuthDocPage() {
         The library ships auth <em>screens</em> but deliberately <strong>not</strong>{" "}
         an auth engine. Bundling a provider (NextAuth, Clerk, Better Auth,
         Supabase, …) would force its SDK and backend on every consumer. Instead,
-        screens depend on <code>@viliha/vui-ui/auth-context</code>: a tiny
+        screens depend on <code>@vui/vui-ui/auth-context</code>: a tiny
         interface you implement with an adapter. Swapping providers touches only
         the adapter; the screens never change.
       </P>
-      <CodeBlock title="@viliha/vui-ui/auth-context">{`export interface AuthContract {
+      <CodeBlock title="@vui/vui-ui/auth-context">{`export interface AuthContract {
   user: AuthUser | null;
   status: "loading" | "authenticated" | "unauthenticated";
   signIn(creds: { email: string; password: string; remember?: boolean }): Promise<void>;
@@ -74,7 +74,7 @@ export default function AuthDocPage() {
         Wrap the app once with an adapter, then read it anywhere with{" "}
         <code>useAuth()</code>:
       </P>
-      <CodeBlock title="app/layout.tsx & any screen">{`import { AuthProvider, useAuth } from "@viliha/vui-ui/auth-context";
+      <CodeBlock title="app/layout.tsx & any screen">{`import { AuthProvider, useAuth } from "@vui/vui-ui/auth-context";
 
 // mount once (see app/_components/auth-provider.tsx)
 <AuthProvider value={adapter}>{children}</AuthProvider>
@@ -221,8 +221,8 @@ export const { GET, POST } = toNextJsHandler(auth);`}</CodeBlock>
       <CodeBlock title="app/auth/signin/page.tsx">{`"use client";
 
 import Link from "next/link";
-import { Button } from "@viliha/vui-ui/button";
-import { Input } from "@viliha/vui-ui/input";
+import { Button } from "@vui/vui-ui/button";
+import { Input } from "@vui/vui-ui/input";
 import {
   AuthCard, AuthCardHeader, AuthCardBody, AuthCardFooter, AuthCardAside,
   FieldGrid, Field,
@@ -288,7 +288,7 @@ export default function SignIn() {
 
       <Note title="Required fields">
         <code>&lt;Field required&gt;</code> renders the same <code>*</code> marker
-        (<code>@viliha/vui-ui/required-mark</code>) the datatable uses, so you get
+        (<code>@vui/vui-ui/required-mark</code>) the datatable uses, so you get
         one consistent mandatory-field cue across tables, forms, and auth.
       </Note>
 
@@ -297,14 +297,14 @@ export default function SignIn() {
         Validation runs through <strong>one channel only</strong>: the field's
         inline error (red border + alert-triangle tooltip). Use{" "}
         <code>useFormFields</code> from{" "}
-        <code>@viliha/vui-ui/use-form-fields</code>. It checks each rule{" "}
+        <code>@vui/vui-ui/use-form-fields</code>. It checks each rule{" "}
         <strong>on blur</strong> (when you leave the field) and again{" "}
         <strong>on submit</strong>, clears the error the moment you edit, and
         works for both <code>Input</code> and <code>Textarea</code>. Set{" "}
         <code>noValidate</code> on the <code>&lt;form&gt;</code> so the browser's
         native bubble never fires on top of it.
       </P>
-      <CodeBlock title="validated sign-in">{`import { useFormFields } from "@viliha/vui-ui/use-form-fields";
+      <CodeBlock title="validated sign-in">{`import { useFormFields } from "@vui/vui-ui/use-form-fields";
 
 const f = useFormFields({
   email: (v) => (!EMAIL_RE.test(v.trim()) ? "Enter a valid email address." : undefined),
@@ -325,7 +325,7 @@ const f = useFormFields({
       </P>
 
       <Note title="Password fields">
-        Use <code>PasswordInput</code> (<code>@viliha/vui-ui/password-input</code>)
+        Use <code>PasswordInput</code> (<code>@vui/vui-ui/password-input</code>)
         for passwords: it masks with <code>*</code> and adds a show/hide eye
         toggle. It's a drop-in for <code>Input</code> — spread{" "}
         <code>bind(...)</code> and pass <code>error</code> the same way. The

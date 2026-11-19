@@ -13,16 +13,16 @@ export const SITE = {
     process.env.NEXT_PUBLIC_APP_TAGLINE ?? "React Admin & CRM Design System",
   // Deploy origin: drives metadataBase, canonical URLs, and OG image URLs.
   // Set NEXT_PUBLIC_APP_URL to your domain (no trailing slash) per deployment.
-  url: process.env.NEXT_PUBLIC_APP_URL ?? "https://internal.viliha.com",
+  url: process.env.NEXT_PUBLIC_APP_URL ?? "https://internal.vailstack.com",
   description:
     process.env.NEXT_PUBLIC_APP_DESCRIPTION ??
-    "Vui Starter is a free, open-source React admin dashboard template and CRM design system for Next.js and Tailwind CSS v4. It pairs the token-driven @viliha/vui-ui component library with a full backoffice demo: datatables, forms, charts, and auth.",
+    "Vui Starter is a free, open-source React admin dashboard template and CRM design system for Next.js and Tailwind CSS v4. It pairs the token-driven @vui/vui-ui component library with a full backoffice demo: datatables, forms, charts, and auth.",
   ogImage: "/brand/pulse-wordmark.png",
   author: "Suman Bonakurthi",
   // Footer identity: overridable per deployment via env (see .env.example).
   // NEXT_PUBLIC_ so the value is inlined into the client bundle at build time.
   company: process.env.NEXT_PUBLIC_COMPANY_NAME ?? "VILIHA PTE. LTD.",
-  // Optional link for the company name in the footer (e.g. https://viliha.com).
+  // Optional link for the company name in the footer (e.g. https://vailstack.com).
   companyUrl: process.env.NEXT_PUBLIC_COMPANY_URL ?? "",
   // Always the current year: inlined at build, so a rebuild/deploy keeps it fresh.
   copyrightYear: new Date().getFullYear(),
@@ -55,7 +55,7 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/components": {
     title: "Components",
     description:
-      "Live component gallery for @viliha/vui-ui: buttons, forms, tables, dialogs, menus and more.",
+      "Live component gallery for @vui/vui-ui: buttons, forms, tables, dialogs, menus and more.",
   },
   "/forms": {
     title: "Forms",

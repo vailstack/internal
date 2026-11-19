@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// @viliha/vui-ui CLI — sets up the theme in a consumer's Next.js project.
+// @vui/vui-ui CLI — sets up the theme in a consumer's Next.js project.
 //
-//   npx @viliha/vui-ui init [options]
+//   npx @vui/vui-ui init [options]
 //
 // Interactive decision tree (skip with flags):
 //   1. Fresh project?              --fresh | --existing
@@ -46,25 +46,25 @@ const DEPS = [
 ].join(" ");
 
 const WIRING_STEPS = `  1. Install peer deps (those your components use):
-       npm i @viliha/vui-ui ${DEPS}
+       npm i @vui/vui-ui ${DEPS}
   2. app/globals.css:
        @import "tailwindcss";
-       @import "@viliha/vui-ui/theme.css";
-  3. next.config:  transpilePackages: ["@viliha/vui-ui"]
+       @import "@vui/vui-ui/theme.css";
+  3. next.config:  transpilePackages: ["@vui/vui-ui"]
   4. tsconfig.json (only if you copy the reference-app pieces):
        "compilerOptions": { "paths": { "@/*": ["./*"] } }
-Then import components from @viliha/vui-ui/* and build your pages.`;
+Then import components from @vui/vui-ui/* and build your pages.`;
 
 function usage() {
-  console.log(`@viliha/vui-ui
+  console.log(`@vui/vui-ui
 
 Usage:
-  npx @viliha/vui-ui init [options]
+  npx @vui/vui-ui init [options]
 
   init            Set up the VUI theme in this project (interactive).
   mcp             Run the MCP server (stdio) so an AI agent can query the
                   components, pages, layouts and rules:
-                    claude mcp add vui -- npx -y @viliha/vui-ui mcp
+                    claude mcp add vui -- npx -y @vui/vui-ui mcp
 
 Options:
   --nextjs | --turbo          standalone Next.js app, or a Turborepo (Q0)
@@ -83,7 +83,7 @@ if (cmd !== "init" && cmd !== "mcp") {
 }
 if (cmd === "init" && !existsSync(TEMPLATE)) {
   console.error(
-    "vui: bundled template not found. Reinstall @viliha/vui-ui (the template " +
+    "vui: bundled template not found. Reinstall @vui/vui-ui (the template " +
       "ships with the published package).",
   );
   process.exit(1);
@@ -247,7 +247,7 @@ async function main() {
   // Install dependencies. Turborepo installs are workspace-specific, so we only
   // auto-install for a standalone Next.js app; turbo gets manual instructions.
   const pm = detectPM(targetRoot);
-  const installList = `@viliha/vui-ui ${DEPS}`;
+  const installList = `@vui/vui-ui ${DEPS}`;
   let installed = false;
   if (!turbo) {
     let doInstall = has("--no-install")
@@ -293,7 +293,7 @@ Everything is in YOUR repo — edit app/_components/nav-config.ts, set your logo
 Theme wired (globals.css + next.config). No shell or demo pages — build your own.
 
 Next steps:
-${installStep}  ${devStepNum}. Import components from @viliha/vui-ui/* in your pages, then run dev.
+${installStep}  ${devStepNum}. Import components from @vui/vui-ui/* in your pages, then run dev.
 `);
   } else {
     // existing + prebuilt

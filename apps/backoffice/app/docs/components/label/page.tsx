@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "@viliha/vui-ui/label";
-import { Input } from "@viliha/vui-ui/input";
+import { Label } from "@vui/vui-ui/label";
+import { Input } from "@vui/vui-ui/input";
 
 import { H2, P, CodeBlock } from "@/components/doc";
 import {
@@ -12,8 +12,8 @@ import {
   PropsTable,
 } from "../component-doc";
 
-const usage = `import { Label } from "@viliha/vui-ui/label";
-import { Input } from "@viliha/vui-ui/input";
+const usage = `import { Label } from "@vui/vui-ui/label";
+import { Input } from "@vui/vui-ui/input";
 
 export function Example() {
   return (
